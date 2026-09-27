@@ -1,203 +1,245 @@
-/* Episode Overlay Base */
+/* Split Screen Overlay */
 .episode-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: var(--color-bg);
+    background-color: var(--color-dark);
     z-index: 1000;
     visibility: hidden;
     opacity: 0;
-    overflow-y: auto;
-    overflow-x: hidden;
-    color: var(--color-text);
+    display: flex;
+    color: #fff;
+    overflow: hidden;
 }
 
 .episode-overlay.active {
     visibility: visible;
 }
 
-/* Close Button */
-.ep-close {
-    position: fixed;
+/* Controls (Close, Next, Prev) */
+.ep-controls {
+    position: absolute;
     top: 2rem;
     right: 2rem;
+    display: flex;
+    gap: 1rem;
+    z-index: 1010;
+}
+
+.ep-btn {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: var(--color-text);
-    color: var(--color-bg);
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     cursor: pointer;
-    z-index: 1010;
-    border: none;
-    transition: transform 0.3s var(--ease-out), background 0.3s;
-}
-.ep-close:hover {
-    transform: scale(1.1);
-    background: var(--color-yellow);
-    color: var(--color-text);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background 0.3s, transform 0.3s var(--ease-out);
+    backdrop-filter: blur(10px);
 }
 
-/* Hero Section inside Overlay */
-.ep-hero {
+.ep-btn:hover:not(:disabled) {
+    background: var(--color-yellow);
+    color: var(--color-dark);
+    transform: scale(1.05);
+}
+.ep-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* Left Pane: Media & Title */
+.ep-left {
+    flex: 0 0 45%;
+    height: 100%;
     position: relative;
-    height: 100vh;
+    padding: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 4rem;
-}
-
-.ep-hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background-size: cover;
     background-position: center;
-    z-index: 0;
-    /* We'll animate this from the thumbnail bounds to full screen via GSAP FLIP-like logic */
 }
-.ep-hero-bg::after {
+
+.ep-left::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, var(--color-bg) 0%, rgba(247, 245, 237, 0.7) 30%, rgba(0,0,0,0.2) 100%);
+    background: linear-gradient(to right, rgba(0,0,0,0.4) 0%, rgba(18, 18, 17, 1) 100%);
 }
 
-.ep-hero-content {
+.ep-left-content {
     position: relative;
     z-index: 10;
-    max-width: 1200px;
 }
 
-.ep-hero-content h1 {
+.ep-left-content h1 {
     font-family: var(--font-heading);
-    font-size: clamp(2.5rem, 5vw, 5rem);
-    line-height: 1;
+    font-size: clamp(2rem, 4vw, 4rem);
+    line-height: 1.1;
     margin-bottom: 1.5rem;
-    letter-spacing: -0.02em;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.5);
 }
 
 .ep-meta {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     font-family: var(--font-body);
     font-weight: 600;
-    margin-bottom: 2rem;
+    color: var(--color-yellow);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
 }
 
-/* Play Audio Button (POC) */
 .ep-play-audio {
     display: inline-flex;
     align-items: center;
     gap: 1rem;
-    background: var(--color-dark);
-    color: white;
-    padding: 1rem 2rem;
+    background: var(--color-yellow);
+    color: var(--color-dark);
+    padding: 0.8rem 1.5rem;
     border-radius: 3rem;
     font-weight: 700;
-    font-size: 1.1rem;
     cursor: pointer;
     border: none;
-    transition: transform 0.3s var(--ease-out), background 0.3s;
+    transition: transform 0.3s;
 }
 .ep-play-audio:hover {
-    transform: translateY(-3px);
-    background: var(--color-blue);
+    transform: translateY(-2px);
 }
 .ep-play-audio .play-icon {
-    width: 24px;
-    height: 24px;
-    background: var(--color-yellow);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-dark);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
 }
 
-/* Books Section - The Main Event */
-.ep-books-section {
-    padding: 6rem 4rem;
-    max-width: 1400px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.ep-books-title {
-    font-family: var(--font-heading);
-    font-size: clamp(2rem, 4vw, 4rem);
-    margin-bottom: 4rem;
-    border-bottom: 2px solid var(--color-text);
-    padding-bottom: 1rem;
-}
-
-/* DOM-based 3D Book List */
-.book-list {
+/* Right Pane: Videogame Menu */
+.ep-right {
+    flex: 1;
+    height: 100%;
+    padding: 6rem 4rem 4rem 2rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    perspective: 1500px; /* Enable 3D space */
+    background-color: var(--color-dark);
 }
 
-.book-item {
+.ep-tabs {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2rem 0;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    gap: 2.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 3rem;
+}
+
+.ep-tab {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.4);
+    background: none;
+    border: none;
+    padding-bottom: 1rem;
     cursor: pointer;
     position: relative;
+    transition: color 0.3s;
+}
+
+.ep-tab:hover {
+    color: rgba(255,255,255,0.8);
+}
+
+.ep-tab.active {
+    color: var(--color-yellow);
+}
+
+.ep-tab::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--color-yellow);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s var(--ease-out);
+}
+.ep-tab.active::after {
+    transform: scaleX(1);
+}
+
+.ep-tab-content {
+    flex: 1;
+    position: relative;
+    overflow-y: auto;
+    padding-right: 1rem;
+}
+
+/* Custom Scrollbar for tab content */
+.ep-tab-content::-webkit-scrollbar {
+    width: 6px;
+}
+.ep-tab-content::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.05);
+    border-radius: 4px;
+}
+.ep-tab-content::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.2);
+    border-radius: 4px;
+}
+
+/* Overview Tab */
+.tab-pane {
+    display: none;
+    animation: fadeIn 0.4s var(--ease-out);
+}
+.tab-pane.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.tab-pane-overview p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.8);
+    max-width: 600px;
+}
+
+/* Books Tab - 3D Horizontal Layout */
+.books-container {
+    display: flex;
+    gap: 3rem;
+    perspective: 1500px;
+    padding: 2rem 0;
+}
+
+.book-card {
+    flex: 0 0 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.book-cover-3d {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    transform: rotateY(-15deg);
     transform-style: preserve-3d;
     transition: transform 0.5s var(--ease-out);
 }
 
-.book-item:hover {
-    transform: translateZ(20px);
-}
-
-.book-info {
-    flex: 1;
-    z-index: 2;
-}
-
-.book-title {
-    font-family: var(--font-heading);
-    font-size: clamp(1.5rem, 3vw, 3rem);
-    margin-bottom: 0.5rem;
-    transition: color 0.3s;
-}
-
-.book-author {
-    font-size: 1.2rem;
-    color: #666;
-    font-family: var(--font-script);
-}
-
-.book-item:hover .book-title {
-    color: var(--color-blue);
-}
-
-/* 3D Cover Reveal */
-.book-cover-3d {
-    position: absolute;
-    right: 10%;
-    top: 50%;
-    width: 200px;
-    height: 300px;
-    transform: translateY(-50%) rotateY(-20deg) rotateX(10deg);
-    transform-style: preserve-3d;
-    opacity: 0;
-    pointer-events: none;
-    z-index: 10;
+.book-card:hover .book-cover-3d {
+    transform: rotateY(-25deg) translateZ(30px) translateY(-10px);
 }
 
 .book-cover-inner {
@@ -205,62 +247,85 @@
     height: 100%;
     position: absolute;
     transform-style: preserve-3d;
-    box-shadow: -20px 20px 30px rgba(0,0,0,0.2);
+    box-shadow: -10px 10px 20px rgba(0,0,0,0.5);
 }
 
 .book-front, .book-back, .book-spine {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-position: center;
-    border-radius: 2px 8px 8px 2px;
+    border-radius: 2px 6px 6px 2px;
 }
 
 .book-front {
     transform: translateZ(15px);
     background-color: var(--color-yellow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--color-dark);
+}
+.book-front-title {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+.book-front-author {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 600;
+    opacity: 0.7;
 }
 
 .book-back {
     transform: translateZ(-15px) rotateY(180deg);
-    background-color: var(--color-dark);
+    background-color: #222;
 }
 
 .book-spine {
     width: 30px;
     transform: rotateY(-90deg) translateZ(15px) translateX(-15px);
-    background-color: #d4a000;
+    background-color: rgba(0,0,0,0.2);
     transform-origin: left;
 }
 
-/* Guest Section */
-.ep-guest {
-    margin-top: 6rem;
-    padding: 4rem;
-    background: #fff;
-    border-radius: 20px;
+.book-details h4 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+    color: #fff;
+}
+.book-details p {
+    color: var(--color-yellow);
+    font-size: 0.9rem;
+}
+
+/* Guest Tab */
+.guest-card {
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
     align-items: center;
+    background: rgba(255,255,255,0.03);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
 }
-
-.guest-photo {
-    width: 150px;
-    height: 150px;
+.guest-avatar {
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    background: var(--color-yellow);
-    flex-shrink: 0;
+    background: var(--color-blue);
 }
-
 .guest-info h3 {
     font-family: var(--font-heading);
     font-size: 2rem;
     margin-bottom: 0.5rem;
 }
-
 .guest-info p {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 1.5rem;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 1rem;
 }
