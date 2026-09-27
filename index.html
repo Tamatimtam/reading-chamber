@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Reading Chamber | Big Books Bigger Conversations</title>
+    <meta name="description" content="A sanctuary for those seeking knowledge through the joy of reading and learning. Dari filsafat, sejarah, politik, hingga fiksi.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Syne:wght@600;700;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="episode.css">
+    
+    <!-- Lenis CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.9/dist/lenis.css">
+</head>
+<body>
+    
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon"></div>
+                <span>THE READING CHAMBER</span>
+            </div>
+            
+            <div class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#">Episodes</a>
+                <a href="#">About</a>
+                <a href="#">Community</a>
+                <a href="#">Merch</a>
+            </div>
+            
+            <div class="nav-actions">
+                <div class="socials">
+                    <a href="#" aria-label="YouTube" class="icon-pill">YT</a>
+                    <a href="#" aria-label="Spotify" class="icon-pill">SP</a>
+                    <a href="#" aria-label="Instagram" class="icon-pill">IG</a>
+                </div>
+                <a href="#" class="btn btn-primary">Support Us &rarr;</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-bg-elements">
+                <!-- Abstract torn paper / geometric shapes -->
+                <div class="shape shape-blue shape-1"></div>
+                <div class="shape shape-yellow shape-2"></div>
+                <div class="shape shape-blue shape-3"></div>
+            </div>
+            
+            <div class="hero-content">
+                <div class="hero-title-wrapper">
+                    <h1 class="hero-title">
+                        <span class="line line-1">Big</span>
+                        <span class="line line-2">Books</span>
+                        <span class="line line-3">Bigger</span>
+                        <span class="line line-4">Conversations</span>
+                    </h1>
+                    
+                    <div class="hero-doodles">
+                        <div class="doodle doodle-1">Ideas<br>Books<br>People<br>A Brighter You &darr;</div>
+                        <div class="doodle doodle-2">Buku Bukan Cuma<br>Bacaan,<br>Tapi Obrolan &swarr;</div>
+                    </div>
+                </div>
+                
+                <div class="hero-info">
+                    <p class="hero-desc">A sanctuary for those seeking knowledge through the joy of reading and learning.</p>
+                    <a href="#" class="btn btn-primary btn-play">
+                        <span class="play-icon">▶</span>
+                        Watch Latest Episode &rarr;
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Asset collage container -->
+            <div class="hero-collage">
+                <div class="collage-item collage-statue-1"></div>
+                <div class="collage-item collage-statue-2"></div>
+                <div class="collage-item collage-hosts"></div>
+            </div>
+        </section>
+
+        <section class="latest-episode">
+            <div class="latest-container">
+                <div class="latest-info">
+                    <div class="badge">LATEST EPISODE</div>
+                    <h2 id="featured-title">Loading...</h2>
+                    <p id="featured-desc">Fetching the latest episode from YouTube...</p>
+                    <a href="#" id="featured-link" target="_blank" class="btn btn-watch-now">
+                        <span class="play-icon">▶</span>
+                        Watch Now &rarr;
+                    </a>
+                </div>
+                
+                <div class="latest-featured-card" id="featured-card">
+                    <div class="ep-badge" id="featured-badge">NEW</div>
+                    <div class="card-image bg-card-1" id="featured-thumb"></div>
+                    <div class="card-overlay">
+                        <h3 id="featured-card-title">Loading...</h3>
+                    </div>
+                </div>
+                
+                <div class="latest-queue" id="queue-container">
+                    <!-- Queue items will be injected here via JS -->
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="about-bg-elements">
+                <div class="shape shape-yellow shape-4"></div>
+                <div class="shape shape-blue shape-5"></div>
+            </div>
+            
+            <div class="about-container">
+                <div class="about-left">
+                    <div class="doodle doodle-3">Lebih dari sekadar podcast &swarr;</div>
+                    <h2 class="about-title">
+                        <span>Tentang</span>
+                        <span>Buku, Manusia,</span>
+                        <span>dan Segalanya.</span>
+                    </h2>
+                    
+                    <div class="about-note">
+                        <p class="handwriting">The more we read,<br>the more we become<br>more human.</p>
+                    </div>
+                </div>
+                
+                <div class="about-right">
+                    <h2>What We Talk About</h2>
+                    <p>Dari filsafat, sejarah, politik, hingga fiksi — kami membahas buku sebagai pintu masuk untuk memahami dunia (dan diri sendiri).</p>
+                    
+                    <div class="topics-grid">
+                        <div class="topic-pill">Filsafat</div>
+                        <div class="topic-pill">Sejarah</div>
+                        <div class="topic-pill">Politik</div>
+                        <div class="topic-pill">Sastra</div>
+                        <div class="topic-pill">Film</div>
+                        <div class="topic-pill">Sains</div>
+                        <div class="topic-pill">Psikologi</div>
+                        <div class="topic-pill">Budaya</div>
+                        <div class="topic-pill">Dunia Modern</div>
+                        <div class="topic-pill">Dan Lainnya...</div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-collage-item"></div>
+        </section>
+        
+        <footer class="footer">
+            <p>&copy; 2026 The Reading Chamber. Big Books, Bigger Conversations.</p>
+        </footer>
+    </main>
+
+    <!-- Episode Overlay (Injected dynamically) -->
+    <div id="episode-overlay" class="episode-overlay" data-lenis-prevent="true">
+        <!-- Structure will be populated by episode.js -->
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="script.js"></script>
+    <script src="episode.js"></script>
+</body>
+</html>

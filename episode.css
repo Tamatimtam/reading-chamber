@@ -1,0 +1,266 @@
+/* Episode Overlay Base */
+.episode-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-bg);
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    color: var(--color-text);
+}
+
+.episode-overlay.active {
+    visibility: visible;
+}
+
+/* Close Button */
+.ep-close {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--color-text);
+    color: var(--color-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1010;
+    border: none;
+    transition: transform 0.3s var(--ease-out), background 0.3s;
+}
+.ep-close:hover {
+    transform: scale(1.1);
+    background: var(--color-yellow);
+    color: var(--color-text);
+}
+
+/* Hero Section inside Overlay */
+.ep-hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 4rem;
+}
+
+.ep-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    /* We'll animate this from the thumbnail bounds to full screen via GSAP FLIP-like logic */
+}
+.ep-hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, var(--color-bg) 0%, rgba(247, 245, 237, 0.7) 30%, rgba(0,0,0,0.2) 100%);
+}
+
+.ep-hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+}
+
+.ep-hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+.ep-meta {
+    display: flex;
+    gap: 2rem;
+    font-family: var(--font-body);
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+/* Play Audio Button (POC) */
+.ep-play-audio {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--color-dark);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.3s var(--ease-out), background 0.3s;
+}
+.ep-play-audio:hover {
+    transform: translateY(-3px);
+    background: var(--color-blue);
+}
+.ep-play-audio .play-icon {
+    width: 24px;
+    height: 24px;
+    background: var(--color-yellow);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-dark);
+    font-size: 0.7rem;
+}
+
+/* Books Section - The Main Event */
+.ep-books-section {
+    padding: 6rem 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.ep-books-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 4rem);
+    margin-bottom: 4rem;
+    border-bottom: 2px solid var(--color-text);
+    padding-bottom: 1rem;
+}
+
+/* DOM-based 3D Book List */
+.book-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    perspective: 1500px; /* Enable 3D space */
+}
+
+.book-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    cursor: pointer;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s var(--ease-out);
+}
+
+.book-item:hover {
+    transform: translateZ(20px);
+}
+
+.book-info {
+    flex: 1;
+    z-index: 2;
+}
+
+.book-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+}
+
+.book-author {
+    font-size: 1.2rem;
+    color: #666;
+    font-family: var(--font-script);
+}
+
+.book-item:hover .book-title {
+    color: var(--color-blue);
+}
+
+/* 3D Cover Reveal */
+.book-cover-3d {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    width: 200px;
+    height: 300px;
+    transform: translateY(-50%) rotateY(-20deg) rotateX(10deg);
+    transform-style: preserve-3d;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.book-cover-inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    box-shadow: -20px 20px 30px rgba(0,0,0,0.2);
+}
+
+.book-front, .book-back, .book-spine {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 2px 8px 8px 2px;
+}
+
+.book-front {
+    transform: translateZ(15px);
+    background-color: var(--color-yellow);
+}
+
+.book-back {
+    transform: translateZ(-15px) rotateY(180deg);
+    background-color: var(--color-dark);
+}
+
+.book-spine {
+    width: 30px;
+    transform: rotateY(-90deg) translateZ(15px) translateX(-15px);
+    background-color: #d4a000;
+    transform-origin: left;
+}
+
+/* Guest Section */
+.ep-guest {
+    margin-top: 6rem;
+    padding: 4rem;
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.guest-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: var(--color-yellow);
+    flex-shrink: 0;
+}
+
+.guest-info h3 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.guest-info p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
