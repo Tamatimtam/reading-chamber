@@ -98,29 +98,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 5. Scroll Reveals for Latest Episode
     gsap.from('.latest-info > *', {
-        y: 40,
+        y: 50,
         opacity: 0,
-        duration: 1,
-        stagger: 0.1,
-        ease: 'power3.out',
+        duration: 1.2,
+        stagger: 0.15,
+        ease: 'power4.out',
         scrollTrigger: {
             trigger: '.latest-episode',
-            start: "top 70%",
+            start: "top 75%",
         }
     });
 
     gsap.from('.latest-featured-card', {
-        scale: 0.95,
+        scale: 0.9,
+        y: 60,
         opacity: 0,
-        duration: 1.2,
-        ease: 'power4.out',
+        duration: 1.5,
+        ease: 'expo.out',
         scrollTrigger: {
-            trigger: '.latest-featured-card',
-            start: "top 80%",
+            trigger: '.latest-episode',
+            start: "top 75%",
         }
     });
-
-    // We will animate .queue-item after fetch completes
     
     // 6. About Section Scroll Animations
     gsap.from(aboutTitleSplit.chars, {
@@ -222,14 +221,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 
                 // Animate queue items now that they exist
                 gsap.from('.queue-item', {
-                    x: 30,
+                    x: 50,
                     opacity: 0,
-                    duration: 0.8,
-                    stagger: 0.1,
-                    ease: 'power3.out',
+                    duration: 1.2,
+                    stagger: 0.15,
+                    ease: 'power4.out',
                     scrollTrigger: {
                         trigger: '.latest-queue',
-                        start: "top 80%",
+                        start: "top 85%",
                     }
                 });
 
