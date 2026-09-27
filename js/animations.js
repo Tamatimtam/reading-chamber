@@ -188,5 +188,5 @@ export function initAnimations() {
             trigger: '.topics-grid',
             start: "top 85%",
         }
-    
+    });
 }
