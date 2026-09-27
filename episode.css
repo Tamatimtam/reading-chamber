@@ -316,42 +316,54 @@
     transform: translateX(5px);
 }
 
-/* Books Tab - 3D Horizontal Layout */
-.books-container {
+/* Books Tab - Showcase Layout */
+.book-titles-bar {
     display: flex;
-    gap: 3rem;
-    perspective: 1500px;
-    padding: 2rem 0;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
 }
 
-.book-card {
-    flex: 0 0 200px;
+.book-indicator {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.3);
+    transition: color 0.4s var(--ease-out), transform 0.4s var(--ease-out);
+}
+.book-indicator.active {
+    color: var(--color-yellow);
+    transform: scale(1.05);
+}
+
+.book-showcase {
+    perspective: 1500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+}
+
+.book-card-hero {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    transform-style: preserve-3d;
-    cursor: pointer;
+    align-items: center;
 }
 
-.book-cover-3d {
-    width: 200px;
-    height: 300px;
+.book-showcase .book-cover-3d {
+    width: 240px;
+    height: 360px;
     position: relative;
-    transform: rotateY(-15deg);
     transform-style: preserve-3d;
-    transition: transform 0.5s var(--ease-out);
 }
 
-.book-card:hover .book-cover-3d {
-    transform: rotateY(-25deg) translateZ(30px) translateY(-10px);
-}
-
-.book-cover-inner {
+.book-showcase .book-cover-inner {
     width: 100%;
     height: 100%;
     position: absolute;
     transform-style: preserve-3d;
-    box-shadow: -10px 10px 20px rgba(0,0,0,0.5);
+    box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+    border-radius: 2px 6px 6px 2px;
 }
 
 .book-front, .book-back, .book-spine {
@@ -362,50 +374,43 @@
 }
 
 .book-front {
-    transform: translateZ(15px);
-    background-color: var(--color-yellow);
+    transform: translateZ(20px);
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    padding: 1.5rem;
+    align-items: center;
     text-align: center;
-    color: var(--color-dark);
-}
-.book-front-title {
-    font-family: var(--font-heading);
-    font-size: 1.4rem;
-    line-height: 1.1;
-    margin-bottom: 0.5rem;
-}
-.book-front-author {
-    font-family: var(--font-body);
-    font-size: 0.9rem;
-    font-weight: 600;
-    opacity: 0.7;
+    padding: 2rem 1.5rem;
+    backface-visibility: hidden;
 }
 
 .book-back {
-    transform: translateZ(-15px) rotateY(180deg);
-    background-color: #222;
+    transform: rotateY(180deg) translateZ(20px);
+    background-color: #111;
 }
 
 .book-spine {
-    width: 30px;
-    transform: rotateY(-90deg) translateZ(15px) translateX(-15px);
-    background-color: rgba(0,0,0,0.2);
-    transform-origin: left;
+    width: 40px;
+    transform: rotateY(-90deg) translateZ(20px) translateX(-20px);
+    transform-origin: left center;
+    background-color: rgba(0,0,0,0.3);
 }
 
-.book-details h4 {
+.book-front-title {
     font-family: var(--font-heading);
-    font-size: 1.3rem;
-    margin-bottom: 0.3rem;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
     color: #fff;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
-.book-details p {
-    color: var(--color-yellow);
+
+.book-front-author {
+    font-family: var(--font-body);
     font-size: 0.9rem;
+    color: rgba(255,255,255,0.8);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 /* Guest Tab */

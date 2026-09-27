@@ -126,31 +126,11 @@ class EpisodeExperience {
                     
                     <!-- Books Tab -->
                     <div class="tab-pane" id="tab-books">
-                        <div class="books-container">
-        `;
-
-        customData.books.forEach(book => {
-            html += `
-                <div class="book-card">
-                    <div class="book-cover-3d">
-                        <div class="book-cover-inner">
-                            <div class="book-front" style="background-color: ${book.coverColor};">
-                                <div class="book-front-title">${book.title}</div>
-                                <div class="book-front-author">${book.author}</div>
-                            </div>
-                            <div class="book-back"></div>
-                            <div class="book-spine" style="background-color: #000;"></div>
+                        <div class="book-titles-bar">
+                            ${customData.books.map((b, i) => `<span class="book-indicator ${i === 0 ? 'active' : ''}">${b.title}</span>`).join('')}
                         </div>
-                    </div>
-                    <div class="book-details">
-                        <h4>${book.title}</h4>
-                        <p>${book.author}</p>
-                    </div>
-                </div>
-            `;
-        });
-
-        html += `
+                        <div class="book-showcase">
+                            <!-- Book will be injected and animated via JS -->
                         </div>
                     </div>
         `;
@@ -202,20 +182,69 @@ class EpisodeExperience {
             };
         });
         
-        // 3D Mouse Tracking for books
-        const bookCards = this.overlay.querySelectorAll('.book-card');
-        bookCards.forEach(card => {
-            const inner = card.querySelector('.book-cover-inner');
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = (e.clientX - rect.left) / rect.width - 0.5;
-                const y = (e.clientY - rect.top) / rect.height - 0.5;
-                gsap.to(inner, { rotateY: x * 20, rotateX: -y * 20, duration: 0.5, ease: 'power1.out' });
+        // Start Book Slideshow
+        this.startBookSlideshow(customData.books);
+    }
+    
+    startBookSlideshow(books) {
+        if (this.bookTimeline) this.bookTimeline.kill();
+        
+        const showcase = this.overlay.querySelector('.book-showcase');
+        const indicators = this.overlay.querySelectorAll('.book-indicator');
+        if (!showcase || !books || books.length === 0) return;
+        
+        let currentIndex = 0;
+        
+        const showBook = (index) => {
+            const book = books[index];
+            
+            // Update indicators
+            indicators.forEach((ind, i) => {
+                if (i === index) ind.classList.add('active');
+                else ind.classList.remove('active');
             });
-            card.addEventListener('mouseleave', () => {
-                gsap.to(inner, { rotateY: 0, rotateX: 0, duration: 0.5, ease: 'power2.out' });
+            
+            // Inject Book HTML
+            showcase.innerHTML = `
+                <div class="book-card-hero">
+                    <div class="book-cover-3d">
+                        <div class="book-cover-inner">
+                            <div class="book-front" style="background-color: ${book.coverColor};">
+                                <div class="book-front-title">${book.title}</div>
+                                <div class="book-front-author">${book.author}</div>
+                            </div>
+                            <div class="book-back"></div>
+                            <div class="book-spine" style="background-color: #000;"></div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            const bookInner = showcase.querySelector('.book-cover-inner');
+            const heroCard = showcase.querySelector('.book-card-hero');
+            
+            // GSAP Animation: Slide in, rotate slowly showing depth without showing the back, slide out
+            this.bookTimeline = gsap.timeline({
+                onComplete: () => {
+                    // Only continue if the overlay is still open and we are still viewing books tab
+                    const currentTab = this.overlay.querySelector('.ep-tab.active');
+                    if (this.isOpen && currentTab && currentTab.dataset.target === 'tab-books') {
+                        currentIndex = (currentIndex + 1) % books.length;
+                        showBook(currentIndex);
+                    }
+                }
             });
-        });
+            
+            this.bookTimeline
+                .fromTo(heroCard, { opacity: 0, scale: 0.8, y: 50 }, { opacity: 1, scale: 1, y: 0, duration: 1.2, ease: 'power4.out' }, 0)
+                .fromTo(bookInner, { rotateY: -35 }, { rotateY: 35, duration: 4.5, ease: 'none' }, 0) // Slow rotation
+                .to(heroCard, { opacity: 0, scale: 0.9, y: -40, duration: 1.0, ease: 'power3.inOut' }, 3.5); // Crossfade out early
+        };
+        
+        // Wait a tiny bit for DOM to settle before animating
+        setTimeout(() => {
+            if (this.isOpen) showBook(currentIndex);
+        }, 100);
     }
 
     navigate(dir) {
