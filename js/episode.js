@@ -178,13 +178,21 @@ export class EpisodeExperience {
             });
             
             // Inject Book HTML
+            const coverStyle = book.coverImage 
+                ? `background-image: url('${book.coverImage}'); background-size: cover; background-position: center; border: 1px solid rgba(255,255,255,0.1);` 
+                : `background-color: ${book.coverColor};`;
+                
+            const titleAuthorHTML = book.coverImage 
+                ? '' // Hide text if we have a real cover image
+                : `<div class="book-front-title">${book.title}</div>
+                   <div class="book-front-author">${book.author}</div>`;
+
             showcase.innerHTML = `
                 <div class="book-card-hero">
                     <div class="book-cover-3d">
                         <div class="book-cover-inner">
-                            <div class="book-front" style="background-color: ${book.coverColor};">
-                                <div class="book-front-title">${book.title}</div>
-                                <div class="book-front-author">${book.author}</div>
+                            <div class="book-front" style="${coverStyle}">
+                                ${titleAuthorHTML}
                             </div>
                             <div class="book-back"></div>
                             <div class="book-spine" style="background-color: #000;"></div>
