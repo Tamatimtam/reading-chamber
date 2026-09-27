@@ -156,10 +156,10 @@ class EpisodeExperience {
         `;
 
         this.overlay.innerHTML = html;
-        this.attachEvents();
+        this.attachEvents(customData);
     }
 
-    attachEvents() {
+    attachEvents(customData) {
         document.getElementById('ep-close').onclick = () => this.close();
         
         const prevBtn = document.getElementById('ep-prev');
