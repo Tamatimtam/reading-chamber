@@ -168,7 +168,13 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(res => res.json())
         .then(data => {
             if (data.status === 'ok' && data.items.length > 0) {
-                const videos = data.items.slice(0, 4);
+                // Filter to only include titles matching "Ep. XX" or "Ep XX"
+                const episodeRegex = /^Ep\.?\s*\d+/i;
+                const officialEpisodes = data.items.filter(item => episodeRegex.test(item.title));
+                
+                if (officialEpisodes.length === 0) return;
+                
+                const videos = officialEpisodes.slice(0, 4);
                 const featured = videos[0];
                 
                 // Set Featured

@@ -203,14 +203,14 @@
 /* Overview Tab */
 .tab-pane {
     display: none;
-    animation: fadeIn 0.4s var(--ease-out);
+    animation: fadeIn 0.8s var(--ease-out) forwards;
 }
 .tab-pane.active {
     display: block;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
+    from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
