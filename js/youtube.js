@@ -75,7 +75,5 @@ export function initYouTube() {
                     ScrollTrigger.refresh();
                 }
             })
-            .catch(console.error);
-    });
-    
+        .catch(console.error);
 }
