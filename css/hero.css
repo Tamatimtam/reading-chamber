@@ -1,0 +1,134 @@
+/* Hero Section */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    padding: 8rem 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.hero-bg-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.shape {
+    position: absolute;
+    background-blend-mode: multiply;
+}
+
+.shape-blue { background-color: var(--color-blue); }
+.shape-yellow { background-color: var(--color-yellow); }
+
+.shape-1 {
+    top: -5%;
+    right: 5%;
+    width: 40vw;
+    height: 50vh;
+    clip-path: polygon(0 0, 100% 20%, 90% 100%, 10% 80%);
+    transform: rotate(15deg);
+}
+
+.shape-2 {
+    top: 20%;
+    left: -5%;
+    width: 35vw;
+    height: 60vh;
+    clip-path: polygon(20% 0%, 100% 10%, 80% 100%, 0% 90%);
+    transform: rotate(-10deg);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+}
+
+.hero-title-wrapper {
+    position: relative;
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 12vw, 11rem);
+    font-weight: 800;
+    line-height: 0.85;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-title .line {
+    display: block;
+    overflow: hidden;
+}
+
+.hero-doodles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.doodle {
+    font-family: var(--font-script);
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    line-height: 1.2;
+    color: var(--color-text);
+    position: absolute;
+    transform: rotate(-5deg);
+}
+
+.doodle-1 {
+    top: 15%;
+    right: 15%;
+}
+
+.doodle-2 {
+    bottom: -10%;
+    right: 5%;
+}
+
+.hero-info {
+    max-width: 400px;
+    margin-top: 2rem;
+}
+
+.hero-desc {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.btn-play {
+    background-color: var(--color-yellow);
+    color: var(--color-text);
+    padding-left: 0.5rem;
+}
+
+.play-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: var(--color-text);
+    color: var(--color-yellow);
+    border-radius: 50%;
+    font-size: 0.8rem;
+}

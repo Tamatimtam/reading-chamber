@@ -1,0 +1,193 @@
+/* Latest Episode */
+.latest-episode {
+    background-color: var(--color-dark);
+    color: white;
+    padding: 4rem 2rem;
+    position: relative;
+    z-index: 20;
+}
+
+.latest-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+    .latest-container {
+        grid-template-columns: 1fr 1.5fr 1fr;
+        align-items: center;
+    }
+}
+
+.badge {
+    color: var(--color-yellow);
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+}
+
+.latest-info h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.latest-info p {
+    color: #a0a09f;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.btn-watch-now {
+    background-color: transparent;
+    color: var(--color-yellow);
+    padding: 0;
+}
+
+.btn-watch-now .play-icon {
+    background-color: var(--color-yellow);
+    color: var(--color-dark);
+}
+
+.latest-featured-card {
+    position: relative;
+    aspect-ratio: 16/9;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #2a2a2a;
+    transition: transform 0.6s var(--ease-out), box-shadow 0.6s var(--ease-out);
+    cursor: pointer;
+}
+
+.latest-featured-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+
+.card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    transition: transform 0.8s var(--ease-out);
+}
+
+.latest-featured-card:hover .card-image {
+    transform: scale(1.05);
+}
+
+.bg-card-1 {
+    background-image: url('assets/media_1790494042540.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-card-2 {
+    background-image: url('assets/media_1790494042540.png');
+    background-size: cover;
+    background-position: center;
+    filter: hue-rotate(45deg);
+}
+
+.bg-card-3 {
+    background-image: url('assets/media_1790494042540.png');
+    background-size: cover;
+    background-position: center;
+    filter: hue-rotate(-45deg);
+}
+
+
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 1.5rem 1rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+.card-overlay h3 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+.latest-queue {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.queue-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: transform 0.4s var(--ease-out), background-color 0.4s var(--ease-out);
+    cursor: pointer;
+}
+
+.queue-item:hover, .queue-item.active {
+    background-color: rgba(255,255,255,0.05);
+    transform: translateX(10px);
+}
+
+.ep-thumb {
+    width: 80px;
+    height: 45px;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    background-color: #333;
+    transition: transform 0.6s var(--ease-out);
+}
+
+.queue-item:hover .ep-thumb {
+    transform: scale(1.1);
+}
+
+.ep-details h4 {
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}
+
+.ep-time {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.4);
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: color 0.4s var(--ease-out), transform 0.4s var(--ease-out);
+    display: inline-block;
+}
+
+.queue-item:hover .ep-time {
+    color: var(--color-yellow);
+    transform: translateX(4px);
+}
+
+.view-all {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-top: 1rem;
+    display: inline-block;
+}

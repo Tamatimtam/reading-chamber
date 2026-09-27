@@ -1,0 +1,28 @@
+:root {
+    --color-bg: #f7f5ed;
+    --color-text: #1a1a19;
+    --color-yellow: #f5b700;
+    --color-blue: #0f5de8;
+    --color-dark: #121211;
+    
+    --font-heading: 'Syne', sans-serif;
+    --font-body: 'Outfit', sans-serif;
+    --font-script: 'Caveat', cursive;
+    
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-in-out: cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
