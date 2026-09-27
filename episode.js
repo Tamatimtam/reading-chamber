@@ -171,17 +171,37 @@ class EpisodeExperience {
     }
 
     navigate(dir) {
+        if (this.isNavigating) return;
+        this.isNavigating = true;
+        
         this.currentIndex += dir;
         
-        // Simple fade transition for content replacement
-        gsap.to(this.overlay, {
-            opacity: 0,
-            duration: 0.3,
+        const content = this.overlay.querySelectorAll('.ep-left, .ep-right');
+        const controls = this.overlay.querySelector('.ep-controls');
+        
+        // Slide out current content and fade controls
+        const tl = gsap.timeline({
             onComplete: () => {
                 this.buildDOM();
-                gsap.to(this.overlay, { opacity: 1, duration: 0.3 });
+                
+                const newContent = this.overlay.querySelectorAll('.ep-left, .ep-right');
+                const newControls = this.overlay.querySelector('.ep-controls');
+                
+                // Slide in new content from opposite direction
+                gsap.fromTo(newContent, 
+                    { x: dir * 50, opacity: 0 },
+                    { x: 0, opacity: 1, duration: 0.4, ease: 'power3.out', onComplete: () => this.isNavigating = false }
+                );
+                
+                gsap.fromTo(newControls,
+                    { opacity: 0 },
+                    { opacity: 1, duration: 0.4, ease: 'power2.out' }
+                );
             }
         });
+        
+        tl.to(content, { x: dir * -50, opacity: 0, duration: 0.3, ease: 'power2.inOut' }, 0)
+          .to(controls, { opacity: 0, duration: 0.3, ease: 'power2.inOut' }, 0);
     }
 
     open(videos, index, sourceElement) {
