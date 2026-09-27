@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const aboutTitleSplit = new SplitType('.about-title span', { types: 'words, chars' });
     
     // 3. Hero Entry Animation (Focal Moment)
-    const tl = gsap.timeline();
+    const tl = gsap.timeline({ paused: true });
 
     // Initial state
     gsap.set('.nav', { y: -100, opacity: 0 });
@@ -95,6 +95,38 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
+    // Start loader out animation
+    const initPage = () => {
+        // Stop scroll until loader is done
+        window.lenis.stop();
+        
+        gsap.to('.loader-content', {
+            y: -50,
+            opacity: 0,
+            duration: 0.8,
+            ease: 'power3.in',
+            delay: 1.5
+        });
+        
+        gsap.to('#loader', {
+            yPercent: -100,
+            duration: 1.2,
+            ease: 'expo.inOut',
+            delay: 1.8,
+            onComplete: () => {
+                document.getElementById('loader').style.display = 'none';
+                window.lenis.start();
+                tl.play(); // Play hero animation
+            }
+        });
+    };
+
+    if (document.readyState === 'complete') {
+        initPage();
+    } else {
+        window.addEventListener('load', initPage);
+    }
 
     // 5. Scroll Reveals for Latest Episode
     gsap.from('.latest-info > *', {
