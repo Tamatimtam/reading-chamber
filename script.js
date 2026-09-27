@@ -175,13 +175,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.getElementById('featured-title').textContent = featured.title;
                 document.getElementById('featured-desc').textContent = 'Latest episode streaming now on YouTube.';
                 document.getElementById('featured-link').href = '#';
-                document.getElementById('featured-link').onclick = (e) => { e.preventDefault(); window.openEpisode(videos, 0, document.getElementById('featured-card')); };
+                document.getElementById('featured-link').onclick = (e) => { e.preventDefault(); window.openEpisode(videos, 0, document.getElementById('featured-thumb')); };
                 
                 document.getElementById('featured-card-title').textContent = featured.title;
                 document.getElementById('featured-thumb').style.backgroundImage = `url('${featured.thumbnail}')`;
                 
                 // Add click to featured card
-                document.getElementById('featured-card').onclick = () => window.openEpisode(videos, 0, document.getElementById('featured-card'));
+                document.getElementById('featured-card').onclick = () => window.openEpisode(videos, 0, document.getElementById('featured-thumb'));
                 document.getElementById('featured-card').style.cursor = 'pointer';
                 
                 // Build Queue
@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     
                     const queueItem = document.createElement('div');
                     queueItem.className = `queue-item ${isActive}`;
-                    queueItem.onclick = () => window.openEpisode(videos, index, queueItem);
+                    queueItem.onclick = () => window.openEpisode(videos, index, queueItem.querySelector('.ep-thumb'));
                     
                     queueItem.innerHTML = `
                         <div class="ep-thumb" style="background-image: url('${video.thumbnail}'); background-size: cover; background-position: center;">

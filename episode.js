@@ -176,31 +176,42 @@ class EpisodeExperience {
         
         this.currentIndex += dir;
         
-        const content = this.overlay.querySelectorAll('.ep-left, .ep-right');
+        const content = this.overlay.querySelectorAll('.ep-left-content, .ep-right');
+        const video = this.overlay.querySelector('.ep-video-container');
         const controls = this.overlay.querySelector('.ep-controls');
         
-        // Slide out current content and fade controls
+        // Slide out current content smoothly
         const tl = gsap.timeline({
             onComplete: () => {
                 this.buildDOM();
                 
-                const newContent = this.overlay.querySelectorAll('.ep-left, .ep-right');
+                const newLeftContent = this.overlay.querySelector('.ep-left-content');
+                const newVideo = this.overlay.querySelector('.ep-video-container');
+                const newRightContent = this.overlay.querySelector('.ep-right');
                 const newControls = this.overlay.querySelector('.ep-controls');
                 
-                // Slide in new content from opposite direction
-                gsap.fromTo(newContent, 
-                    { x: dir * 50, opacity: 0 },
-                    { x: 0, opacity: 1, duration: 0.4, ease: 'power3.out', onComplete: () => this.isNavigating = false }
-                );
+                // Split title for bounce effect
+                const titleSplit = new SplitType(this.overlay.querySelector('.ep-title'), { types: 'words, chars' });
                 
+                gsap.set(titleSplit.chars, { y: 20, opacity: 0 });
+                gsap.set([newLeftContent.children[0], newLeftContent.children[2], newVideo, newRightContent], { x: dir * 50, opacity: 0 });
+                
+                // Slide in new content with premium easing
+                const inTl = gsap.timeline({ onComplete: () => this.isNavigating = false });
+                
+                inTl.to(newVideo, { x: 0, opacity: 1, duration: 1.0, ease: 'power4.out' }, 0)
+                    .to([newLeftContent.children[0], newLeftContent.children[2]], { x: 0, opacity: 1, duration: 0.8, stagger: 0.1, ease: 'power3.out' }, 0.1)
+                    .to(titleSplit.chars, { y: 0, opacity: 1, duration: 0.8, stagger: 0.02, ease: 'back.out(1.5)' }, 0.2)
+                    .to(newRightContent, { x: 0, opacity: 1, duration: 0.9, ease: 'power3.out' }, 0.1);
+                    
                 gsap.fromTo(newControls,
                     { opacity: 0 },
-                    { opacity: 1, duration: 0.4, ease: 'power2.out' }
+                    { opacity: 1, duration: 0.6, ease: 'power2.out' }
                 );
             }
         });
         
-        tl.to(content, { x: dir * -50, opacity: 0, duration: 0.3, ease: 'power2.inOut' }, 0)
+        tl.to([content, video], { x: dir * -50, opacity: 0, duration: 0.5, ease: 'power3.inOut', stagger: 0.05 }, 0)
           .to(controls, { opacity: 0, duration: 0.3, ease: 'power2.inOut' }, 0);
     }
 
@@ -231,8 +242,11 @@ class EpisodeExperience {
         const rightPane = this.overlay.querySelector('.ep-right');
         const controls = this.overlay.querySelector('.ep-controls');
         
-        // Hide overlay contents initially
-        gsap.set([videoTarget, leftContent, rightPane, controls], { autoAlpha: 0 });
+        const titleSplit = new SplitType(this.overlay.querySelector('.ep-title'), { types: 'words, chars' });
+        
+        // Hide overlay contents initially (keep title split hidden)
+        gsap.set([videoTarget, leftContent.children[0], leftContent.children[2], rightPane, controls], { autoAlpha: 0 });
+        gsap.set(titleSplit.chars, { y: 20, opacity: 0 });
         
         // Create a clone for the FLIP animation
         const clone = document.createElement('div');
@@ -258,29 +272,37 @@ class EpisodeExperience {
         
         const tl = gsap.timeline();
         
-        // Animate clone to target dimensions
+        // Animate clone to target dimensions (slower, more premium curve)
         tl.to(clone, {
             top: targetRect.top,
             left: targetRect.left,
             width: targetRect.width,
             height: targetRect.height,
             borderRadius: '12px',
-            duration: 0.8,
-            ease: 'power4.inOut',
+            duration: 1.0,
+            ease: 'expo.inOut',
             onComplete: () => {
                 // Remove clone and show real target
                 clone.remove();
                 gsap.set(videoTarget, { autoAlpha: 1 });
             }
         })
-        // Fade in the rest of the UI staggered
-        .to([leftContent, rightPane, controls], {
+        // Fade in the rest of the UI staggered with anticipation
+        .to([leftContent.children[0], leftContent.children[2], rightPane, controls], {
             autoAlpha: 1,
             y: 0,
-            duration: 0.6,
+            duration: 0.8,
             stagger: 0.1,
             ease: 'power3.out'
-        }, "-=0.3");
+        }, "-=0.2")
+        // Title letter bounce
+        .to(titleSplit.chars, {
+            y: 0,
+            opacity: 1,
+            duration: 0.8,
+            stagger: 0.02,
+            ease: 'back.out(1.5)'
+        }, "-=0.6");
         
         document.body.style.overflow = 'hidden';
     }

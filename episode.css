@@ -56,46 +56,50 @@
 
 /* Left Pane: Media & Title */
 .ep-left {
-    flex: 0 0 45%;
+    flex: 0 0 35%;
     height: 100%;
     position: relative;
-    padding: 4rem;
+    padding: 3rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    background-color: #121211; /* Slight contrast to right pane */
+    border-right: 1px solid rgba(255,255,255,0.05);
+}
+
+.ep-video-container {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
     background-size: cover;
     background-position: center;
-}
-
-.ep-left::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to right, rgba(0,0,0,0.4) 0%, rgba(18, 18, 17, 1) 100%);
-}
-
-.ep-left-content {
+    margin-bottom: 2rem;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
     position: relative;
     z-index: 10;
 }
 
+.ep-left-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
 .ep-left-content h1 {
     font-family: var(--font-heading);
-    font-size: clamp(2rem, 4vw, 4rem);
+    font-size: clamp(2rem, 3.5vw, 3.5rem);
     line-height: 1.1;
-    margin-bottom: 1.5rem;
-    text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    margin-bottom: 2rem;
 }
 
 .ep-meta {
-    display: flex;
-    gap: 1rem;
     font-family: var(--font-body);
     font-weight: 600;
     color: var(--color-yellow);
     margin-bottom: 1rem;
     font-size: 0.9rem;
     letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
 
 .ep-play-audio {
@@ -104,15 +108,18 @@
     gap: 1rem;
     background: var(--color-yellow);
     color: var(--color-dark);
-    padding: 0.8rem 1.5rem;
+    padding: 1rem 2rem;
     border-radius: 3rem;
     font-weight: 700;
+    font-size: 1.1rem;
     cursor: pointer;
     border: none;
-    transition: transform 0.3s;
+    transition: transform 0.3s, background 0.3s;
+    align-self: flex-start;
 }
 .ep-play-audio:hover {
     transform: translateY(-2px);
+    background: #fff;
 }
 .ep-play-audio .play-icon {
     font-size: 0.8rem;
@@ -144,15 +151,17 @@
     padding-bottom: 1rem;
     cursor: pointer;
     position: relative;
-    transition: color 0.3s;
+    transition: color 0.4s var(--ease-out), transform 0.4s var(--ease-out);
 }
 
 .ep-tab:hover {
     color: rgba(255,255,255,0.8);
+    transform: translateY(-2px);
 }
 
 .ep-tab.active {
     color: var(--color-yellow);
+    transform: translateY(0);
 }
 
 .ep-tab::after {
@@ -312,13 +321,24 @@
     background: rgba(255,255,255,0.03);
     padding: 2rem;
     border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: transform 0.5s var(--ease-out), background 0.5s var(--ease-out), border-color 0.5s var(--ease-out);
+    cursor: pointer;
+}
+.guest-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.06);
+    border-color: rgba(255,255,255,0.15);
 }
 .guest-avatar {
     width: 120px;
     height: 120px;
     border-radius: 50%;
     background: var(--color-blue);
+    transition: transform 0.6s var(--ease-out);
+}
+.guest-card:hover .guest-avatar {
+    transform: scale(1.05) rotate(5deg);
 }
 .guest-info h3 {
     font-family: var(--font-heading);
