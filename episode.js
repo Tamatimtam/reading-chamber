@@ -33,8 +33,25 @@ class EpisodeExperience {
         this.isOpen = false;
         this.videos = [];
         this.currentIndex = 0;
+        this.isNavigating = false;
+        
+        this.handleKeyDown = this.handleKeyDown.bind(this);
+        window.addEventListener('keydown', this.handleKeyDown);
         
         window.openEpisode = this.open.bind(this);
+    }
+    
+    handleKeyDown(e) {
+        if (!this.isOpen || this.isNavigating) return;
+        if (e.key === 'ArrowRight' && this.currentIndex < this.videos.length - 1) {
+            this.navigate(1);
+        }
+        if (e.key === 'ArrowLeft' && this.currentIndex > 0) {
+            this.navigate(-1);
+        }
+        if (e.key === 'Escape') {
+            this.close();
+        }
     }
 
     buildDOM() {
@@ -73,7 +90,38 @@ class EpisodeExperience {
                 <div class="ep-tab-content">
                     <!-- Overview Tab -->
                     <div class="tab-pane active" id="tab-overview">
-                        <p>${customData.description}</p>
+                        <div class="overview-grid">
+                            <div class="overview-text">
+                                <h3 class="overview-heading">About This Episode</h3>
+                                <p>${customData.description}</p>
+                                
+                                <div class="overview-meta-blocks">
+                                    <div class="meta-block">
+                                        <span class="meta-label">Released</span>
+                                        <span class="meta-value">${new Date(videoData.pubDate).toLocaleDateString('en-US', {month: 'long', day: 'numeric', year: 'numeric'})}</span>
+                                    </div>
+                                    <div class="meta-block">
+                                        <span class="meta-label">Host</span>
+                                        <span class="meta-value">Pram & Pras</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overview-actions">
+                                <h3 class="overview-heading">Listen On</h3>
+                                <a href="${videoData.link}" target="_blank" class="action-btn yt-btn">
+                                    <span class="btn-text">YouTube Video</span>
+                                    <span class="btn-arrow">&rarr;</span>
+                                </a>
+                                <a href="#" class="action-btn sp-btn">
+                                    <span class="btn-text">Spotify Podcast</span>
+                                    <span class="btn-arrow">&rarr;</span>
+                                </a>
+                                <a href="#" class="action-btn apple-btn">
+                                    <span class="btn-text">Apple Podcasts</span>
+                                    <span class="btn-arrow">&rarr;</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     
                     <!-- Books Tab -->
