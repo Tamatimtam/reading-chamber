@@ -52,12 +52,13 @@ class EpisodeExperience {
                 <button class="ep-btn" id="ep-close">&times;</button>
             </div>
             
-            <div class="ep-left" id="ep-left-bg" style="background-image: url('${videoData.thumbnail}');">
+            <div class="ep-left" id="ep-left-bg">
+                <div class="ep-video-container" id="ep-video-target" style="background-image: url('${videoData.thumbnail}');"></div>
                 <div class="ep-left-content">
                     <div class="ep-meta">LATEST EPISODE • AUDIO AVAILABLE</div>
                     <h1 class="ep-title">${videoData.title}</h1>
                     <button class="ep-play-audio">
-                        <span class="play-icon">▶</span> Play
+                        <span class="play-icon">▶</span> Play Episode
                     </button>
                 </div>
             </div>
@@ -191,43 +192,71 @@ class EpisodeExperience {
         
         this.buildDOM();
         
-        const sourceRect = sourceElement.getBoundingClientRect();
+        console.log("--- STARTING EPISODE TRANSITION ---");
         
-        gsap.set(this.overlay, { autoAlpha: 1 });
+        // Ensure sourceElement is valid and get its bounds
+        if (!sourceElement) {
+            console.error("No source element provided!");
+            return;
+        }
+        const sourceRect = sourceElement.getBoundingClientRect();
+        console.log("Source Element Rect:", sourceRect);
+        
+        // Fade in overlay base smoothly (instead of instantly snapping to black)
+        gsap.to(this.overlay, { autoAlpha: 1, duration: 0.5, ease: 'power2.out' });
         
         const leftPane = this.overlay.querySelector('.ep-left');
+        const videoTarget = this.overlay.querySelector('#ep-video-target');
+        const leftContent = this.overlay.querySelector('.ep-left-content');
         const rightPane = this.overlay.querySelector('.ep-right');
         const controls = this.overlay.querySelector('.ep-controls');
         
-        // Animate left pane from source dimensions to split screen
-        gsap.set(leftPane, {
-            position: 'fixed',
-            top: sourceRect.top,
-            left: sourceRect.left,
-            width: sourceRect.width,
-            height: sourceRect.height,
-            borderRadius: '12px'
-        });
+        // Hide overlay contents initially
+        gsap.set([videoTarget, leftContent, rightPane, controls], { autoAlpha: 0 });
         
-        gsap.set([rightPane, controls], { autoAlpha: 0, x: 50 });
+        // Create a clone for the FLIP animation
+        const clone = document.createElement('div');
+        clone.style.position = 'fixed';
+        clone.style.top = sourceRect.top + 'px';
+        clone.style.left = sourceRect.left + 'px';
+        clone.style.width = sourceRect.width + 'px';
+        clone.style.height = sourceRect.height + 'px';
+        clone.style.backgroundImage = `url('${videos[index].thumbnail}')`;
+        clone.style.backgroundSize = 'cover';
+        clone.style.backgroundPosition = 'center';
+        clone.style.borderRadius = getComputedStyle(sourceElement).borderRadius || '12px';
+        clone.style.zIndex = 10001; // Above overlay
+        document.body.appendChild(clone);
+        
+        // Get target dimensions for the clone
+        // We temporarily make videoTarget visible to measure it
+        gsap.set(videoTarget, { autoAlpha: 1 });
+        const targetRect = videoTarget.getBoundingClientRect();
+        gsap.set(videoTarget, { autoAlpha: 0 }); // Hide again
+        
+        console.log("Target Rect for Clone:", targetRect);
         
         const tl = gsap.timeline();
         
-        tl.to(leftPane, {
-            top: 0,
-            left: 0,
-            width: '45%',
-            height: '100vh',
-            borderRadius: '0px',
+        // Animate clone to target dimensions
+        tl.to(clone, {
+            top: targetRect.top,
+            left: targetRect.left,
+            width: targetRect.width,
+            height: targetRect.height,
+            borderRadius: '12px',
             duration: 0.8,
             ease: 'power4.inOut',
             onComplete: () => {
-                gsap.set(leftPane, { position: 'relative', width: 'auto' });
+                // Remove clone and show real target
+                clone.remove();
+                gsap.set(videoTarget, { autoAlpha: 1 });
             }
         })
-        .to([rightPane, controls], {
+        // Fade in the rest of the UI staggered
+        .to([leftContent, rightPane, controls], {
             autoAlpha: 1,
-            x: 0,
+            y: 0,
             duration: 0.6,
             stagger: 0.1,
             ease: 'power3.out'
