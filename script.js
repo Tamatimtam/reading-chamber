@@ -202,11 +202,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     
                     queueItem.innerHTML = `
                         <div class="ep-thumb" style="background-image: url('${video.thumbnail}'); background-size: cover; background-position: center;">
-                            <div class="ep-number">NEW</div>
                         </div>
                         <div class="ep-details">
                             <h4>${video.title}</h4>
-                            <span class="ep-time">Watch</span>
+                            <span class="ep-time">Enter Chamber &rarr;</span>
                         </div>
                     `;
                     queueContainer.appendChild(queueItem);

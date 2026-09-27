@@ -404,19 +404,7 @@ body {
     filter: hue-rotate(-45deg);
 }
 
-.ep-badge {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    background-color: var(--color-yellow);
-    color: var(--color-dark);
-    font-family: var(--font-script);
-    padding: 0.2rem 0.8rem;
-    font-size: 1.2rem;
-    border-radius: 4px;
-    transform: rotate(-5deg);
-    z-index: 2;
-}
+
 
 .card-overlay {
     position: absolute;
@@ -468,20 +456,6 @@ body {
     transform: scale(1.1);
 }
 
-.ep-thumb .ep-number {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.7rem;
-    font-weight: 700;
-}
-
 .ep-details h4 {
     font-size: 0.9rem;
     margin-bottom: 0.2rem;
@@ -493,7 +467,17 @@ body {
 
 .ep-time {
     font-size: 0.8rem;
-    color: #888;
+    color: rgba(255,255,255,0.4);
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: color 0.4s var(--ease-out), transform 0.4s var(--ease-out);
+    display: inline-block;
+}
+
+.queue-item:hover .ep-time {
+    color: var(--color-yellow);
+    transform: translateX(4px);
 }
 
 .view-all {
