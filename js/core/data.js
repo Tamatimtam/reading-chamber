@@ -415,13 +415,13 @@ export const episodeData = {
                 "title": "The Republic",
                 "author": "Plato",
                 "coverColor": "#1a1a19",
-                "coverImage": "assets/republic.jpg"
+                "coverImage": "assets/books/republic.jpg"
             },
             {
                 "title": "The Odyssey",
                 "author": "Homer",
                 "coverColor": "#0f5de8",
-                "coverImage": "assets/odyssey.jpg"
+                "coverImage": "assets/books/odyssey.jpg"
             }
         ]
     }

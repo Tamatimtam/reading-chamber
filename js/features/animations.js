@@ -35,10 +35,10 @@ export function initAnimations() {
     // Initial state
     gsap.set('.nav, .nav-immune', { y: -100, opacity: 0 });
     gsap.set(heroTitleSplit.chars, { y: 100, opacity: 0 });
-    gsap.set('.doodle', { opacity: 0, scale: 0.8 });
     gsap.set('.hero-desc', { opacity: 0, x: -20 });
-    gsap.set('.btn-play', { opacity: 0, y: 20 });
-    gsap.set('.shape', { scale: 0.8, opacity: 0 });
+    gsap.set('.hero-bg-yellow', { scale: 0.8, opacity: 0 });
+    gsap.set('.hero-buttons > *', { opacity: 0, y: 20 });
+    gsap.set('.collage-item', { y: 150, opacity: 0 });
 
     tl.to('.nav, .nav-immune', {
         y: 0,
@@ -47,11 +47,10 @@ export function initAnimations() {
         ease: 'power4.out',
         delay: 0.2
     })
-    .to('.shape', {
+    .to('.hero-bg-yellow', {
         scale: 1,
         opacity: 1,
         duration: 1.5,
-        stagger: 0.1,
         ease: 'power3.out'
     }, "-=0.8")
     .to(heroTitleSplit.chars, {
@@ -61,40 +60,41 @@ export function initAnimations() {
         stagger: 0.02,
         ease: 'power4.out'
     }, "-=1.2")
-    .to('.doodle-1, .doodle-2', {
-        opacity: 1,
-        scale: 1,
-        duration: 0.8,
-        stagger: 0.2,
-        ease: 'back.out(1.5)'
-    }, "-=0.5")
     .to('.hero-desc', {
         opacity: 1,
         x: 0,
         duration: 0.8,
         ease: 'power3.out'
     }, "-=0.6")
-    .to('.btn-play', {
+    .to('.collage-item', {
+        y: 0,
+        opacity: 1,
+        duration: 1.2,
+        stagger: 0.2, // Puppet show staggered entry
+        ease: 'power4.out'
+    }, "-=1.0")
+    .to('.hero-buttons > *', {
         opacity: 1,
         y: 0,
         duration: 0.8,
+        stagger: 0.1,
         ease: 'power3.out'
     }, "-=0.6");
 
-    // 4. Parallax Background Shapes
-    gsap.utils.toArray('.shape').forEach(shape => {
-        gsap.to(shape, {
-            yPercent: -30,
-            rotation: "+=10",
-            ease: "none",
-            scrollTrigger: {
-                trigger: shape,
-                start: "top bottom",
-                end: "bottom top",
-                scrub: true
-            }
-        });
-    });
+    // 4. Parallax Collage
+
+    // Puppet show parallax effect
+    const heroScroll = {
+        trigger: '.hero',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: 1
+    };
+
+    gsap.to('.collage-bg', { yPercent: 20, ease: "none", scrollTrigger: heroScroll });
+    gsap.to('.collage-thinker', { yPercent: 25, ease: "none", scrollTrigger: heroScroll });
+    gsap.to('.collage-hosts', { yPercent: 5, ease: "none", scrollTrigger: heroScroll });
+    // table stays static to anchor the bottom edge
 
     // Start loader out animation
     const initPage = () => {
@@ -188,5 +188,45 @@ export function initAnimations() {
             trigger: '.topics-grid',
             start: "top 85%",
         }
+    });
+
+    // 7. Page Transition Logic
+    document.querySelectorAll('a').forEach(anchor => {
+        anchor.addEventListener('click', (e) => {
+            const href = anchor.getAttribute('href');
+            // Check if it's an internal link
+            if (href && href !== '#' && !href.startsWith('http') && anchor.target !== '_blank') {
+                e.preventDefault();
+                const loader = document.getElementById('loader');
+                
+                if (loader) {
+                    loader.style.display = 'flex';
+                    // Reset positions for slide down
+                    gsap.set('#loader', { yPercent: -100 });
+                    gsap.set('.loader-content', { y: -50, opacity: 0 });
+                    
+                    // Slide loader down to cover screen
+                    gsap.to('#loader', {
+                        yPercent: 0,
+                        duration: 0.8,
+                        ease: 'expo.inOut'
+                    });
+                    
+                    // Fade content in, then navigate
+                    gsap.to('.loader-content', {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: 0.4,
+                        ease: 'power3.out',
+                        onComplete: () => {
+                            window.location.href = href;
+                        }
+                    });
+                } else {
+                    window.location.href = href;
+                }
+            }
+        });
     });
 }

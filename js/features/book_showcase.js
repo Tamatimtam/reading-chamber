@@ -81,7 +81,7 @@ export class BookShowcase {
         this.navItems.forEach((item, i) => {
             if (i === this.currentIndex) {
                 item.classList.add('active');
-                item.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                item.scrollIntoView({ block: 'nearest' });
             } else {
                 item.classList.remove('active');
             }

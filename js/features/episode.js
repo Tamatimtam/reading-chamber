@@ -1,4 +1,4 @@
-import { episodeData } from './data.js';
+import { episodeData } from '../core/data.js';
 import { BookShowcase } from './book_showcase.js';
 
 export class EpisodeExperience {
