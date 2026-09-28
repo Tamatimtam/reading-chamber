@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon | The Reading Chamber</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Syne:wght@600;700;800&family=Caveat:wght@600&family=Chewy&family=Bebas+Neue&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="assets/branding/logo.jpg">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/pages/coming-soon.css">
+</head>
+<body>
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <img src="assets/branding/logo.jpg" alt="The Reading Chamber">
+            </div>
+            
+            <div class="book">
+                <div class="spine"></div>
+                <div class="cover-left"></div>
+                <div class="cover-right"></div>
+                <div class="pages">
+                    <div class="page"></div>
+                    <div class="page"></div>
+                    <div class="page"></div>
+                    <div class="page"></div>
+                    <div class="page"></div>
+                    <div class="page"></div>
+                </div>
+            </div>
+            
+            <h1 class="loader-title">THE READING CHAMBER</h1>
+        </div>
+    </div>
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-slot" aria-hidden="true"></div>
+                <span>THE READING CHAMBER</span>
+            </div>
+            
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="coming-soon.html" class="active">Episodes</a>
+                <a href="coming-soon.html">About</a>
+                <a href="coming-soon.html">Community</a>
+                <a href="coming-soon.html">Merch</a>
+            </div>
+            
+            <div class="nav-actions">
+                <div class="socials">
+                    <a href="https://www.youtube.com/@TheReadingChamber-ID" target="_blank" aria-label="YouTube" class="icon-pill">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://open.spotify.com/show/494Hfls80qLeQLIC8zns04" target="_blank" aria-label="Spotify" class="icon-pill">
+                        <i class="fa-brands fa-spotify"></i>
+                    </a>
+                    <a href="https://www.instagram.com/thereadingchamber" target="_blank" aria-label="Instagram" class="icon-pill">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+                <div class="btn btn-primary btn-slot" aria-hidden="true">Support Us &rarr;</div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="nav-immune">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link" aria-label="The Reading Chamber Home">
+                    <img src="assets/branding/logo.jpg" alt="The Reading Chamber Logo" class="logo-icon">
+                </a>
+                <span class="nav-ghost-text" aria-hidden="true">THE READING CHAMBER</span>
+            </div>
+            
+            <div class="nav-links nav-ghost-links" aria-hidden="true">
+                <a href="index.html">Home</a>
+                <a href="coming-soon.html">Episodes</a>
+                <a href="coming-soon.html">About</a>
+                <a href="coming-soon.html">Community</a>
+                <a href="coming-soon.html">Merch</a>
+            </div>
+            
+            <div class="nav-actions">
+                <div class="socials nav-ghost-socials" aria-hidden="true">
+                    <a href="https://www.youtube.com/@TheReadingChamber-ID" target="_blank" class="icon-pill"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://open.spotify.com/show/494Hfls80qLeQLIC8zns04" target="_blank" class="icon-pill"><i class="fa-brands fa-spotify"></i></a>
+                    <a href="https://www.instagram.com/thereadingchamber" target="_blank" class="icon-pill"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <a href="#" class="btn btn-primary">Support Us &rarr;</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="soon-main">
+        <div class="soon-bg">
+            <div class="shape-soon-1"></div>
+            <div class="shape-soon-2"></div>
+        </div>
+        
+        <div class="soon-content">
+            <h1 class="soon-title">
+                <span class="line line-1">STILL</span>
+                <span class="line line-2">READING</span>
+                <span class="line line-3">...</span>
+            </h1>
+            
+            <p class="soon-desc">We're brewing up something special for this section. Grab a cup of coffee and check back later!</p>
+            
+            <a href="index.html" class="btn btn-primary soon-btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Chamber
+            </a>
+        </div>
+        
+        <img src="assets/collage/collage-table-mics.png" alt="Coffee Mugs" class="floating-element floating-mug">
+        <img src="assets/collage/collage-thinker.png" alt="The Thinker" class="floating-element floating-thinker">
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Loader Out
+            gsap.to('.loader-content', {
+                y: -50,
+                opacity: 0,
+                duration: 0.8,
+                ease: 'power3.in',
+                delay: 1.0
+            });
+            gsap.to('#loader', {
+                yPercent: -100,
+                duration: 1.2,
+                ease: 'expo.inOut',
+                delay: 1.3,
+                onComplete: () => {
+                    document.getElementById('loader').style.display = 'none';
+                }
+            });
+
+            // Text split and reveal
+            const titleSplit = new SplitType('.soon-title .line', { types: 'chars' });
+            
+            gsap.from(titleSplit.chars, {
+                y: 100,
+                opacity: 0,
+                rotation: () => gsap.utils.random(-25, 25),
+                duration: 1.2,
+                stagger: 0.05,
+                ease: "back.out(1.7)",
+                delay: 0.2
+            });
+            
+            gsap.from('.soon-desc', {
+                y: 30,
+                opacity: 0,
+                duration: 1,
+                delay: 0.8,
+                ease: "power3.out"
+            });
+            
+            gsap.from('.soon-btn', {
+                scale: 0.5,
+                opacity: 0,
+                duration: 0.8,
+                delay: 1.1,
+                ease: "back.out(2)"
+            });
+            
+            // Floating items
+            gsap.to('.floating-mug', {
+                y: -30,
+                rotation: 3,
+                duration: 3,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut"
+            });
+            
+            gsap.to('.floating-thinker', {
+                y: -20,
+                rotation: -5,
+                duration: 4,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut",
+                delay: 0.5
+            });
+            
+            // BG Shapes entrance
+            gsap.from('.shape-soon-1', {
+                scale: 0,
+                rotation: -90,
+                duration: 2.5,
+                ease: "power4.out"
+            });
+            
+            gsap.from('.shape-soon-2', {
+                scale: 0,
+                rotation: 90,
+                duration: 2.5,
+                delay: 0.3,
+                ease: "power4.out"
+            });
+
+            // Page Transition Logic
+            document.querySelectorAll('a').forEach(anchor => {
+                anchor.addEventListener('click', (e) => {
+                    const href = anchor.getAttribute('href');
+                    if (href && href !== '#' && !href.startsWith('http') && anchor.target !== '_blank') {
+                        e.preventDefault();
+                        const loader = document.getElementById('loader');
+                        
+                        if (loader) {
+                            loader.style.display = 'flex';
+                            gsap.set('#loader', { yPercent: -100 });
+                            gsap.set('.loader-content', { y: -50, opacity: 0 });
+                            
+                            gsap.to('#loader', {
+                                yPercent: 0,
+                                duration: 0.8,
+                                ease: 'expo.inOut'
+                            });
+                            
+                            gsap.to('.loader-content', {
+                                y: 0,
+                                opacity: 1,
+                                duration: 0.5,
+                                delay: 0.4,
+                                ease: 'power3.out',
+                                onComplete: () => {
+                                    window.location.href = href;
+                                }
+                            });
+                        } else {
+                            window.location.href = href;
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

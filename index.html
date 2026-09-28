@@ -9,12 +9,13 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Syne:wght@600;700;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Syne:wght@600;700;800&family=Caveat:wght@600&family=Chewy&family=Bebas+Neue&display=swap" rel="stylesheet">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+    <link rel="icon" type="image/jpeg" href="assets/branding/logo.jpg">
     
     <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="episode.css">
     
@@ -25,7 +26,7 @@
     <div id="loader">
         <div class="loader-content">
             <div class="loader-logo">
-                <img src="assets/logo.jpg" alt="The Reading Chamber">
+                <img src="assets/branding/logo.jpg" alt="The Reading Chamber">
             </div>
             
             <div class="book">
@@ -55,17 +56,23 @@
             
             <div class="nav-links">
                 <a href="#" class="active">Home</a>
-                <a href="#">Episodes</a>
-                <a href="#">About</a>
-                <a href="#">Community</a>
-                <a href="#">Merch</a>
+                <a href="coming-soon.html">Episodes</a>
+                <a href="coming-soon.html">About</a>
+                <a href="coming-soon.html">Community</a>
+                <a href="coming-soon.html">Merch</a>
             </div>
             
             <div class="nav-actions">
                 <div class="socials">
-                    <a href="#" aria-label="YouTube" class="icon-pill">YT</a>
-                    <a href="#" aria-label="Spotify" class="icon-pill">SP</a>
-                    <a href="#" aria-label="Instagram" class="icon-pill">IG</a>
+                    <a href="https://www.youtube.com/@TheReadingChamber-ID" target="_blank" aria-label="YouTube" class="icon-pill">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://open.spotify.com/show/494Hfls80qLeQLIC8zns04" target="_blank" aria-label="Spotify" class="icon-pill">
+                        <i class="fa-brands fa-spotify"></i>
+                    </a>
+                    <a href="https://www.instagram.com/thereadingchamber" target="_blank" aria-label="Instagram" class="icon-pill">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
                 </div>
                 <div class="btn btn-primary btn-slot" aria-hidden="true">Support Us &rarr;</div>
             </div>
@@ -76,24 +83,24 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="#" class="logo-link" aria-label="The Reading Chamber Home">
-                    <img src="assets/logo.jpg" alt="The Reading Chamber Logo" class="logo-icon">
+                    <img src="assets/branding/logo.jpg" alt="The Reading Chamber Logo" class="logo-icon">
                 </a>
                 <span class="nav-ghost-text" aria-hidden="true">THE READING CHAMBER</span>
             </div>
             
             <div class="nav-links nav-ghost-links" aria-hidden="true">
-                <span>Home</span>
-                <span>Episodes</span>
-                <span>About</span>
-                <span>Community</span>
-                <span>Merch</span>
+                <a href="#">Home</a>
+                <a href="coming-soon.html">Episodes</a>
+                <a href="coming-soon.html">About</a>
+                <a href="coming-soon.html">Community</a>
+                <a href="coming-soon.html">Merch</a>
             </div>
             
             <div class="nav-actions">
                 <div class="socials nav-ghost-socials" aria-hidden="true">
-                    <span class="icon-pill">YT</span>
-                    <span class="icon-pill">SP</span>
-                    <span class="icon-pill">IG</span>
+                    <a href="https://www.youtube.com/@TheReadingChamber-ID" target="_blank" class="icon-pill"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://open.spotify.com/show/494Hfls80qLeQLIC8zns04" target="_blank" class="icon-pill"><i class="fa-brands fa-spotify"></i></a>
+                    <a href="https://www.instagram.com/thereadingchamber" target="_blank" class="icon-pill"><i class="fa-brands fa-instagram"></i></a>
                 </div>
                 <a href="#" class="btn btn-primary">Support Us &rarr;</a>
             </div>
@@ -103,41 +110,37 @@
     <main>
         <section class="hero" id="home">
             <div class="hero-bg-elements">
-                <!-- Abstract torn paper / geometric shapes -->
-                <div class="shape shape-blue shape-1"></div>
-                <div class="shape shape-yellow shape-2"></div>
-                <div class="shape shape-blue shape-3"></div>
+                <div class="hero-bg-yellow"></div>
             </div>
             
             <div class="hero-content">
                 <div class="hero-title-wrapper">
                     <h1 class="hero-title">
-                        <span class="line line-1">Big</span>
-                        <span class="line line-2">Books</span>
-                        <span class="line line-3">Bigger</span>
-                        <span class="line line-4">Conversations</span>
+                        <span class="line line-1">THE READING</span>
+                        <span class="line line-2">CHAMBER</span>
                     </h1>
-                    
-                    <div class="hero-doodles">
-                        <div class="doodle doodle-1">Ideas<br>Books<br>People<br>A Brighter You &darr;</div>
-                        <div class="doodle doodle-2">Buku Bukan Cuma<br>Bacaan,<br>Tapi Obrolan &swarr;</div>
-                    </div>
                 </div>
                 
                 <div class="hero-info">
-                    <p class="hero-desc">A sanctuary for those seeking knowledge through the joy of reading and learning.</p>
-                    <a href="#" class="btn btn-primary btn-play">
-                        <span class="play-icon">▶</span>
-                        Watch Latest Episode &rarr;
-                    </a>
+                    <p class="hero-desc">A sanctuary for those seeking knowledge through the joy of reading and learning, curated by Pramudya A. Oktavinanda and Prasetya Dwicahya in loving memory of our mother, Erna Dwina.</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-primary btn-play">
+                            <span class="play-icon">▶</span>
+                            LATEST EPISODE &rarr;
+                        </a>
+                        <a href="#" class="btn btn-secondary btn-about">
+                            ABOUT US &rarr;
+                        </a>
+                    </div>
                 </div>
             </div>
             
             <!-- Asset collage container -->
             <div class="hero-collage">
-                <div class="collage-item collage-statue-1"></div>
-                <div class="collage-item collage-statue-2"></div>
-                <div class="collage-item collage-hosts"></div>
+                <div class="collage-item collage-bg" style="background-image: url('assets/collage/collage-athens.png')"></div>
+                <div class="collage-item collage-thinker" style="background-image: url('assets/collage/collage-thinker.png')"></div>
+                <div class="collage-item collage-hosts" style="background-image: url('assets/collage/collage-hosts.png')"></div>
+                <div class="collage-item collage-table" style="background-image: url('assets/collage/collage-table-mics.png')"></div>
             </div>
         </section>
 
@@ -222,6 +225,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
-    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/core/main.js"></script>
 </body>
 </html>

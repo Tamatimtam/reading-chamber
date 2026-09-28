@@ -1,6 +1,6 @@
-@import url('css/base.css');
-@import url('css/nav.css');
-@import url('css/hero.css');
-@import url('css/latest_episode.css');
-@import url('css/about.css');
-@import url('css/loader.css');
+@import url('css/core/base.css');
+@import url('css/layout/nav.css');
+@import url('css/sections/hero.css');
+@import url('css/sections/latest_episode.css');
+@import url('css/sections/about.css');
+@import url('css/layout/loader.css');
