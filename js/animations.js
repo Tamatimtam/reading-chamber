@@ -33,14 +33,14 @@ export function initAnimations() {
     const tl = gsap.timeline({ paused: true });
 
     // Initial state
-    gsap.set('.nav', { y: -100, opacity: 0 });
+    gsap.set('.nav, .nav-immune', { y: -100, opacity: 0 });
     gsap.set(heroTitleSplit.chars, { y: 100, opacity: 0 });
     gsap.set('.doodle', { opacity: 0, scale: 0.8 });
     gsap.set('.hero-desc', { opacity: 0, x: -20 });
     gsap.set('.btn-play', { opacity: 0, y: 20 });
     gsap.set('.shape', { scale: 0.8, opacity: 0 });
 
-    tl.to('.nav', {
+    tl.to('.nav, .nav-immune', {
         y: 0,
         opacity: 1,
         duration: 1,
