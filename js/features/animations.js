@@ -91,9 +91,20 @@ export function initAnimations() {
         scrub: 1
     };
 
-    gsap.to('.collage-bg', { yPercent: 20, ease: "none", scrollTrigger: heroScroll });
-    gsap.to('.collage-thinker', { yPercent: 25, ease: "none", scrollTrigger: heroScroll });
-    gsap.to('.collage-hosts', { yPercent: 5, ease: "none", scrollTrigger: heroScroll });
+    let mm = gsap.matchMedia();
+    
+    mm.add("(min-width: 1024px)", () => {
+        gsap.to('.collage-bg', { yPercent: 20, ease: "none", scrollTrigger: heroScroll });
+        gsap.to('.collage-thinker', { yPercent: 25, ease: "none", scrollTrigger: heroScroll });
+        gsap.to('.collage-hosts', { yPercent: 5, ease: "none", scrollTrigger: heroScroll });
+    });
+
+    mm.add("(max-width: 1023px)", () => {
+        // Reduced parallax for mobile so elements don't fly off screen
+        gsap.to('.collage-bg', { yPercent: 5, ease: "none", scrollTrigger: heroScroll });
+        gsap.to('.collage-thinker', { yPercent: 10, ease: "none", scrollTrigger: heroScroll });
+        gsap.to('.collage-hosts', { yPercent: 2, ease: "none", scrollTrigger: heroScroll });
+    });
     // table stays static to anchor the bottom edge
 
     // Start loader out animation

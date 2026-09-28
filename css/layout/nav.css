@@ -192,3 +192,56 @@
 .btn-primary:hover {
     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5);
 }
+
+@media (max-width: 1023px) {
+    .nav, .nav-immune {
+        padding: 1rem 1.25rem;
+    }
+    .nav-logo {
+        font-size: 1.5rem;
+    }
+    .logo-icon, .logo-slot {
+        width: 30px;
+        height: 30px;
+    }
+    .btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+    .socials {
+        display: none;
+    }
+    
+    /* Mobile Bottom Nav Bar */
+    .nav-links {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(18, 18, 17, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 1rem;
+        justify-content: space-around;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        z-index: 1000;
+        pointer-events: auto;
+    }
+    
+    .nav-ghost-links {
+        display: none !important;
+    }
+    
+    .nav-links a {
+        color: #ffffff;
+        text-decoration: none;
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 1.1rem;
+        letter-spacing: 0.05em;
+        transition: color 0.3s;
+    }
+    
+    .nav-links a:hover, .nav-links a.active {
+        color: var(--color-yellow);
+    }
+}

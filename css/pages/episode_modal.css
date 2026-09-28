@@ -360,22 +360,83 @@
 }
 
 /* Responsive Modal Layout */
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
     .episode-overlay {
         flex-direction: column;
         overflow-y: auto;
     }
+    
+    .ep-controls {
+        top: 1rem;
+        right: 1rem;
+        position: fixed; /* Keep it accessible while scrolling */
+        background: rgba(0,0,0,0.4);
+        padding: 0.25rem;
+        border-radius: 50px;
+        backdrop-filter: blur(10px);
+    }
+
+    .ep-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
     .ep-left {
         flex: none;
         width: 100%;
         height: auto;
-        padding: 2rem;
+        padding: 5rem 1.5rem 2rem; /* space for fixed controls */
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
     }
+    
+    .ep-left-content h1 {
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
+    }
+    
+    .ep-video-container {
+        margin-bottom: 1.5rem;
+    }
+    
     .ep-right {
-        padding: 2rem;
+        padding: 2rem 1.5rem;
+        overflow: visible; /* Let overlay handle scroll */
     }
+    
+    .ep-tab-content {
+        overflow: visible;
+    }
+    
+    .ep-tabs {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .ep-tab {
+        font-size: 1rem;
+        padding-bottom: 0.5rem;
+    }
+    
     .overview-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+    
+    .overview-text p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .guest-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+    
+    .overview-meta-blocks {
+        flex-direction: column;
+        gap: 1.5rem;
     }
 }

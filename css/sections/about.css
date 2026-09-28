@@ -134,3 +134,59 @@
     position: relative;
     z-index: 20;
 }
+
+@media (max-width: 1023px) {
+    .about-section {
+        padding: 5rem 1.5rem;
+    }
+    
+    .about-container {
+        gap: 3rem;
+    }
+    
+    .about-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .about-title {
+        align-items: center;
+    }
+    
+    .doodle-3 {
+        transform: rotate(-2deg);
+        margin-bottom: 1.5rem;
+    }
+    
+    .about-note {
+        margin-top: 2rem;
+        transform: rotate(1deg);
+        padding: 1.5rem;
+        width: 100%;
+        max-width: 320px;
+    }
+    
+    .about-right {
+        text-align: center;
+    }
+    
+    .about-right p {
+        margin: 0 auto 2.5rem;
+    }
+    
+    .topics-grid {
+        justify-content: center;
+        gap: 0.75rem;
+    }
+    
+    .topic-pill {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .about-bg-elements .shape {
+        opacity: 0.3;
+    }
+}
