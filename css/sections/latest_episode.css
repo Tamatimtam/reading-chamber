@@ -87,20 +87,20 @@
 }
 
 .bg-card-1 {
-    background-image: url('../assets/media_1790494042540.png');
+    background-image: url('../../assets/references/media_1790494042540.png');
     background-size: cover;
     background-position: center;
 }
 
 .bg-card-2 {
-    background-image: url('../assets/media_1790494042540.png');
+    background-image: url('../../assets/references/media_1790494042540.png');
     background-size: cover;
     background-position: center;
     filter: hue-rotate(45deg);
 }
 
 .bg-card-3 {
-    background-image: url('../assets/media_1790494042540.png');
+    background-image: url('../../assets/references/media_1790494042540.png');
     background-size: cover;
     background-position: center;
     filter: hue-rotate(-45deg);

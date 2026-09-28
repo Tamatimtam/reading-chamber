@@ -5,6 +5,14 @@
     overflow: hidden;
 }
 
+.shape {
+    position: absolute;
+    background-blend-mode: multiply;
+}
+
+.shape-blue { background-color: var(--color-blue); }
+.shape-yellow { background-color: var(--color-yellow); }
+
 .about-bg-elements .shape-4 {
     bottom: -10%;
     left: -5%;
@@ -41,6 +49,14 @@
 
 .about-left {
     position: relative;
+}
+
+.doodle {
+    font-family: var(--font-script);
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    line-height: 1.2;
+    color: var(--color-text);
+    position: absolute;
 }
 
 .doodle-3 {
