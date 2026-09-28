@@ -1,0 +1,386 @@
+/* ==========================================================================
+   Books Tab - 2-Column Split Stage & 3D Watertight Book Box
+   ========================================================================== */
+
+/* Books Stage Layout */
+.books-stage {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 3.5rem;
+    align-items: center;
+    padding-top: 1rem;
+    min-height: 480px;
+}
+
+/* Left Panel: Interactive Books Index */
+.books-list-panel {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 16px;
+    padding: 1.4rem;
+    backdrop-filter: blur(16px);
+}
+
+.books-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.9rem;
+    margin-bottom: 0.8rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.books-panel-title {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+}
+
+.books-panel-count {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-yellow);
+    letter-spacing: 0.05em;
+}
+
+.books-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+    max-height: 400px;
+}
+
+.books-nav-list::-webkit-scrollbar {
+    width: 4px;
+}
+.books-nav-list::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 4px;
+}
+.books-nav-list::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+}
+
+/* Individual Book Nav Item */
+.book-nav-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+    padding: 0.75rem 0.9rem;
+    border-radius: 10px;
+    background: transparent;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    text-align: left;
+    user-select: none;
+}
+
+.book-nav-item:hover {
+    background: rgba(255, 255, 255, 0.04);
+    transform: translateX(4px);
+}
+
+.book-nav-num {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.3);
+    margin-top: 2px;
+    transition: color 0.3s var(--ease-out);
+}
+
+.book-nav-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.book-nav-title {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    line-height: 1.35;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+    transition: color 0.3s var(--ease-out);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.book-nav-author {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.4);
+    margin-top: 0.25rem;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Active Book Nav Item (Expanded State) */
+.book-nav-item.active {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(214, 179, 69, 0.35);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transform: translateX(6px);
+}
+
+.book-nav-item.active .book-nav-num {
+    color: var(--color-yellow);
+}
+
+.book-nav-item.active .book-nav-title {
+    color: #fff;
+    font-weight: 600;
+    white-space: normal;
+}
+
+.book-nav-item.active .book-nav-author {
+    max-height: 40px;
+    opacity: 1;
+    color: var(--color-yellow);
+}
+
+.book-nav-glow {
+    position: absolute;
+    left: 0;
+    top: 20%;
+    height: 60%;
+    width: 3px;
+    background: var(--book-color, var(--color-yellow));
+    border-radius: 2px;
+    opacity: 0;
+    transform: scaleY(0);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.book-nav-item.active .book-nav-glow {
+    opacity: 1;
+    transform: scaleY(1);
+    box-shadow: 0 0 12px var(--book-color, var(--color-yellow));
+}
+
+/* Right Panel: 3D Stage & Controls */
+.books-hero-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.book-showcase {
+    perspective: 1600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 440px;
+    width: 100%;
+    position: relative;
+}
+
+.book-card-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.book-ambient-glow {
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+    filter: blur(50px);
+    opacity: 0.35;
+    transition: background 0.8s ease;
+}
+
+/* ==========================================================================
+   Watertight 3D Book Geometry (Zero Gaps)
+   Dimensions: Width 250px, Height 375px, Thickness 36px (Z-plane: -18px to +18px)
+   ========================================================================== */
+.book-showcase .book-cover-3d {
+    width: 250px;
+    height: 375px;
+    position: relative;
+    transform-style: preserve-3d;
+    z-index: 2;
+}
+
+.book-showcase .book-cover-inner {
+    width: 250px;
+    height: 375px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    box-shadow: 0 35px 70px rgba(0, 0, 0, 0.65);
+    border-radius: 2px 6px 6px 2px;
+}
+
+/* Front Cover: Z = +18px */
+.book-front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 375px;
+    transform: translateZ(18px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2.5rem 1.8rem;
+    backface-visibility: hidden;
+    border-radius: 2px 6px 6px 2px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+/* Back Cover: Z = -18px */
+.book-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 375px;
+    transform: rotateY(180deg) translateZ(18px);
+    border-radius: 6px 2px 2px 6px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+/* 3D Spine: Left Edge X=0, spanning Z from -18px to +18px (Zero Gap Flush) */
+.book-spine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 375px;
+    transform-origin: 0 0;
+    transform: rotateY(-90deg) translateX(-18px);
+    border-radius: 3px 0 0 3px;
+}
+
+/* 3D Paper Pages Block: Right Edge X=247px, recessed 3px inside covers */
+.book-pages {
+    position: absolute;
+    top: 5px;
+    left: 247px;
+    width: 34px;
+    height: 365px;
+    transform-origin: 0 0;
+    transform: rotateY(90deg) translateX(-17px);
+    background: repeating-linear-gradient(to right, #f6f1e5 0px, #e7dfce 2px, #d6cbb5 3px);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.35);
+    border-radius: 1px;
+}
+
+/* 3D Top Pages Cap */
+.book-pages-top {
+    position: absolute;
+    top: 0;
+    left: 2px;
+    width: 246px;
+    height: 34px;
+    transform-origin: 0 0;
+    transform: rotateX(90deg) translateY(-17px);
+    background: repeating-linear-gradient(to bottom, #f6f1e5 0px, #e7dfce 2px, #d6cbb5 3px);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* 3D Bottom Pages Cap */
+.book-pages-bottom {
+    position: absolute;
+    top: 375px;
+    left: 2px;
+    width: 246px;
+    height: 34px;
+    transform-origin: 0 0;
+    transform: rotateX(-90deg) translateY(-17px);
+    background: repeating-linear-gradient(to top, #f6f1e5 0px, #e7dfce 2px, #d6cbb5 3px);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.book-front-title {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    line-height: 1.25;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.book-front-author {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.85);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+/* Controls underneath 3D Book */
+.book-stage-controls {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    z-index: 10;
+}
+
+.book-ctrl-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s var(--ease-out);
+}
+
+.book-ctrl-btn:hover {
+    background: var(--color-yellow);
+    color: var(--color-dark);
+    transform: scale(1.08);
+    border-color: var(--color-yellow);
+}
+
+.book-counter {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.6);
+    min-width: 70px;
+    text-align: center;
+}
+
+/* Responsive adjustment for Books Stage */
+@media (max-width: 1024px) {
+    .books-stage {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .books-list-panel {
+        max-height: 260px;
+    }
+}

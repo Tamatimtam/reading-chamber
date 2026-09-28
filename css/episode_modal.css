@@ -1,0 +1,381 @@
+/* ==========================================================================
+   Episode Experience Modal - Core Layout & Navigation
+   ========================================================================== */
+
+/* Split Screen Overlay */
+.episode-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-dark);
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    color: #fff;
+    overflow: hidden;
+}
+
+.episode-overlay.active {
+    visibility: visible;
+}
+
+/* Controls (Close, Next, Prev) */
+.ep-controls {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    display: flex;
+    gap: 1rem;
+    z-index: 1010;
+}
+
+.ep-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background 0.3s, transform 0.3s var(--ease-out);
+    backdrop-filter: blur(10px);
+}
+
+.ep-btn:hover:not(:disabled) {
+    background: var(--color-yellow);
+    color: var(--color-dark);
+    transform: scale(1.05);
+}
+.ep-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* Left Pane: Media & Title */
+.ep-left {
+    flex: 0 0 35%;
+    height: 100%;
+    position: relative;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #121211;
+    border-right: 1px solid rgba(255,255,255,0.05);
+}
+
+.ep-video-container {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    position: relative;
+    z-index: 10;
+}
+
+.ep-left-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.ep-left-content h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 3.5vw, 3.5rem);
+    line-height: 1.1;
+    margin-bottom: 2rem;
+}
+
+.ep-meta {
+    font-family: var(--font-body);
+    font-weight: 600;
+    color: var(--color-yellow);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.ep-play-audio {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--color-yellow);
+    color: var(--color-dark);
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.3s, background 0.3s;
+    align-self: flex-start;
+}
+.ep-play-audio:hover {
+    transform: translateY(-2px);
+    background: #fff;
+}
+.ep-play-audio .play-icon {
+    font-size: 0.8rem;
+}
+
+/* Right Pane */
+.ep-right {
+    flex: 1;
+    height: 100%;
+    padding: 6rem 4rem 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-dark);
+}
+
+.ep-tabs {
+    display: flex;
+    gap: 2.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 3rem;
+}
+
+.ep-tab {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.4);
+    background: none;
+    border: none;
+    padding-bottom: 1rem;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.4s var(--ease-out), transform 0.4s var(--ease-out);
+}
+
+.ep-tab:hover {
+    color: rgba(255,255,255,0.8);
+    transform: translateY(-2px);
+}
+
+.ep-tab.active {
+    color: var(--color-yellow);
+    transform: translateY(0);
+}
+
+.ep-tab::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--color-yellow);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s var(--ease-out);
+}
+.ep-tab.active::after {
+    transform: scaleX(1);
+}
+
+.ep-tab-content {
+    flex: 1;
+    position: relative;
+    overflow-y: auto;
+    padding-right: 1rem;
+}
+
+.ep-tab-content::-webkit-scrollbar {
+    width: 6px;
+}
+.ep-tab-content::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.05);
+    border-radius: 4px;
+}
+.ep-tab-content::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.2);
+    border-radius: 4px;
+}
+
+/* Tab Panes */
+.tab-pane {
+    display: none;
+    animation: epFadeIn 0.8s var(--ease-out) forwards;
+}
+.tab-pane.active {
+    display: block;
+}
+
+@keyframes epFadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Overview Tab */
+.overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 4rem;
+    padding-top: 1rem;
+}
+
+.overview-heading {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.overview-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 3rem;
+    white-space: pre-line;
+}
+
+.overview-meta-blocks {
+    display: flex;
+    gap: 3rem;
+}
+
+.meta-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.meta-label {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.meta-value {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/* Action Buttons */
+.overview-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 1.5rem;
+    border-radius: 50px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #fff;
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    transition: all 0.4s var(--ease-out);
+    position: relative;
+    overflow: hidden;
+}
+
+.action-btn::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: var(--color-yellow);
+    transform: translateX(-100%);
+    transition: transform 0.4s var(--ease-out);
+    z-index: 0;
+}
+
+.action-btn:hover::before {
+    transform: translateX(0);
+}
+
+.action-btn:hover {
+    color: var(--color-dark);
+    border-color: var(--color-yellow);
+    transform: scale(1.02);
+}
+
+.btn-text, .btn-arrow {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-arrow {
+    transition: transform 0.4s var(--ease-out);
+}
+
+.action-btn:hover .btn-arrow {
+    transform: translateX(5px);
+}
+
+/* Guest Tab */
+.guest-card {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    background: rgba(255,255,255,0.03);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: transform 0.5s var(--ease-out), background 0.5s var(--ease-out), border-color 0.5s var(--ease-out);
+    cursor: pointer;
+}
+.guest-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.06);
+    border-color: rgba(255,255,255,0.15);
+}
+.guest-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--color-blue);
+    transition: transform 0.6s var(--ease-out);
+}
+.guest-card:hover .guest-avatar {
+    transform: scale(1.05) rotate(5deg);
+}
+.guest-info h3 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+.guest-info p {
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 1rem;
+}
+
+/* Responsive Modal Layout */
+@media (max-width: 1024px) {
+    .episode-overlay {
+        flex-direction: column;
+        overflow-y: auto;
+    }
+    .ep-left {
+        flex: none;
+        width: 100%;
+        height: auto;
+        padding: 2rem;
+    }
+    .ep-right {
+        padding: 2rem;
+    }
+    .overview-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}

@@ -1,4 +1,5 @@
 import { episodeData } from './data.js';
+import { BookShowcase } from './book_showcase.js';
 
 export class EpisodeExperience {
     constructor() {
@@ -7,11 +8,10 @@ export class EpisodeExperience {
         this.videos = [];
         this.currentIndex = 0;
         this.isNavigating = false;
+        this.bookShowcase = new BookShowcase(this.overlay);
         
         this.handleKeyDown = this.handleKeyDown.bind(this);
         window.addEventListener('keydown', this.handleKeyDown);
-        
-        
     }
     
     handleKeyDown(e) {
@@ -35,6 +35,10 @@ export class EpisodeExperience {
         const hasPrev = this.currentIndex > 0;
         const hasNext = this.currentIndex < this.videos.length - 1;
 
+        const releaseDate = videoData.pubDate && !isNaN(new Date(videoData.pubDate).getTime())
+            ? new Date(videoData.pubDate).toLocaleDateString('en-US', {month: 'long', day: 'numeric', year: 'numeric'})
+            : (videoData.timeAgo || videoData.pubDate || 'Recently Released');
+
         let html = `
             <div class="ep-controls">
                 <button class="ep-btn" id="ep-prev" ${!hasPrev ? 'disabled' : ''}>&larr;</button>
@@ -56,7 +60,7 @@ export class EpisodeExperience {
             <div class="ep-right" id="ep-right-panel">
                 <div class="ep-tabs">
                     <button class="ep-tab active" data-target="tab-overview">Overview</button>
-                    <button class="ep-tab" data-target="tab-books">The Books</button>
+                    ${customData.books && customData.books.length > 0 ? `<button class="ep-tab" data-target="tab-books">The Books</button>` : ''}
                     ${customData.guest ? `<button class="ep-tab" data-target="tab-guest">Guest</button>` : ''}
                 </div>
                 
@@ -71,7 +75,7 @@ export class EpisodeExperience {
                                 <div class="overview-meta-blocks">
                                     <div class="meta-block">
                                         <span class="meta-label">Released</span>
-                                        <span class="meta-value">${new Date(videoData.pubDate).toLocaleDateString('en-US', {month: 'long', day: 'numeric', year: 'numeric'})}</span>
+                                        <span class="meta-value">${releaseDate}</span>
                                     </div>
                                     <div class="meta-block">
                                         <span class="meta-label">Host</span>
@@ -97,15 +101,44 @@ export class EpisodeExperience {
                         </div>
                     </div>
                     
+                    ${customData.books && customData.books.length > 0 ? `
                     <!-- Books Tab -->
                     <div class="tab-pane" id="tab-books">
-                        <div class="book-titles-bar">
-                            ${customData.books.map((b, i) => `<span class="book-indicator ${i === 0 ? 'active' : ''}">${b.title}</span>`).join('')}
-                        </div>
-                        <div class="book-showcase">
-                            <!-- Book will be injected and animated via JS -->
+                        <div class="books-stage">
+                            <!-- Left: Interactive Book Selector -->
+                            <div class="books-list-panel">
+                                <div class="books-panel-header">
+                                    <span class="books-panel-title">BOOKS DISCUSSED</span>
+                                    <span class="books-panel-count">${customData.books.length} TITLES</span>
+                                </div>
+                                <div class="books-nav-list" id="books-nav-list">
+                                    ${customData.books.map((b, i) => `
+                                        <div class="book-nav-item ${i === 0 ? 'active' : ''}" data-index="${i}">
+                                            <span class="book-nav-num">${String(i + 1).padStart(2, '0')}</span>
+                                            <div class="book-nav-info">
+                                                <h4 class="book-nav-title">${b.title}</h4>
+                                                ${b.author ? `<p class="book-nav-author">${b.author}</p>` : ''}
+                                            </div>
+                                            <div class="book-nav-glow" style="--book-color: ${b.coverColor || '#d6b345'}"></div>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>
+                            
+                            <!-- Right: 3D Book Showcase -->
+                            <div class="books-hero-panel">
+                                <div class="book-showcase" id="book-showcase-target">
+                                    <!-- 3D Book injected & animated via JS -->
+                                </div>
+                                <div class="book-stage-controls">
+                                    <button class="book-ctrl-btn" id="book-ctrl-prev" title="Previous Book">&larr;</button>
+                                    <div class="book-counter" id="book-counter">01 / ${String(customData.books.length).padStart(2, '0')}</div>
+                                    <button class="book-ctrl-btn" id="book-ctrl-next" title="Next Book">&rarr;</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    ` : ''}
         `;
 
         if (customData.guest) {
@@ -151,81 +184,23 @@ export class EpisodeExperience {
                 panes.forEach(p => p.classList.remove('active'));
                 
                 tab.classList.add('active');
-                document.getElementById(tab.dataset.target).classList.add('active');
+                const target = document.getElementById(tab.dataset.target);
+                if (target) target.classList.add('active');
+                
+                if (tab.dataset.target === 'tab-books') {
+                    this.bookShowcase.showBook(this.bookShowcase.currentIndex || 0);
+                } else {
+                    this.bookShowcase.kill();
+                }
             };
         });
         
-        // Start Book Slideshow
-        this.startBookSlideshow(customData.books);
-    }
-    
-    startBookSlideshow(books) {
-        if (this.bookTimeline) this.bookTimeline.kill();
-        
-        const showcase = this.overlay.querySelector('.book-showcase');
-        const indicators = this.overlay.querySelectorAll('.book-indicator');
-        if (!showcase || !books || books.length === 0) return;
-        
-        let currentIndex = 0;
-        
-        const showBook = (index) => {
-            const book = books[index];
-            
-            // Update indicators
-            indicators.forEach((ind, i) => {
-                if (i === index) ind.classList.add('active');
-                else ind.classList.remove('active');
-            });
-            
-            // Inject Book HTML
-            const coverStyle = book.coverImage 
-                ? `background-image: url('${book.coverImage}'); background-size: cover; background-position: center; border: 1px solid rgba(255,255,255,0.1);` 
-                : `background-color: ${book.coverColor};`;
-                
-            const titleAuthorHTML = book.coverImage 
-                ? '' // Hide text if we have a real cover image
-                : `<div class="book-front-title">${book.title}</div>
-                   <div class="book-front-author">${book.author}</div>`;
-
-            showcase.innerHTML = `
-                <div class="book-card-hero">
-                    <div class="book-cover-3d">
-                        <div class="book-cover-inner">
-                            <div class="book-front" style="${coverStyle}">
-                                ${titleAuthorHTML}
-                            </div>
-                            <div class="book-back"></div>
-                            <div class="book-spine" style="background-color: #000;"></div>
-                        </div>
-                    </div>
-                </div>
-            `;
-            
-            const bookInner = showcase.querySelector('.book-cover-inner');
-            const heroCard = showcase.querySelector('.book-card-hero');
-            
-            // GSAP Animation: Slide in, rotate slowly showing depth without showing the back, slide out
-            this.bookTimeline = gsap.timeline({
-                onComplete: () => {
-                    // Only continue if the overlay is still open and we are still viewing books tab
-                    const currentTab = this.overlay.querySelector('.ep-tab.active');
-                    if (this.isOpen && currentTab && currentTab.dataset.target === 'tab-books') {
-                        currentIndex = (currentIndex + 1) % books.length;
-                        showBook(currentIndex);
-                    }
-                }
-            });
-            
-            this.bookTimeline
-                .fromTo(heroCard, { opacity: 0, scale: 0.8, y: 50 }, { opacity: 1, scale: 1, y: 0, duration: 1.2, ease: 'power4.out' }, 0)
-                .fromTo(bookInner, { rotateY: -35 }, { rotateY: 35, duration: 4.5, ease: 'none' }, 0) // Slow rotation
-                .to(heroCard, { opacity: 0, scale: 0.9, y: -40, duration: 1.0, ease: 'power3.inOut' }, 3.5); // Crossfade out early
-        };
-        
-        // Wait a tiny bit for DOM to settle before animating
-        setTimeout(() => {
-            if (this.isOpen) showBook(currentIndex);
-        }, 100);
+        // Initialize Book Showcase module
+        if (customData.books && customData.books.length > 0) {
+            this.bookShowcase.init(customData.books);
+        } else {
+            this.bookShowcase.kill();
+        }
     }
 
     navigate(dir) {
@@ -368,6 +343,7 @@ export class EpisodeExperience {
     close() {
         if (!this.isOpen) return;
         this.isOpen = false;
+        this.bookShowcase.kill();
         
         gsap.to(this.overlay, {
             autoAlpha: 0,
