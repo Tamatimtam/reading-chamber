@@ -117,10 +117,9 @@ function renderEpisodes(videos) {
     });
 
     const viewAll = document.createElement('a');
-    viewAll.href = 'https://www.youtube.com/@TheReadingChamber-ID/videos';
-    viewAll.target = '_blank';
+    viewAll.href = 'episodes.html';
     viewAll.className = 'view-all';
-    viewAll.innerHTML = 'VIEW ALL EPISODES &darr;';
+    viewAll.innerHTML = 'VIEW ALL EPISODES &rarr;';
     queueContainer.appendChild(viewAll);
 
     // Animate queue items now that they exist

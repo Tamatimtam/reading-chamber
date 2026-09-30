@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Episodes Archive | The Reading Chamber</title>
+    <meta name="description" content="Arsip lengkap episode The Reading Chamber bersama Pram & Pras. Menjelajahi ratusan buku filsafat, sejarah, hukum, politik, dan pemikiran modern.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Syne:wght@600;700;800&family=Caveat:wght@600&family=Chewy&family=Bebas+Neue&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="assets/branding/logo.jpg">
+    
+    <!-- CSS Dependencies -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/pages/episode_modal.css">
+    <link rel="stylesheet" href="css/pages/episode_books.css">
+    <link rel="stylesheet" href="css/pages/episodes.css">
+    
+    <!-- Lenis Smooth Scroll CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.9/dist/lenis.css">
+</head>
+<body>
+    <!-- Animated Book Loader -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <img src="assets/branding/logo.jpg" alt="The Reading Chamber">
+            </div>
+            
+            <div class="book">
+                <div class="spine"></div>
+                <div class="cover-left"></div>
+                <div class="cover-right"></div>
+                <div class="pages">
+                    <div class="page"></div>
+                    <div class="page"></div>
+                    <div class="page"></div>
+                    <div class="page"></div>
+                    <div class="page"></div>
+                    <div class="page"></div>
+                </div>
+            </div>
+            
+            <h1 class="loader-title">THE READING CHAMBER</h1>
+        </div>
+    </div>
+    
+    <!-- Fixed Navigation Bar -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-slot" aria-hidden="true"></div>
+                <span>THE READING CHAMBER</span>
+            </div>
+            
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="episodes.html" class="active">Episodes</a>
+                <a href="coming-soon.html">About</a>
+                <a href="coming-soon.html">Community</a>
+                <a href="coming-soon.html">Merch</a>
+            </div>
+            
+            <div class="nav-actions">
+                <div class="socials">
+                    <a href="https://www.youtube.com/@TheReadingChamber-ID" target="_blank" aria-label="YouTube" class="icon-pill">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://open.spotify.com/show/494Hfls80qLeQLIC8zns04" target="_blank" aria-label="Spotify" class="icon-pill">
+                        <i class="fa-brands fa-spotify"></i>
+                    </a>
+                    <a href="https://www.instagram.com/thereadingchamber" target="_blank" aria-label="Instagram" class="icon-pill">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+                <div class="btn btn-primary btn-slot" aria-hidden="true">Support Us &rarr;</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Nav Ghost Layer for Smooth Interactions -->
+    <div class="nav-immune">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link" aria-label="The Reading Chamber Home">
+                    <img src="assets/branding/logo.jpg" alt="The Reading Chamber Logo" class="logo-icon">
+                </a>
+                <span class="nav-ghost-text" aria-hidden="true">THE READING CHAMBER</span>
+            </div>
+            
+            <div class="nav-links nav-ghost-links" aria-hidden="true">
+                <a href="index.html">Home</a>
+                <a href="episodes.html" class="active">Episodes</a>
+                <a href="coming-soon.html">About</a>
+                <a href="coming-soon.html">Community</a>
+                <a href="coming-soon.html">Merch</a>
+            </div>
+            
+            <div class="nav-actions">
+                <div class="socials nav-ghost-socials" aria-hidden="true">
+                    <a href="https://www.youtube.com/@TheReadingChamber-ID" target="_blank" class="icon-pill"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://open.spotify.com/show/494Hfls80qLeQLIC8zns04" target="_blank" class="icon-pill"><i class="fa-brands fa-spotify"></i></a>
+                    <a href="https://www.instagram.com/thereadingchamber" target="_blank" class="icon-pill"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <a href="https://www.youtube.com/@TheReadingChamber-ID" target="_blank" class="btn btn-primary">Support Us &rarr;</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="episodes-page-main">
+        <!-- Atmospheric Background Shapes -->
+        <div class="archive-bg-elements">
+            <div class="shape-archive-1"></div>
+            <div class="shape-archive-2"></div>
+        </div>
+
+        <div class="archive-container">
+            <!-- Hero Section -->
+            <header class="archive-hero">
+                <div class="archive-tag-kicker">
+                    <span class="catalog-bracket">[</span>
+                    <span class="catalog-id">CATALOG // EP. 01—50</span>
+                    <span class="catalog-bracket">]</span>
+                    <span class="catalog-dot">•</span>
+                    <span class="catalog-sub">SEARCH ANY BOOKS, GUESTS &amp; TOPICS HERE</span>
+                </div>
+
+                <div class="archive-title-wrapper">
+                    <h1 class="archive-title">
+                        <span class="line line-1">THE READING CHAMBER</span>
+                        <span class="line line-2">ARCHIVE</span>
+                    </h1>
+                </div>
+
+                <div class="archive-subtitle-row">
+                    <p class="archive-description">
+                        Koleksi lengkap seluruh episode diskusi, perdebatan gagasan, dan kurasi buku yang kami buka bersama para tamu pemikir dan kawan diskusi. Pilih episode mana saja untuk membuka Chamber dan eksplorasi buku-bukunya dalam visual 3D.
+                    </p>
+                </div>
+            </header>
+
+            <!-- Spotlight / Featured Mount Point -->
+            <div id="archive-spotlight-mount">
+                <!-- Injected via episodes_page.js -->
+            </div>
+
+            <!-- Sticky Interactive Controls Toolbar -->
+            <section class="archive-controls-bar" aria-label="Search and Filter Episodes">
+                <div class="controls-top-row">
+                    <!-- Search Input -->
+                    <div class="archive-search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="archive-search-input" class="archive-search-input" placeholder="Cari episode, tamu, atau judul buku..." autocomplete="off">
+                        <button id="search-clear-btn" class="search-clear-btn" aria-label="Hapus pencarian">&times;</button>
+                    </div>
+
+                    <!-- Sort & Surprise Me -->
+                    <div class="controls-utilities">
+                        <div class="sort-select-wrap">
+                            <select id="sort-episodes" class="sort-select" aria-label="Urutkan episode">
+                                <option value="newest">Urutan: Episode Terbaru</option>
+                                <option value="oldest">Urutan: Episode Terlama</option>
+                                <option value="books">Urutan: Buku Terbanyak</option>
+                            </select>
+                        </div>
+
+                        <button id="btn-surprise-me" class="btn-surprise" title="Pilih episode acak untukmu!">
+                            <i class="fa-solid fa-dice dice-icon"></i>
+                            <span>Surprise Me!</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Topic Category Filter Pills -->
+                <nav class="filter-tags-scroll" aria-label="Kategori Topik">
+                    <button class="filter-pill active" data-filter="all">Semua Episode <span class="filter-pill-count">(50+)</span></button>
+                    <button class="filter-pill" data-filter="filsafat">Filsafat & Pikiran</button>
+                    <button class="filter-pill" data-filter="hukum">Hukum & Bisnis</button>
+                    <button class="filter-pill" data-filter="politik">Politik & Tata Kelola</button>
+                    <button class="filter-pill" data-filter="sastra">Sastra & Mitologi</button>
+                    <button class="filter-pill" data-filter="guest">Tamu Spesial</button>
+                </nav>
+            </section>
+
+            <!-- Episodes Master Grid -->
+            <section class="episodes-grid-section">
+                <div class="episodes-grid-header">
+                    <span id="grid-result-count" class="grid-result-count">Memuat episode...</span>
+                </div>
+
+                <div id="episodes-grid" class="episodes-grid">
+                    <!-- Dynamically populated by episodes_page.js -->
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer" style="margin-top: 5rem;">
+            <p>&copy; 2026 The Reading Chamber. Big Books, Bigger Conversations.</p>
+        </footer>
+    </main>
+
+    <!-- Episode Overlay Modal (3D Books & Interactive Chamber) -->
+    <div id="episode-overlay" class="episode-overlay" data-lenis-prevent="true">
+        <!-- Structure will be populated by EpisodeExperience -->
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script type="module" src="js/pages/episodes_page.js"></script>
+</body>
+</html>
