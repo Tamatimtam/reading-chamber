@@ -10,62 +10,62 @@ export const episodeData = {
             {
                 "title": "Yang Tak Terkatakan tentang Menuju Dewasa",
                 "author": "Okki Sutanto",
-                "coverColor": "#2b5034",
-                "coverImage": ""
+                "coverColor": "#97b7c2",
+                "coverImage": "assets/books/ep-latest-01-menuju-dewasa.png"
             },
             {
                 "title": "Why We Are Restless: On the Modern Quest for Contentment",
                 "author": "Benjamin Storey & Jenna Silber Storey",
-                "coverColor": "#0f5de8",
-                "coverImage": ""
+                "coverColor": "#c8b70b",
+                "coverImage": "assets/books/ep-latest-02-why-we-are-restless.png"
             },
             {
                 "title": "The Birth of Hedonism: The Cyrenaic Philosophers and Pleasure as a Way of Life",
                 "author": "Kurt Lampe",
-                "coverColor": "#8a2b2b",
-                "coverImage": ""
+                "coverColor": "#5a4a6b",
+                "coverImage": "assets/books/ep-latest-03-birth-of-hedonism.png"
             },
             {
                 "title": "The Hedonism Handbook: Mastering the Lost Arts of Leisure and Pleasure",
                 "author": "Michael Flocker",
-                "coverColor": "#1a1a19",
-                "coverImage": ""
+                "coverColor": "#3cb5e0",
+                "coverImage": "assets/books/ep-latest-04-hedonism-handbook.png"
             },
             {
                 "title": "Winning: The Unforgiving Race to Greatness",
                 "author": "Tim S. Grover",
-                "coverColor": "#d6b345",
-                "coverImage": ""
+                "coverColor": "#d4af37",
+                "coverImage": "assets/books/ep-latest-05-winning.png"
             },
             {
                 "title": "On Giving Up",
                 "author": "Adam Phillips",
-                "coverColor": "#4a3b32",
-                "coverImage": ""
+                "coverColor": "#c4982c",
+                "coverImage": "assets/books/ep-latest-06-on-giving-up.jpg"
             },
             {
                 "title": "Catatan Pinggir",
                 "author": "Goenawan Mohamad",
-                "coverColor": "#2f4f4f",
-                "coverImage": ""
+                "coverColor": "#6b2844",
+                "coverImage": "assets/books/ep-latest-07-catatan-pinggir.jpg"
             },
             {
                 "title": "Mr. Clean Mar'ie Muhammad: Sang Pejuang Antikorupsi dan Aktivis Kemanusiaan",
                 "author": "Qaris Tajudin",
-                "coverColor": "#5c3a21",
-                "coverImage": ""
+                "coverColor": "#365870",
+                "coverImage": "assets/books/ep-latest-08-mr-clean-marie-muhammad.jpg"
             },
             {
                 "title": "How to Stand Up to a Dictator",
                 "author": "Maria Ressa",
-                "coverColor": "#2b5034",
-                "coverImage": ""
+                "coverColor": "#a83232",
+                "coverImage": "assets/books/ep-latest-09-how-to-stand-up-to-a-dictator.jpg"
             },
             {
                 "title": "The Dictator's Handbook",
                 "author": "Bruce Bueno de Mesquita & Alastair Smith",
-                "coverColor": "#0f5de8",
-                "coverImage": ""
+                "coverColor": "#82725e",
+                "coverImage": "assets/books/ep-latest-10-dictators-handbook.jpg"
             }
         ]
     },
@@ -77,25 +77,25 @@ export const episodeData = {
                 "title": "Public Choice: Concepts and Applications in Law",
                 "author": "Maxwell L. Stearns & Todd J. Zywicki",
                 "coverColor": "#2b5034",
-                "coverImage": ""
+                "coverImage": "assets/books/ep-HbUO9Are2Hw-00-public-choice-concepts-and-app.jpg"
             },
             {
                 "title": "The Arrow Impossibility Theorem",
                 "author": "Eric Maskin & Amartya Sen",
-                "coverColor": "#0f5de8",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-HbUO9Are2Hw-01-the-arrow-impossibility-theore.jpg"
             },
             {
                 "title": "Collective Action",
                 "author": "Russell Hardin",
-                "coverColor": "#8a2b2b",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-HbUO9Are2Hw-02-collective-action.jpg"
             },
             {
                 "title": "Voting, Interest Groups, and Parties",
                 "author": "Bradbury Seasholes",
-                "coverColor": "#1a1a19",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-HbUO9Are2Hw-03-voting.jpg"
             }
         ]
     },
@@ -107,13 +107,13 @@ export const episodeData = {
                 "title": "Odyssey karya Homer",
                 "author": "",
                 "coverColor": "#2b5034",
-                "coverImage": ""
+                "coverImage": "assets/books/ep-0ytdhPJoWRA-00-odyssey.jpg"
             },
             {
                 "title": "Kitab Jihad (The Book of Jihad) karya Imam Ath-Thabari, dibacakan dari edisi terjemahan Inggris. Memuat ijma dan ikhtilaf empat mazhab (Abu Hanifah, Asy-Syafi'i, dll.) soal hukum perang.",
                 "author": "",
-                "coverColor": "#0f5de8",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-0ytdhPJoWRA-01-kitab-jihad.jpg"
             },
             {
                 "title": "Tafsir Ath-Thabari dan Tarikh Ath-Thabari karya Imam Ath-Thabari",
@@ -124,26 +124,26 @@ export const episodeData = {
             {
                 "title": "The Greeks and the Irrational karya E.R. Dodds",
                 "author": "",
-                "coverColor": "#1a1a19",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-0ytdhPJoWRA-03-the-greeks-and-the-irrational.jpg"
             },
             {
                 "title": "Berserk karya Kentaro Miura",
                 "author": "perbandingan adegan Skilla",
-                "coverColor": "#d6b345",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-0ytdhPJoWRA-04-berserk.jpg"
             },
             {
                 "title": "Life of Pi karya Yann Martel",
                 "author": "sebagai kerangka interpretasi trauma",
-                "coverColor": "#4a3b32",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-0ytdhPJoWRA-05-life-of-pi.jpg"
             },
             {
                 "title": "Jason and the Argonauts",
                 "author": "mitologi Yunani, disebut ada di edisi Donal Bebek lain",
-                "coverColor": "#2f4f4f",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-0ytdhPJoWRA-06-jason-argonau.jpg"
             }
         ]
     },
@@ -155,31 +155,31 @@ export const episodeData = {
                 "title": "Odyssey",
                 "author": "Homer",
                 "coverColor": "#2b5034",
-                "coverImage": ""
+                "coverImage": "assets/books/ep-OUGfYiSk8oo-00-odyssey.jpg"
             },
             {
                 "title": "Iliad",
                 "author": "Homer",
-                "coverColor": "#0f5de8",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-OUGfYiSk8oo-01-iliad.jpg"
             },
             {
                 "title": "Mitologi Yunani",
                 "author": "Koleksi Klasik) (Menelaos Yannis Stephanides",
-                "coverColor": "#8a2b2b",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-OUGfYiSk8oo-02-mitologi-yunani.jpg"
             },
             {
                 "title": "The Aeneid",
                 "author": "Virgil",
-                "coverColor": "#1a1a19",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-OUGfYiSk8oo-03-the-aeneid.jpg"
             },
             {
                 "title": "Al-Tabari's Book of Jihad: A Translation from the Original Arabic (Al-Tabari) (Penerjemah & Pengantar: Dr. Yasir S. Ibrahim).",
                 "author": "",
-                "coverColor": "#d6b345",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-OUGfYiSk8oo-04-al-tabari-s-book-of-jihad-a-tr.jpg"
             }
         ]
     },
@@ -195,13 +195,13 @@ export const episodeData = {
                 "title": "A Guidebook to Learning",
                 "author": "Mortimer J. Adler",
                 "coverColor": "#2b5034",
-                "coverImage": ""
+                "coverImage": "assets/books/ep-S3t1FFKl7IY-00-a-guidebook-to-learning.jpg"
             },
             {
                 "title": "Makanya Mikir",
                 "author": "Cania Citta",
-                "coverColor": "#0f5de8",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-S3t1FFKl7IY-01-makanya-mikir.jpg"
             }
         ]
     },
@@ -217,43 +217,43 @@ export const episodeData = {
                 "title": "Tombstones: A Lawyer's Tales from the Takeover Decades",
                 "author": "Lawrence Lederman",
                 "coverColor": "#2b5034",
-                "coverImage": ""
+                "coverImage": "assets/books/ep-o3WNHu-Vlh4-00-tombstones-a-lawyer-s-tales-fr.jpg"
             },
             {
                 "title": "Bloodsport: When Ruthless Dealmakers, Shrewd Ideologues, and Brawling Lawyers Toppled the Corporate Establishment",
                 "author": "Robert Teitelman",
-                "coverColor": "#0f5de8",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-o3WNHu-Vlh4-01-bloodsport-when-ruthless-dealm.jpg"
             },
             {
                 "title": "M&A Titans: The Pioneers Who Shaped Wall Street's Mergers and Acquisitions Industry",
                 "author": "Brett Cole",
-                "coverColor": "#8a2b2b",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-o3WNHu-Vlh4-02-ma-titans.jpg"
             },
             {
                 "title": "Managing the Professional Service Firm",
                 "author": "David Maister",
-                "coverColor": "#1a1a19",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-o3WNHu-Vlh4-03-managing-the-professional-serv.jpg"
             },
             {
                 "title": "First Among Equals: How to Manage a Group of Professionals",
                 "author": "Patrick J. McKenna & David H. Maister",
-                "coverColor": "#d6b345",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-o3WNHu-Vlh4-04-first-among-equals-how-to-mana.jpg"
             },
             {
                 "title": "Art's Principles: 50 Years of Hard-Learned Lessons in Building a World-Class Professional Services Firm",
                 "author": "Arthur Gensler",
-                "coverColor": "#4a3b32",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-o3WNHu-Vlh4-05-art-s-principles-50-years-of-h.jpg"
             },
             {
                 "title": "Growth Is Dead: Now What?",
                 "author": "Bruce MacEwen",
-                "coverColor": "#2f4f4f",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-o3WNHu-Vlh4-06-growth-is-dead-now-what.jpg"
             },
             {
                 "title": "A New Taxonomy: The Seven Law Firm Business Models",
@@ -265,7 +265,7 @@ export const episodeData = {
                 "title": "Tomorrowland: Scenarios for Law Firms Beyond the Horizon",
                 "author": "Bruce MacEwen",
                 "coverColor": "#2b5034",
-                "coverImage": ""
+                "coverImage": "assets/books/ep-o3WNHu-Vlh4-08-tomorrowland.jpg"
             }
         ]
     },
@@ -282,19 +282,19 @@ export const episodeData = {
                 "title": "Poor Economics: A Radical Rethinking of the Way to Fight Global Poverty",
                 "author": "Abhijit V. Banerjee & Esther Duflo",
                 "coverColor": "#2b5034",
-                "coverImage": ""
+                "coverImage": "assets/books/ep-710oKYFv5Ic-00-poor-economics.jpg"
             },
             {
                 "title": "Gambling on Development: Why Some Countries Win and Others Lose",
                 "author": "Stefan Dercon",
-                "coverColor": "#0f5de8",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-710oKYFv5Ic-01-gambling-on-development-why-so.jpg"
             },
             {
                 "title": "How China Escaped the Poverty Trap",
                 "author": "Yuen Yuen Ang",
-                "coverColor": "#8a2b2b",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-710oKYFv5Ic-02-how-china-escaped.jpg"
             },
             {
                 "title": "The Power of Creative Destruction: Economic Upheavals and the Wealth of Nations",
@@ -305,26 +305,26 @@ export const episodeData = {
             {
                 "title": "Government versus Markets: The Changing Economic Role of the State",
                 "author": "Vito Tanzi",
-                "coverColor": "#d6b345",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-710oKYFv5Ic-04-government-vs-markets.jpg"
             },
             {
                 "title": "In the Service of the Republic: The Art and Science of Economic Policy",
                 "author": "Vijay Kelkar & Ajay Shah",
-                "coverColor": "#4a3b32",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-710oKYFv5Ic-05-in-the-service-of-the-republic.jpg"
             },
             {
                 "title": "The Entrepreneurial State: Debunking Public vs. Private Sector Myths",
                 "author": "Mariana Mazzucato",
-                "coverColor": "#2f4f4f",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-710oKYFv5Ic-06-entrepreneurial-state.jpg"
             },
             {
                 "title": "Power and Progress: Our Thousand-Year Struggle Over Technology and Prosperity",
                 "author": "Daron Acemoglu & Simon Johnson",
-                "coverColor": "#5c3a21",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-710oKYFv5Ic-07-power-and-progress-our-thousan.jpg"
             },
             {
                 "title": "Shared Prosperity in a Fractured World",
@@ -335,8 +335,8 @@ export const episodeData = {
             {
                 "title": "Pengalaman Pembangunan Indonesia",
                 "author": "Widjojo Nitisastro",
-                "coverColor": "#0f5de8",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-710oKYFv5Ic-09-pengalaman-pembangunan.jpg"
             },
             {
                 "title": "Kesan Para Sahabat tentang Widjojo Nitisastro",
@@ -347,8 +347,8 @@ export const episodeData = {
             {
                 "title": "Berenang di Segara: Kuntoro Mangkusubroto dalam Tuturan Sahabat",
                 "author": "",
-                "coverColor": "#1a1a19",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-710oKYFv5Ic-11-kuntoro-mangkusubroto.jpg"
             }
         ]
     },
@@ -364,25 +364,25 @@ export const episodeData = {
                 "title": "White Shoes: How a New Breed of Wall Street Lawyers Changed Big Business and the American Economy",
                 "author": "John Oller",
                 "coverColor": "#2b5034",
-                "coverImage": ""
+                "coverImage": "assets/books/ep-o80aUzcKTxo-00-white-shoes-how-a-new-breed-of.jpg"
             },
             {
                 "title": "Skadden: Power, Money, and the Rise of a Legal Empire",
                 "author": "Lincoln Caplan",
-                "coverColor": "#0f5de8",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-o80aUzcKTxo-01-skadden-power.jpg"
             },
             {
                 "title": "Turks and Brahmins: Upheaval at Milbank, Tweed",
                 "author": "Ellen Joan Pollock",
-                "coverColor": "#8a2b2b",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-o80aUzcKTxo-02-turks-and-brahmins.jpg"
             },
             {
                 "title": "A Law Unto Itself: The Untold Story of the Law Firm Sullivan & Cromwell",
                 "author": "Nancy Lisagor & Frank Lipsius",
-                "coverColor": "#1a1a19",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-o80aUzcKTxo-03-a-law-unto-itself-the-untold-s.jpg"
             },
             {
                 "title": "The Anointed",
