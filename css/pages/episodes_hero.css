@@ -1,0 +1,186 @@
+/* ==========================================================================
+   Episodes Archive - Hero & Layout Styles
+   ========================================================================== */
+
+/* Main Archive Container */
+.episodes-page-main {
+    position: relative;
+    min-height: 100vh;
+    padding-top: 7rem;
+    padding-bottom: 6rem;
+    background-color: var(--color-bg);
+    overflow: hidden;
+}
+
+/* Background Atmospheric Shapes */
+.archive-bg-elements {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.shape-archive-1 {
+    position: absolute;
+    width: 60vw;
+    height: 60vw;
+    top: -15%;
+    right: -10%;
+    background-color: var(--color-yellow);
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    opacity: 0.22;
+    mix-blend-mode: multiply;
+    filter: blur(40px);
+    animation: slowDrift 20s ease-in-out infinite alternate;
+}
+
+.shape-archive-2 {
+    position: absolute;
+    width: 45vw;
+    height: 45vw;
+    top: 40%;
+    left: -15%;
+    background-color: var(--color-blue);
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    opacity: 0.12;
+    mix-blend-mode: multiply;
+    filter: blur(50px);
+    animation: slowDrift 25s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes slowDrift {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    100% { transform: translate(40px, 30px) rotate(15deg); }
+}
+
+/* Content Container */
+.archive-container {
+    position: relative;
+    z-index: 10;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Hero Header */
+.archive-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 3.5rem;
+    position: relative;
+}
+
+/* Archival Catalog Tag Kicker */
+.archive-tag-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-dark);
+    background: #ffffff;
+    padding: 0.45rem 1rem;
+    border: 2px solid var(--color-dark);
+    border-radius: 6px;
+    box-shadow: 3px 3px 0px var(--color-dark);
+    margin-bottom: 1.5rem;
+}
+
+.archive-tag-kicker .catalog-bracket {
+    color: var(--color-blue);
+    font-weight: 800;
+}
+
+.archive-tag-kicker .catalog-id {
+    color: var(--color-dark);
+    font-weight: 800;
+}
+
+.archive-tag-kicker .catalog-dot {
+    color: var(--color-yellow);
+    font-size: 1.1rem;
+    line-height: 0;
+}
+
+.archive-tag-kicker .catalog-sub {
+    font-size: 0.78rem;
+    color: rgba(18, 18, 17, 0.7);
+    letter-spacing: 0.05em;
+}
+
+/* Hero Title - Bebas Neue (Same as Home Page) */
+.archive-title-wrapper {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.archive-title {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #ffffff;
+    -webkit-text-stroke: 4px #000000;
+    paint-order: stroke fill;
+    text-shadow: 6px 6px 0px #000000;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    letter-spacing: 0.03em;
+    line-height: 0.85;
+}
+
+.archive-title .line-1 {
+    font-size: clamp(3rem, 7vw, 6.8rem);
+    line-height: 0.88;
+}
+
+.archive-title .line-2 {
+    font-size: clamp(4.5rem, 11vw, 10.5rem);
+    line-height: 0.85;
+    color: var(--color-yellow);
+}
+
+.archive-title .line {
+    display: block;
+    white-space: nowrap;
+    padding-right: 0.15em;
+    padding-bottom: 0.12em;
+}
+
+.archive-subtitle-row {
+    display: flex;
+    width: 100%;
+}
+
+.archive-description {
+    font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+    line-height: 1.6;
+    color: rgba(18, 18, 17, 0.85);
+    max-width: 720px;
+}
+
+/* Responsive Adaptations */
+@media (max-width: 768px) {
+    .archive-title {
+        -webkit-text-stroke: 3px #000000;
+        text-shadow: 4px 4px 0px #000000;
+    }
+    
+    .archive-title .line-1 {
+        font-size: clamp(2.4rem, 8vw, 3.8rem);
+    }
+    
+    .archive-title .line-2 {
+        font-size: clamp(3.8rem, 13vw, 6rem);
+    }
+
+    .archive-tag-kicker {
+        font-size: 0.72rem;
+        padding: 0.35rem 0.75rem;
+        flex-wrap: wrap;
+    }
+}

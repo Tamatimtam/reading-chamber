@@ -1,0 +1,396 @@
+/* ==========================================================================
+   Episodes Archive - Master Grid & Card Styles
+   ========================================================================== */
+
+/* Master Grid Section */
+.episodes-grid-section {
+    position: relative;
+}
+
+.episodes-grid-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1.75rem;
+}
+
+.grid-result-count {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: rgba(18, 18, 17, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.episodes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 2rem;
+}
+
+/* Episode Card */
+.ep-card {
+    background: #ffffff;
+    border: 2px solid var(--color-dark);
+    border-radius: 16px;
+    box-shadow: 5px 5px 0px var(--color-dark);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+    position: relative;
+}
+
+.ep-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 9px 9px 0px var(--color-dark);
+}
+
+/* Card Visual / Thumbnail */
+.ep-card-media {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: #1a1a19;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.ep-card-thumb {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s var(--ease-out);
+}
+
+.ep-card:hover .ep-card-thumb {
+    transform: scale(1.06);
+}
+
+/* Badge Overlays */
+.ep-card-badges {
+    position: absolute;
+    top: 0.85rem;
+    left: 0.85rem;
+    right: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.ep-num-pill {
+    background: var(--color-yellow);
+    color: var(--color-dark);
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    padding: 0.3rem 0.65rem;
+    border-radius: 6px;
+    border: 1.5px solid var(--color-dark);
+    box-shadow: 2px 2px 0px var(--color-dark);
+}
+
+.ep-date-pill {
+    background: rgba(18, 18, 17, 0.8);
+    backdrop-filter: blur(8px);
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.3rem 0.65rem;
+    border-radius: 100px;
+}
+
+/* Play Pill Hover Overlay */
+.ep-card-play-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.ep-card:hover .ep-card-play-overlay {
+    opacity: 1;
+}
+
+.ep-card-play-btn {
+    background: #ffffff;
+    color: var(--color-dark);
+    border-radius: 100px;
+    padding: 0.6rem 1.25rem;
+    font-size: 0.82rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    transform: translateY(10px);
+    transition: transform 0.25s var(--ease-out), background 0.2s ease;
+}
+
+.ep-card:hover .ep-card-play-btn {
+    transform: translateY(0);
+}
+
+.ep-card-play-btn:hover {
+    background: var(--color-yellow);
+}
+
+/* Card Body */
+.ep-card-body {
+    padding: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 0.75rem;
+}
+
+/* Guest Tag & Text */
+.ep-guest-text,
+.ep-guest-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--color-blue);
+    align-self: flex-start;
+}
+
+.ep-guest-text i,
+.ep-guest-tag i {
+    font-size: 0.78rem;
+}
+
+.ep-card-title {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--color-dark);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.ep-card-title:hover {
+    color: var(--color-blue);
+}
+
+.ep-card-excerpt {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    color: rgba(18, 18, 17, 0.75);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Book Preview Shelf in Card */
+.ep-card-books-shelf {
+    margin-top: auto;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(18, 18, 17, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.shelf-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.shelf-thumbs {
+    display: flex;
+    align-items: center;
+}
+
+.mini-book-thumb {
+    width: 24px;
+    height: 34px;
+    border-radius: 3px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #ffffff;
+    margin-right: -10px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.mini-book-thumb:hover {
+    transform: translateY(-4px) scale(1.2);
+    z-index: 5;
+}
+
+.shelf-books-label {
+    padding-left: 14px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: rgba(18, 18, 17, 0.7);
+}
+
+.no-books-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: rgba(18, 18, 17, 0.4);
+    font-style: italic;
+}
+
+/* Card Actions Footer */
+.ep-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.85rem 1.4rem 1.25rem 1.4rem;
+}
+
+.btn-card-enter {
+    flex: 1;
+    background: var(--color-dark);
+    color: #ffffff;
+    border: none;
+    border-radius: 100px;
+    padding: 0.65rem 1rem;
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    transition: background 0.2s ease, transform 0.2s var(--ease-out);
+}
+
+.btn-card-enter:hover {
+    background: var(--color-blue);
+    transform: translateY(-1px);
+}
+
+.btn-card-yt {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1.5px solid var(--color-dark);
+    background: #ffffff;
+    color: var(--color-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn-card-yt:hover {
+    background: #e02424;
+    border-color: #e02424;
+    color: #ffffff;
+}
+
+/* Surprise Pulse Highlight */
+.ep-card.highlighted-surprise {
+    animation: surprisePulse 2s ease-out;
+}
+
+@keyframes surprisePulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(245, 183, 0, 0.8), 5px 5px 0px var(--color-dark);
+        transform: scale(1.03) translate(-4px, -4px);
+    }
+    50% {
+        box-shadow: 0 0 30px 10px rgba(245, 183, 0, 0.6), 9px 9px 0px var(--color-dark);
+    }
+    100% {
+        box-shadow: 5px 5px 0px var(--color-dark);
+        transform: scale(1);
+    }
+}
+
+/* Empty Search State */
+.archive-empty-state {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5rem 2rem;
+    background: #ffffff;
+    border: 2px dashed rgba(18, 18, 17, 0.2);
+    border-radius: 20px;
+}
+
+.empty-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.empty-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.empty-desc {
+    font-size: 0.95rem;
+    color: rgba(18, 18, 17, 0.65);
+    max-width: 400px;
+    margin-bottom: 1.5rem;
+}
+
+.btn-reset-filters {
+    background: var(--color-dark);
+    color: #ffffff;
+    border: none;
+    border-radius: 100px;
+    padding: 0.75rem 1.5rem;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.btn-reset-filters:hover {
+    background: var(--color-blue);
+}
+
+/* Responsive Adaptations */
+@media (max-width: 1024px) {
+    .episodes-grid {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .episodes-page-main {
+        padding-top: 5.5rem;
+    }
+    .archive-container {
+        padding: 0 1.25rem;
+    }
+    .episodes-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .archive-stats-strip {
+        grid-template-columns: 1fr 1fr;
+    }
+    .stat-item:nth-child(2) {
+        border-right: none;
+    }
+}
