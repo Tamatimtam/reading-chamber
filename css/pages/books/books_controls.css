@@ -1,0 +1,140 @@
+/* ==========================================================================
+   Books Library - Search & Filter Controls Styles
+   ========================================================================== */
+
+/* Sticky Search & Filter Toolbar */
+.books-controls-bar {
+    position: sticky;
+    top: 5.5rem;
+    z-index: 40;
+    background: rgba(247, 245, 237, 0.94);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 2px solid var(--color-dark);
+    border-radius: 16px;
+    box-shadow: 5px 5px 0px var(--color-dark);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 3.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.books-controls-top {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.books-search-box {
+    position: relative;
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    align-items: center;
+}
+
+.books-search-box i {
+    position: absolute;
+    left: 1.2rem;
+    color: rgba(18, 18, 17, 0.5);
+    font-size: 1rem;
+    pointer-events: none;
+}
+
+.books-search-input {
+    width: 100%;
+    padding: 0.85rem 3rem 0.85rem 2.85rem;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    background: #ffffff;
+    border: 2px solid var(--color-dark);
+    border-radius: 100px;
+    outline: none;
+    box-shadow: 2px 2px 0px var(--color-dark);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.books-search-input:focus {
+    box-shadow: 4px 4px 0px var(--color-dark);
+    border-color: var(--color-blue);
+}
+
+.books-search-clear {
+    position: absolute;
+    right: 1.1rem;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    color: rgba(18, 18, 17, 0.5);
+    cursor: pointer;
+    display: none;
+    line-height: 1;
+}
+
+.books-search-clear:hover {
+    color: var(--color-dark);
+}
+
+.books-controls-utilities {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.books-sort-select {
+    padding: 0.85rem 1.75rem 0.85rem 1.25rem;
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    background: #ffffff;
+    border: 2px solid var(--color-dark);
+    border-radius: 100px;
+    box-shadow: 2px 2px 0px var(--color-dark);
+    cursor: pointer;
+    outline: none;
+}
+
+/* Category Filter Pills */
+.books-filter-pills {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+    scrollbar-width: none;
+}
+
+.books-filter-pills::-webkit-scrollbar {
+    display: none;
+}
+
+.book-filter-pill {
+    white-space: nowrap;
+    background: #ffffff;
+    color: var(--color-dark);
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    padding: 0.55rem 1.15rem;
+    border: 1.5px solid var(--color-dark);
+    border-radius: 100px;
+    cursor: pointer;
+    box-shadow: 2px 2px 0px var(--color-dark);
+    transition: transform 0.2s var(--ease-out), background-color 0.2s ease, color 0.2s ease;
+}
+
+.book-filter-pill:hover {
+    transform: translateY(-2px);
+    background-color: var(--color-yellow);
+}
+
+.book-filter-pill.active {
+    background: var(--color-dark);
+    color: #ffffff;
+    border-color: var(--color-dark);
+}
