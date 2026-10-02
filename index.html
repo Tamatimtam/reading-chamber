@@ -17,8 +17,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="css/pages/episode_modal.css">
-    <link rel="stylesheet" href="css/pages/episode_books.css">
+    <link rel="stylesheet" href="css/pages/episodes/episode_modal.css">
+    <link rel="stylesheet" href="css/pages/episodes/episode_books.css">
     
     <!-- Lenis CSS -->
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.9/dist/lenis.css">
@@ -58,7 +58,7 @@
             <div class="nav-links">
                 <a href="#" class="active">Home</a>
                 <a href="episodes.html">Episodes</a>
-                <a href="coming-soon.html">About</a>
+                <a href="books.html">Perpustakaan</a>
                 <a href="coming-soon.html">Community</a>
                 <a href="coming-soon.html">Merch</a>
             </div>
@@ -92,7 +92,7 @@
             <div class="nav-links nav-ghost-links" aria-hidden="true">
                 <a href="#">Home</a>
                 <a href="episodes.html">Episodes</a>
-                <a href="coming-soon.html">About</a>
+                <a href="books.html">Perpustakaan</a>
                 <a href="coming-soon.html">Community</a>
                 <a href="coming-soon.html">Merch</a>
             </div>
@@ -153,7 +153,7 @@
                     <p id="featured-desc">Fetching the latest episode from YouTube...</p>
                     <a href="#" id="featured-link" target="_blank" class="btn btn-watch-now">
                         <span class="play-icon">▶</span>
-                        Enter Chamber &rarr;
+                        Lihat Detail &rarr;
                     </a>
                 </div>
                 
@@ -178,7 +178,7 @@
             
             <div class="about-container">
                 <div class="about-left">
-                    <div class="doodle doodle-3">Lebih dari sekadar podcast &swarr;</div>
+                    <div class="doodle doodle-3">Buku tebal, obrolan panjang &swarr;</div>
                     <h2 class="about-title">
                         <span>Tentang</span>
                         <span>Buku, Manusia,</span>
@@ -192,7 +192,7 @@
                 
                 <div class="about-right">
                     <h2>What We Talk About</h2>
-                    <p>Dari filsafat, sejarah, politik, hingga fiksi — kami membahas buku sebagai pintu masuk untuk memahami dunia (dan diri sendiri).</p>
+                    <p>Dari filsafat, sejarah, politik, hingga fiksi, kami membahas buku sebagai pintu masuk untuk memahami dunia dan diri sendiri.</p>
                     
                     <div class="topics-grid">
                         <div class="topic-pill">Filsafat</div>
@@ -209,10 +209,70 @@
                 </div>
             </div>
             <div class="about-collage-item"></div>
+
         </section>
         
         <footer class="footer">
             <p>&copy; 2026 The Reading Chamber. Big Books, Bigger Conversations.</p>
+
+            <!-- Sneaky Living Books Patrol (Touching bottom of footer, sneaking & hopping offscreen) -->
+            <div class="sneaky-footer-zone" id="sneaky-footer-zone">
+                <a href="books.html" class="sneaky-books-track" id="sneaky-books-track" aria-label="Buka Perpustakaan">
+                    
+                    <!-- Squad of Real Book Covers Sneaking Along Footer -->
+                    <div class="sneaky-caravan" id="sneaky-caravan">
+                        <!-- Book 1: Why We Are Restless -->
+                        <div class="sneaky-real-book sbook-1" data-title="Why We Are Restless">
+                            <div class="sbook-chassis">
+                                <img src="assets/books/ep-latest-02-why-we-are-restless.png" alt="Why We Are Restless" class="sbook-cover-img">
+                                <div class="sbook-spine-crease"></div>
+                                <div class="sbook-pages-edge"></div>
+                            </div>
+                            <div class="sbook-shadow"></div>
+                        </div>
+
+                        <!-- Book 2: Odyssey -->
+                        <div class="sneaky-real-book sbook-2" data-title="The Odyssey">
+                            <div class="sbook-chassis">
+                                <img src="assets/books/odyssey.jpg" alt="The Odyssey" class="sbook-cover-img">
+                                <div class="sbook-spine-crease"></div>
+                                <div class="sbook-pages-edge"></div>
+                            </div>
+                            <div class="sbook-shadow"></div>
+                        </div>
+
+                        <!-- Book 3: Catatan Pinggir -->
+                        <div class="sneaky-real-book sbook-3" data-title="Catatan Pinggir">
+                            <div class="sbook-chassis">
+                                <img src="assets/books/ep-latest-07-catatan-pinggir.jpg" alt="Catatan Pinggir" class="sbook-cover-img">
+                                <div class="sbook-spine-crease"></div>
+                                <div class="sbook-pages-edge"></div>
+                            </div>
+                            <div class="sbook-shadow"></div>
+                        </div>
+
+                        <!-- Book 4: Winning -->
+                        <div class="sneaky-real-book sbook-4" data-title="Winning">
+                            <div class="sbook-chassis">
+                                <img src="assets/books/ep-latest-05-winning.png" alt="Winning" class="sbook-cover-img">
+                                <div class="sbook-spine-crease"></div>
+                                <div class="sbook-pages-edge"></div>
+                            </div>
+                            <div class="sbook-shadow"></div>
+                        </div>
+                    </div>
+
+                    <!-- Revealed "Buka Perpustakaan" Box (Reveals on Hover) -->
+                    <div class="sneaky-reveal-cta" id="sneaky-reveal-cta">
+                        <div class="reveal-cta-card">
+                            <span class="reveal-kicker">KOLEKSI LENGKAP</span>
+                            <span class="reveal-btn-text">
+                                Buka Perpustakaan <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </footer>
     </main>
 

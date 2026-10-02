@@ -1,0 +1,186 @@
+/* ==========================================================================
+   Sneaky Living Books (Patrolling along bottom of footer)
+   The Reading Chamber - Authentic Covers Sneaking & Hopping Offscreen
+   ========================================================================== */
+
+.sneaky-footer-zone {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 160px;
+    pointer-events: none;
+    z-index: 25;
+    overflow: visible;
+}
+
+.sneaky-books-track {
+    position: absolute;
+    inset: 0;
+    pointer-events: auto;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Caravan of Sneaking Books */
+.sneaky-caravan {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    display: flex;
+    align-items: flex-end;
+    gap: 22px;
+    will-change: transform;
+    pointer-events: auto;
+}
+
+/* Individual Real Book Item */
+.sneaky-real-book {
+    position: relative;
+    width: 62px;
+    height: 94px;
+    transform-origin: bottom center;
+    will-change: transform;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.sbook-chassis {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px 6px 6px 2px;
+    overflow: hidden;
+    box-shadow: 2px 6px 14px rgba(0, 0, 0, 0.65), 0 1px 3px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: #121211;
+}
+
+.sbook-cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    user-select: none;
+    pointer-events: none;
+}
+
+/* Hardcover Spine Crease Shadow */
+.sbook-spine-crease {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 8px;
+    background: linear-gradient(90deg, rgba(0,0,0,0.65) 0%, rgba(255,255,255,0.25) 40%, rgba(0,0,0,0.3) 100%);
+    pointer-events: none;
+}
+
+/* Pages Paper Edge */
+.sbook-pages-edge {
+    position: absolute;
+    right: 0;
+    top: 2px;
+    bottom: 2px;
+    width: 3px;
+    background: repeating-linear-gradient(to bottom, #f3eedf 0px, #f3eedf 2px, #ded4be 3px);
+    border-left: 1px solid rgba(0,0,0,0.3);
+    pointer-events: none;
+}
+
+/* Ambient Shadow Under Book */
+.sbook-shadow {
+    position: absolute;
+    bottom: -5px;
+    left: 4px;
+    right: 4px;
+    height: 8px;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.75) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(2.5px);
+    transform-origin: center;
+}
+
+/* Revealed "Buka Perpustakaan" Box */
+.sneaky-reveal-cta {
+    position: absolute;
+    bottom: 22px;
+    right: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(18px) scale(0.9);
+    pointer-events: none;
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.25s ease;
+    z-index: 35;
+}
+
+.reveal-cta-card {
+    background: var(--color-dark);
+    color: #ffffff;
+    border: 2.5px solid var(--color-yellow);
+    border-radius: 100px;
+    padding: 0.75rem 1.6rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 4px 4px 0px var(--color-yellow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    white-space: nowrap;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sneaky-books-track:hover .reveal-cta-card {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.7), 6px 6px 0px var(--color-yellow);
+}
+
+.reveal-kicker {
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    color: var(--color-yellow);
+    text-transform: uppercase;
+}
+
+.reveal-btn-text {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 800;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+}
+
+.reveal-btn-text i {
+    color: var(--color-yellow);
+    transition: transform 0.25s ease;
+}
+
+.sneaky-books-track:hover .reveal-btn-text i {
+    transform: translateX(4px);
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .sneaky-real-book {
+        width: 52px;
+        height: 80px;
+    }
+
+    .sneaky-caravan {
+        gap: 16px;
+    }
+
+    .sneaky-reveal-cta {
+        right: 50%;
+        transform: translateX(50%) translateY(18px) scale(0.9);
+    }
+}

@@ -1,0 +1,398 @@
+/* ==========================================================================
+   Interactive 3D Bookshelf Component
+   Standalone 3D Furniture Piece - The Reading Chamber
+   ========================================================================== */
+
+.bottom-shelf-anchor {
+    position: relative;
+    max-width: 1200px;
+    margin: 5rem auto 1.5rem auto;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2rem;
+    z-index: 30;
+}
+
+.interactive-bookshelf {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    perspective: 1000px;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Subtle Curiosity Beacon (Gently pulses without text) */
+.shelf-curiosity-beacon {
+    position: absolute;
+    top: -14px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    pointer-events: none;
+    z-index: 25;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.beacon-pulse {
+    position: absolute;
+    inset: -3px;
+    border-radius: 50%;
+    background: rgba(245, 183, 0, 0.45);
+    animation: beaconPulseAnim 2.2s cubic-bezier(0.1, 0, 0.3, 1) infinite;
+}
+
+.beacon-core {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: #121211;
+    color: var(--color-yellow);
+    border: 2px solid var(--color-yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.78rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes beaconPulseAnim {
+    0% { transform: scale(0.9); opacity: 0.8; }
+    60%, 100% { transform: scale(2.2); opacity: 0; }
+}
+
+.interactive-bookshelf:hover .shelf-curiosity-beacon {
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+/* Floating Reveal Tag (Reveals on Hover) */
+.shelf-reveal-tag {
+    position: absolute;
+    bottom: calc(100% + 18px);
+    left: 50%;
+    transform: translateX(-50%) translateY(14px) scale(0.85);
+    opacity: 0;
+    pointer-events: none;
+    background: #121211;
+    color: #ffffff;
+    border: 2.5px solid var(--color-yellow);
+    border-radius: 100px;
+    padding: 0.65rem 1.4rem;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35), 4px 4px 0px var(--color-yellow);
+    white-space: nowrap;
+    z-index: 30;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+}
+
+.shelf-reveal-tag::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 8px solid transparent;
+    border-top-color: #121211;
+}
+
+.shelf-reveal-tag .reveal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.shelf-reveal-tag .reveal-eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    color: var(--color-yellow);
+    text-transform: uppercase;
+}
+
+.shelf-reveal-tag .reveal-title {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.shelf-reveal-tag .reveal-title i {
+    color: var(--color-yellow);
+    transition: transform 0.25s ease;
+}
+
+.interactive-bookshelf:hover .shelf-reveal-tag {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.interactive-bookshelf:hover .shelf-reveal-tag .reveal-title i {
+    transform: translateX(4px);
+}
+
+/* 3D Bookshelf Stage */
+.bookshelf-3d-stage {
+    position: relative;
+    width: 240px;
+    height: 260px;
+    transform-style: preserve-3d;
+    transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.interactive-bookshelf:hover .bookshelf-3d-stage {
+    transform: translateY(-16px) scale(1.18) rotateX(4deg) rotateY(-5deg);
+}
+
+/* Floor Contact Shadow */
+.cabinet-shadow {
+    position: absolute;
+    bottom: -12px;
+    left: 15px;
+    right: 15px;
+    height: 24px;
+    background: radial-gradient(ellipse at center, rgba(18, 18, 17, 0.5) 0%, rgba(18, 18, 17, 0) 70%);
+    border-radius: 50%;
+    filter: blur(5px);
+    transition: all 0.45s ease;
+}
+
+.interactive-bookshelf:hover .cabinet-shadow {
+    bottom: -22px;
+    left: 5px;
+    right: 5px;
+    opacity: 0.65;
+    filter: blur(10px);
+    transform: scale(1.18);
+}
+
+/* Solid Wooden Bookshelf Cabinet */
+.bookshelf-cabinet {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, #442817 0%, #29170d 100%);
+    border: 3.5px solid #160c07;
+    border-radius: 6px;
+    box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.65), 6px 12px 28px rgba(0, 0, 0, 0.28);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 12px 6px 12px;
+    transform-style: preserve-3d;
+}
+
+/* Top Crown Molding */
+.cabinet-crown {
+    position: absolute;
+    top: -9px;
+    left: -7px;
+    right: -7px;
+    height: 11px;
+    background: linear-gradient(180deg, #5c3720 0%, #361f12 100%);
+    border: 2.5px solid #160c07;
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.35);
+}
+
+.crown-bevel {
+    height: 2px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Cabinet Shelves (Tiers) */
+.cabinet-tier {
+    position: relative;
+    height: 106px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.tier-interior {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #180d07 0%, #23130b 100%);
+    border-radius: 3px;
+    box-shadow: inset 0 6px 12px rgba(0, 0, 0, 0.65);
+    z-index: 1;
+}
+
+.tier-books {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 4px;
+    padding: 0 4px 2px 4px;
+    height: 100%;
+}
+
+.wooden-shelf-plank {
+    position: relative;
+    z-index: 3;
+    width: calc(100% + 14px);
+    margin-left: -7px;
+    height: 9px;
+    background: linear-gradient(180deg, #6b4025 0%, #3b2214 100%);
+    border: 2px solid #160c07;
+    border-radius: 2px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Individual Book Spines */
+.shelf-book {
+    width: var(--w, 18px);
+    height: var(--h, 76px);
+    background-color: var(--bg, #0f5de8);
+    border: 1.5px solid #121211;
+    border-bottom: none;
+    border-radius: 3px 3px 0 0;
+    position: relative;
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.35);
+    transform-origin: bottom center;
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.book-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #eadecc;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 2px 2px 0 0;
+}
+
+.book-spine {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.gold-band {
+    width: 70%;
+    height: 2px;
+    background: #ffd700;
+    border-radius: 1px;
+    box-shadow: 0 0 3px rgba(255, 215, 0, 0.6);
+}
+
+.silver-band {
+    width: 70%;
+    height: 2px;
+    background: #e0e0e0;
+    border-radius: 1px;
+}
+
+.spine-rule {
+    width: 55%;
+    height: 1.5px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 1px;
+}
+
+.tilt-right { transform: rotate(5deg); }
+.tilt-left { transform: rotate(-5deg); }
+
+/* Horizontal Stack of Books */
+.book-stack-h {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2px;
+    margin-bottom: 2px;
+}
+
+.shelf-book-h {
+    width: var(--bw, 48px);
+    height: var(--bh, 14px);
+    background: var(--bg, #2b5034);
+    border: 1.5px solid #121211;
+    border-radius: 2px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Pulled Book Interactive Micro-Animation */
+.shelf-book.b-hero-pull {
+    position: relative;
+    z-index: 4;
+}
+
+.ribbon-tail {
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 7px;
+    background: #ffd700;
+    border-radius: 0 0 2px 2px;
+}
+
+.interactive-bookshelf:hover .shelf-book.b-hero-pull {
+    transform: translateY(-12px) scale(1.08) rotate(-3deg);
+    box-shadow: -4px 10px 18px rgba(0, 0, 0, 0.5);
+    border-color: #000;
+}
+
+.interactive-bookshelf:hover .tilt-right {
+    transform: rotate(8deg);
+}
+
+.interactive-bookshelf:hover .tilt-left {
+    transform: rotate(-8deg);
+}
+
+/* Base Feet */
+.cabinet-base-feet {
+    position: absolute;
+    bottom: -9px;
+    left: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.foot {
+    width: 18px;
+    height: 8px;
+    background: #201108;
+    border: 2px solid #160c07;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .bottom-shelf-anchor {
+        justify-content: center;
+        padding-right: 0;
+        margin-top: 3.5rem;
+    }
+
+    .bookshelf-3d-stage {
+        width: 210px;
+        height: 235px;
+    }
+
+    .shelf-reveal-tag {
+        bottom: calc(100% + 12px);
+        padding: 0.55rem 1.1rem;
+    }
+}
