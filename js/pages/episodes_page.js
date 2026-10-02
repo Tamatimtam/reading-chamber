@@ -205,6 +205,14 @@ class EpisodesArchiveApp {
     }
 
     handleSurpriseMe() {
+        const surpriseBtn = document.getElementById('btn-surprise-me');
+        if (surpriseBtn && typeof gsap !== 'undefined') {
+            const dice = surpriseBtn.querySelector('.dice-icon');
+            if (dice) {
+                gsap.fromTo(dice, { rotate: 0 }, { rotate: 360, duration: 0.65, ease: 'back.out(2)' });
+            }
+        }
+
         if (this.filteredEpisodes.length === 0) {
             this.resetFilters();
         }

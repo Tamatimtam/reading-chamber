@@ -6,10 +6,10 @@ A guide for finding, downloading, and standardizing high-res book covers for **T
 
 ## 1. Quick Summary of the 3D Stage Specs
 
-Our 3D book engine in `css/pages/episode_books.css` and `js/features/book_showcase.js` expects:
+Our 3D book engine in `css/pages/episodes/episode_books.css` and `js/features/book_showcase.js` expects:
 
-* **Aspect Ratio:** `2:3` (Width 250px × Height 375px in CSS)
-* **Image Dimensions:** Ideal is **600 × 900 px** or **800 × 1200 px** (retina crisp, ~50 KB – 300 KB).
+* **Aspect Ratio:** `2:3` (Width 250px x Height 375px in CSS)
+* **Image Dimensions:** Ideal is **600 x 900 px** or **800 x 1200 px** (retina crisp, ~50 KB to 300 KB).
 * **Format:** Flat front cover only (no 3D angled mockups, desk shadows, or slanted spine shots). The CSS creates the 3D geometry and rotation.
 * **Storage Location:** `assets/books/`
 * **Config Location:** `js/core/data.js`

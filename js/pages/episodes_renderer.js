@@ -25,10 +25,19 @@ export function renderSpotlightCard(spotlight, container, episodeExperience, all
                     ${previewCovers}
                 </div>
                 <span class="stack-count-badge">
-                    <i class="fa-solid fa-book-open"></i> ${books.length} Buku Dibahas di Episode Ini
+                    <i class="fa-solid fa-book-open"></i> ${books.length} Buku Dibahas
                 </span>
             </div>
         `;
+    }
+
+    // Clean, readable excerpt for the spotlight
+    let cleanDesc = '';
+    if (custom.description) {
+        const paragraphs = custom.description.split('\n\n').filter(p => p.trim());
+        cleanDesc = paragraphs[0] || custom.description;
+    } else {
+        cleanDesc = 'Simak perbincangan mendalam di episode terbaru The Reading Chamber.';
     }
 
     container.innerHTML = `
@@ -37,10 +46,10 @@ export function renderSpotlightCard(spotlight, container, episodeExperience, all
             
             <div class="spotlight-info">
                 <div class="spotlight-meta-line">
-                    <span class="spotlight-kicker">LATEST RELEASE // EP. ${spotlight.epNum}</span>
+                    <span class="spotlight-kicker">LATEST RELEASE</span>
                     ${custom.guest ? `
                         <span class="spotlight-guest">
-                            <i class="fa-solid fa-user"></i> ft. ${custom.guest.name} <span class="guest-role-sub">(${custom.guest.role})</span>
+                            <i class="fa-solid fa-user"></i> ft. ${custom.guest.name}
                         </span>
                     ` : ''}
                     <span class="spotlight-date">
@@ -49,13 +58,13 @@ export function renderSpotlightCard(spotlight, container, episodeExperience, all
                 </div>
 
                 <h2 class="spotlight-title">${spotlight.title}</h2>
-                <p class="spotlight-desc">${custom.description || 'Simak perbincangan mendalam di episode terbaru The Reading Chamber.'}</p>
+                <p class="spotlight-desc">${cleanDesc}</p>
 
                 ${booksPreviewHtml}
 
                 <div class="spotlight-actions">
                     <button class="btn-spotlight-enter" id="spotlight-enter-btn">
-                        <i class="fa-solid fa-play"></i> Masuk Chamber (${books.length} Buku 3D) &rarr;
+                        <span>Lihat Detail</span> <i class="fa-solid fa-arrow-right"></i>
                     </button>
                     <a href="${spotlight.link}" target="_blank" class="btn-spotlight-yt">
                         <i class="fa-brands fa-youtube"></i> Tonton di YouTube
@@ -67,7 +76,7 @@ export function renderSpotlightCard(spotlight, container, episodeExperience, all
                 <div class="spotlight-thumb" id="spotlight-thumb-el" style="background-image: url('${spotlight.thumbnail}')"></div>
                 <div class="spotlight-overlay-play">
                     <div class="spotlight-play-pill">
-                        <i class="fa-solid fa-play"></i> BUKA CHAMBER
+                        <i class="fa-solid fa-arrow-right"></i> LIHAT DETAIL
                     </div>
                 </div>
             </div>
@@ -89,7 +98,7 @@ export function renderEpisodesGrid(filteredEpisodes, allEpisodes, gridContainer,
     if (!gridContainer) return;
 
     if (countLabel) {
-        countLabel.textContent = `Menampilkan ${filteredEpisodes.length} Dari ${allEpisodes.length} Episode`;
+        countLabel.innerHTML = `Menampilkan ${filteredEpisodes.length} Dari ${allEpisodes.length} Episode <span class="grid-wip-badge">WIP</span>`;
     }
 
     if (filteredEpisodes.length === 0) {
@@ -150,7 +159,7 @@ export function renderEpisodesGrid(filteredEpisodes, allEpisodes, gridContainer,
                     </div>
                     <div class="ep-card-play-overlay">
                         <div class="ep-card-play-btn">
-                            <i class="fa-solid fa-play"></i> Masuk Chamber
+                            <i class="fa-solid fa-arrow-right"></i> Lihat Detail
                         </div>
                     </div>
                 </div>
@@ -171,7 +180,7 @@ export function renderEpisodesGrid(filteredEpisodes, allEpisodes, gridContainer,
 
                 <div class="ep-card-footer">
                     <button class="btn-card-enter">
-                        <span>Buka Chamber</span> &rarr;
+                        <span>Lihat Detail</span> <i class="fa-solid fa-arrow-right card-arrow"></i>
                     </button>
                     <a href="${ep.link}" target="_blank" class="btn-card-yt" title="Tonton di YouTube" aria-label="YouTube Link">
                         <i class="fa-brands fa-youtube"></i>

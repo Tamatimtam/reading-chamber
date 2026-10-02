@@ -17,9 +17,9 @@
     <!-- CSS Dependencies -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="css/pages/episode_modal.css">
-    <link rel="stylesheet" href="css/pages/episode_books.css">
-    <link rel="stylesheet" href="css/pages/episodes.css">
+    <link rel="stylesheet" href="css/pages/episodes/episode_modal.css">
+    <link rel="stylesheet" href="css/pages/episodes/episode_books.css">
+    <link rel="stylesheet" href="css/pages/episodes/episodes.css">
     
     <!-- Lenis Smooth Scroll CSS -->
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.9/dist/lenis.css">
@@ -61,7 +61,7 @@
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="episodes.html" class="active">Episodes</a>
-                <a href="coming-soon.html">About</a>
+                <a href="books.html">Perpustakaan</a>
                 <a href="coming-soon.html">Community</a>
                 <a href="coming-soon.html">Merch</a>
             </div>
@@ -96,7 +96,7 @@
             <div class="nav-links nav-ghost-links" aria-hidden="true">
                 <a href="index.html">Home</a>
                 <a href="episodes.html" class="active">Episodes</a>
-                <a href="coming-soon.html">About</a>
+                <a href="books.html">Perpustakaan</a>
                 <a href="coming-soon.html">Community</a>
                 <a href="coming-soon.html">Merch</a>
             </div>
@@ -124,10 +124,6 @@
             <!-- Hero Section -->
             <header class="archive-hero">
                 <div class="archive-tag-kicker">
-                    <span class="catalog-bracket">[</span>
-                    <span class="catalog-id">CATALOG // EP. 01—50</span>
-                    <span class="catalog-bracket">]</span>
-                    <span class="catalog-dot">•</span>
                     <span class="catalog-sub">SEARCH ANY BOOKS, GUESTS &amp; TOPICS HERE</span>
                 </div>
 
@@ -140,7 +136,7 @@
 
                 <div class="archive-subtitle-row">
                     <p class="archive-description">
-                        Koleksi lengkap seluruh episode diskusi, perdebatan gagasan, dan kurasi buku yang kami buka bersama para tamu pemikir dan kawan diskusi. Pilih episode mana saja untuk membuka Chamber dan eksplorasi buku-bukunya dalam visual 3D.
+                        Koleksi lengkap seluruh episode diskusi, perdebatan gagasan, dan kurasi buku yang kami bedah bersama para tamu dan kawan diskusi. Pilih episode mana saja untuk melihat buku yang dibahas dan menyimak detail obrolannya.
                     </p>
                 </div>
             </header>
@@ -199,12 +195,12 @@
                 </div>
             </section>
         </div>
-
-        <!-- Footer -->
-        <footer class="footer" style="margin-top: 5rem;">
-            <p>&copy; 2026 The Reading Chamber. Big Books, Bigger Conversations.</p>
-        </footer>
     </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 The Reading Chamber. Big Books, Bigger Conversations.</p>
+    </footer>
 
     <!-- Episode Overlay Modal (3D Books & Interactive Chamber) -->
     <div id="episode-overlay" class="episode-overlay" data-lenis-prevent="true">

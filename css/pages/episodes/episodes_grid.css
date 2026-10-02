@@ -20,6 +20,27 @@
     color: rgba(18, 18, 17, 0.7);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.grid-wip-badge {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+    background: var(--color-yellow);
+    color: var(--color-dark);
+    border: 1.5px solid var(--color-dark);
+    box-shadow: 2px 2px 0px var(--color-dark);
+    vertical-align: middle;
+    text-transform: uppercase;
 }
 
 .episodes-grid {
@@ -276,6 +297,16 @@
 .btn-card-enter:hover {
     background: var(--color-blue);
     transform: translateY(-1px);
+}
+
+.btn-card-enter .card-arrow {
+    transition: transform 0.25s var(--ease-out);
+    font-size: 0.85rem;
+}
+
+.btn-card-enter:hover .card-arrow,
+.ep-card:hover .btn-card-enter .card-arrow {
+    transform: translateX(4px);
 }
 
 .btn-card-yt {
