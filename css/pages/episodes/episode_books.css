@@ -379,8 +379,20 @@
     .books-stage {
         grid-template-columns: 1fr;
         gap: 2rem;
+        max-width: 100%;
+        overflow-x: hidden;
     }
     .books-list-panel {
         max-height: 260px;
     }
+    .book-ambient-glow {
+        width: 260px;
+        height: 260px;
+        max-width: 80vw;
+    }
+    .book-showcase {
+        overflow: hidden;
+        max-width: 100%;
+    }
 }
+
