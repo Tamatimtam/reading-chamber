@@ -194,11 +194,14 @@
 
 @media (max-width: 1023px) {
     .latest-episode {
-        padding: 4rem 1.5rem;
+        padding: 4rem 1.25rem 3.5rem;
+        overflow: hidden;
     }
     
     .latest-container {
-        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.25rem;
     }
     
     .latest-info {
@@ -206,19 +209,58 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 0;
     }
     
+    .latest-info .badge {
+        margin-bottom: 0.75rem;
+    }
+
     .latest-info h2 {
-        font-size: clamp(1.2rem, 5vw, 1.8rem);
-        margin-bottom: 1.5rem;
+        font-size: clamp(1.25rem, 5vw, 1.75rem);
+        line-height: 1.25;
+        margin-bottom: 0.75rem;
+    }
+
+    .latest-info p {
+        margin-bottom: 1.25rem;
+        font-size: 0.92rem;
     }
     
     .btn-watch-now {
-        margin: 0 auto;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.65rem 1.4rem;
+        background-color: var(--color-yellow);
+        color: var(--color-dark);
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 0.88rem;
+        text-decoration: none;
+        margin: 0.25rem auto 0 auto;
+        box-shadow: 0 4px 15px rgba(245, 183, 0, 0.3);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn-watch-now:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(245, 183, 0, 0.45);
+    }
+
+    .btn-watch-now .play-icon {
+        width: 26px;
+        height: 26px;
+        background-color: var(--color-dark);
+        color: var(--color-yellow);
+        font-size: 0.7rem;
     }
     
     .latest-featured-card {
-        aspect-ratio: 4/5;
+        aspect-ratio: 16/10;
+        width: 100%;
+        max-width: 100%;
+        margin-top: 0.5rem;
     }
     
     .queue-item {
@@ -226,3 +268,4 @@
         border: 1px solid rgba(255,255,255,0.1);
     }
 }
+
