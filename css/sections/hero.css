@@ -8,7 +8,7 @@
     flex-direction: column;
     justify-content: center; /* Center text vertically */
     overflow: hidden;
-    background-color: #ffffff;
+    background-color: #fdbc14;
 }
 
 .hero-bg-elements {
@@ -209,72 +209,124 @@
 
 @media (max-width: 1023px) {
     .hero {
-        padding: 7rem 1.5rem 2rem;
+        padding: 5rem 1.25rem 2.5rem 1.25rem;
         height: auto;
-        min-height: 100vh;
+        min-height: auto;
         justify-content: flex-start;
+        align-items: center;
+        background-color: #fdbc14;
+        overflow: hidden;
+        width: 100%;
+        max-width: 100%;
     }
     
     .hero-content {
+        display: contents;
+    }
+
+    .hero-info {
+        display: contents;
+    }
+
+    .hero-title-wrapper {
+        order: 1;
         width: 100%;
-        margin-left: 0;
-        padding-top: 0;
-        gap: 1.5rem;
         text-align: center;
-        align-items: center;
+        margin-bottom: 0.25rem;
     }
 
     .hero-title {
         align-items: center;
+        width: 100%;
     }
     
     .hero-title .line-1 {
-        font-size: clamp(2.5rem, 10vw, 4rem);
+        font-size: clamp(2.3rem, 9.5vw, 3.8rem);
+        -webkit-text-stroke: 2.5px #000;
+        text-shadow: 4px 4px 0px #000;
     }
     
     .hero-title .line-2 {
-        font-size: clamp(3rem, 12vw, 5rem);
-    }
-    
-    .hero-info {
-        margin-top: 0;
+        font-size: clamp(2.8rem, 12vw, 4.6rem);
+        -webkit-text-stroke: 3px #000;
+        text-shadow: 4px 4px 0px #000;
     }
     
     .hero-desc {
+        order: 2;
+        width: 100%;
+        max-width: 440px;
         text-align: center;
-        font-size: 1rem;
-        margin-bottom: 2rem;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin: 0.25rem auto 0 auto;
+        padding: 0 0.5rem;
+    }
+    
+    .hero-collage {
+        order: 3;
+        position: relative;
+        width: 100%;
+        max-width: 360px;
+        height: 250px;
+        top: 0;
+        margin: 0.5rem auto 1rem auto;
+        opacity: 1;
+        overflow: hidden;
+        pointer-events: none;
+    }
+
+    .collage-bg {
+        width: 100%;
+        height: 100%;
+        right: 0;
+        bottom: 0;
+        background-position: center bottom;
+    }
+
+    .collage-thinker {
+        top: 2%;
+        right: 18%;
+        width: 30%;
+        height: 52%;
+        background-position: center;
+        z-index: 2;
+    }
+    
+    .collage-hosts {
+        bottom: 5%;
+        left: 8%;
+        width: 84%;
+        height: 72%;
+        background-position: center bottom;
+        z-index: 3;
+    }
+    
+    .collage-table {
+        bottom: 0;
+        left: 5%;
+        width: 90%;
+        height: 34%;
+        background-position: center bottom;
+        z-index: 4;
     }
     
     .hero-buttons {
+        order: 4;
+        display: flex;
         flex-direction: column;
         width: 100%;
-        gap: 1rem;
+        max-width: 340px;
+        margin: 0 auto;
+        gap: 0.75rem;
+        z-index: 10;
     }
     
     .hero-buttons .btn {
         width: 100%;
         justify-content: center;
-    }
-    
-    .hero-collage {
-        position: relative;
-        width: 100%;
-        height: 50vh;
-        top: 0;
-        margin-top: 2rem;
-        opacity: 0.9;
-    }
-    
-    .collage-hosts {
-        width: 80%;
-        left: 10%;
-        height: 70%;
-    }
-    
-    .collage-table {
-        width: 90%;
-        left: 5%;
-        height: 35%;
+        padding: 0.8rem 1.5rem;
+        font-size: 0.92rem;
     }
 }
+
