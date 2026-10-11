@@ -191,6 +191,11 @@
     .about-bg-elements .shape {
         opacity: 0.3;
     }
+
+    .footer {
+        padding: 3rem 1.25rem 8rem 1.25rem;
+        min-height: 220px;
+    }
 }
 
 
