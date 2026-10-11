@@ -274,7 +274,8 @@ class EpisodesArchiveApp {
             y: 0,
             autoAlpha: 1,
             duration: 0.8,
-            ease: 'power4.out'
+            ease: 'power4.out',
+            clearProps: 'transform'
         })
         // 2. Tag kicker pops in with energetic spring
         .to('.archive-tag-kicker', {

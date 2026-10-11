@@ -45,7 +45,8 @@ export function initAnimations() {
         opacity: 1,
         duration: 1,
         ease: 'power4.out',
-        delay: 0.2
+        delay: 0.2,
+        clearProps: 'transform'
     })
     .to('.hero-bg-yellow', {
         scale: 1,
@@ -141,26 +142,26 @@ export function initAnimations() {
 
     // 5. Scroll Reveals for Latest Episode
     gsap.from('.latest-info > *', {
-        y: 50,
+        y: 30,
         opacity: 0,
-        duration: 1.2,
-        stagger: 0.15,
-        ease: 'power4.out',
+        duration: 1,
+        stagger: 0.08,
+        ease: 'power3.out',
         scrollTrigger: {
             trigger: '.latest-episode',
-            start: "top 75%",
+            start: "top 80%",
         }
     });
 
     gsap.from('.latest-featured-card', {
-        scale: 0.9,
-        y: 60,
+        scale: 0.95,
+        y: 30,
         opacity: 0,
-        duration: 1.5,
-        ease: 'expo.out',
+        duration: 1.2,
+        ease: 'power3.out',
         scrollTrigger: {
             trigger: '.latest-episode',
-            start: "top 75%",
+            start: "top 80%",
         }
     });
     
@@ -434,4 +435,41 @@ export function initAnimations() {
             }
         });
     });
+
+    // 8. Mobile Navigation Drawer Controller
+    initMobileNav();
 }
+
+export function initMobileNav() {
+    const openBtn = document.getElementById('nav-menu-btn');
+    const closeBtn = document.getElementById('mobile-nav-close');
+    const backdrop = document.getElementById('mobile-nav-backdrop');
+    const drawer = document.getElementById('mobile-nav-drawer');
+
+    if (!drawer) return;
+
+    function openDrawer() {
+        drawer.classList.add('active');
+        drawer.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        if (window.lenis) window.lenis.stop();
+    }
+
+    function closeDrawer() {
+        drawer.classList.remove('active');
+        drawer.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        if (window.lenis) window.lenis.start();
+    }
+
+    if (openBtn) openBtn.onclick = openDrawer;
+    if (closeBtn) closeBtn.onclick = closeDrawer;
+    if (backdrop) backdrop.onclick = closeDrawer;
+
+    drawer.querySelectorAll('.mobile-nav-links a, .mobile-support-btn').forEach(link => {
+        link.addEventListener('click', () => {
+            closeDrawer();
+        });
+    });
+}
+

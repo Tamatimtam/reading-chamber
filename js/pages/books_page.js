@@ -270,7 +270,7 @@ class BooksApp {
         if (typeof gsap === 'undefined') return;
 
         const tl = gsap.timeline();
-        tl.to('.nav, .nav-immune', { y: 0, autoAlpha: 1, duration: 0.8, ease: 'power4.out' })
+        tl.to('.nav, .nav-immune', { y: 0, autoAlpha: 1, duration: 0.8, ease: 'power4.out', clearProps: 'transform' })
           .to('.books-tag-kicker', { y: 0, scale: 1, autoAlpha: 1, duration: 0.6, ease: 'back.out(2)' }, "-=0.4")
           .to('.books-title .line', { y: 0, autoAlpha: 1, duration: 0.7, stagger: 0.08, ease: 'back.out(1.8)' }, "-=0.4")
           .to('.books-description', { y: 0, autoAlpha: 1, duration: 0.5, ease: 'power3.out' }, "-=0.3")
