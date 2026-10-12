@@ -10,7 +10,14 @@ Welcome to the JavaScript layer of **The Reading Chamber**! This application use
 js/
 ├── core/         # Core application bootstrap & central database
 │   ├── main.js   # Global orchestrator (Lenis scroll, nav behavior)
-│   └── data.js   # Central repository of episodes, books, and hosts
+│   └── data.js   # Central repository of episodes (aggregates modular chunks)
+├── data/         # Modular episode datasets (< 500 lines each)
+│   ├── episodes_meta.js   # Full 55-episode fallback metadata catalog
+│   ├── episodes_chunk1.js # Episodes 51 - 43
+│   ├── episodes_chunk2.js # Episodes 42 - 32
+│   ├── episodes_chunk3.js # Episodes 31 - 23 & Specials
+│   ├── episodes_chunk4.js # Episodes 22 - 14
+│   └── episodes_chunk5.js # Episodes 13 - 0
 ├── features/     # Reusable feature engines
 │   ├── animations.js    # GSAP scroll animations & sneaky footer books
 │   ├── book_showcase.js # 3D book cover interaction engine

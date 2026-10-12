@@ -7,9 +7,7 @@ This directory contains application foundation modules and the single source of 
 ## File Inventory
 
 * `main.js`: Initializes global smooth scrolling via Lenis, handles mobile navigation menus, and orchestrates global scroll listeners.
-* `data.js`: The central content database containing:
-  * `episodeData`: Map of YouTube video IDs to rich metadata (titles, descriptions, quotes, and array of referenced books).
-  * Host bios, social links, and podcast details.
+* `data.js`: The central content aggregator. To preserve developer experience and keep files strictly under 500 lines, it imports modular chunks (`episodes_chunk1.js` through `episodes_chunk5.js` from `js/data/`) and exports the unified `episodeData` object.
 
 ---
 

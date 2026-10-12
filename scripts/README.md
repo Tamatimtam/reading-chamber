@@ -6,6 +6,8 @@ This directory contains standalone Python utility scripts used during build, ass
 
 ## Script Inventory
 
+* `scrape_all_episodes.py`: Fetches all video metadata, descriptions, and book lists directly from the Reading Chamber YouTube channel into `scripts/cache/raw_youtube_episodes.json`.
+* `generate_all_episodes.py`: Master builder that parses the cached YouTube data, preserves hand-curated records, and splits data into modular files under 500 lines in `js/data/`.
 * `batch_update_all_episodes.py`: Updates episode book listings and custom metadata in `js/core/data.js`.
 * `fetch_book_cover.py`: Queries open book APIs (Google Books, Open Library) to fetch high-resolution covers for new episodes.
 * `fetch_covers.py`: Batch utility for downloading book cover images into `assets/books/`.

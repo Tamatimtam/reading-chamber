@@ -154,7 +154,7 @@ export function renderEpisodesGrid(filteredEpisodes, allEpisodes, gridContainer,
                 <div class="ep-card-media" data-ep-index="${index}">
                     <div class="ep-card-thumb" style="background-image: url('${ep.thumbnail}')"></div>
                     <div class="ep-card-badges">
-                        <span class="ep-num-pill">EP. ${ep.epNum}</span>
+                        <span class="ep-num-pill">${ep.epDisplay || `EP. ${ep.epNum}`}</span>
                         <span class="ep-date-pill">${releaseDate}</span>
                     </div>
                     <div class="ep-card-play-overlay">
