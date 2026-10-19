@@ -14,14 +14,14 @@ export const episodesChunk3 = {
             {
                 "title": "Makanya, Mikir!",
                 "author": "Abigail Limuria & Cania Citta",
-                "coverColor": "#1a365d",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-S3t1FFKl7IY-01-makanya-mikir.jpg"
             },
             {
                 "title": "Maxims for Thinking Analytically",
                 "author": "Daniel Kahneman & others",
-                "coverColor": "#234e52",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-VJWAQbMrMK8-01-maxims-for-thinking-analytically.jpg"
             },
             {
                 "title": "Intuition Pumps and Other Tools for Thinking",
@@ -120,8 +120,8 @@ export const episodesChunk3 = {
             {
                 "title": "Who Owns This Sentence? A History of Copyrights and Wrongs",
                 "author": "The Reading Chamber Archive",
-                "coverColor": "#285e61",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-qMOlNeEGGkc-08-who-owns-this-sentence-a-history-of.jpg"
             }
         ]
     },
@@ -148,8 +148,8 @@ export const episodesChunk3 = {
             {
                 "title": "When The President Calls",
                 "author": "Simon & Schuster",
-                "coverColor": "#22543d",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-8fnseRh8FOc-02-when-the-president-calls.jpg"
             },
             {
                 "title": "Will Singapore Exist in 100 Years?",
@@ -160,38 +160,38 @@ export const episodesChunk3 = {
             {
                 "title": "Gambling On Development: Why Some Countries Win and Others Lose",
                 "author": "Stefan Dercon",
-                "coverColor": "#7b341e",
-                "coverImage": ""
+                "coverColor": "#2b5034",
+                "coverImage": "assets/books/ep-710oKYFv5Ic-01-gambling-on-development-why-so.jpg"
             },
             {
                 "title": "Leadership: Six Studies in World Strategy",
                 "author": "Henry Kissinger",
-                "coverColor": "#521b41",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-8fnseRh8FOc-05-leadership-six-studies-in-world-str.jpg"
             },
             {
                 "title": "The Feminine Mistake",
                 "author": "Leslie Bennetts",
-                "coverColor": "#44337a",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-8fnseRh8FOc-06-the-feminine-mistake.jpg"
             },
             {
                 "title": "Nice Girls Don’t Get Rich",
                 "author": "Lois P. Frankel",
-                "coverColor": "#2c5282",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-8fnseRh8FOc-07-nice-girls-don-t-get-rich.jpg"
             },
             {
                 "title": "Price Theory",
                 "author": "Milton Friedman",
-                "coverColor": "#285e61",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-8fnseRh8FOc-08-price-theory.jpg"
             },
             {
                 "title": "Economic Theory",
                 "author": "Gary Becker",
-                "coverColor": "#2d3748",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-8fnseRh8FOc-09-economic-theory.jpg"
             }
         ]
     },
@@ -202,8 +202,8 @@ export const episodesChunk3 = {
             {
                 "title": "No Longer Human",
                 "author": "Osamu Dazai",
-                "coverColor": "#1a365d",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-_7AyrDpYFUo-00-no-longer-human.jpg"
             },
             {
                 "title": "Misteri Hantu Terbesar di Dunia",
@@ -220,20 +220,20 @@ export const episodesChunk3 = {
             {
                 "title": "A Short Stay in Hell",
                 "author": "Steven L. Peck",
-                "coverColor": "#744210",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-_7AyrDpYFUo-03-a-short-stay-in-hell.jpg"
             },
             {
                 "title": "Lisey’s Story",
                 "author": "Stephen King",
-                "coverColor": "#7b341e",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-_7AyrDpYFUo-04-liseys-story.jpg"
             },
             {
                 "title": "Roald Dahl’s Book of Ghost Stories",
                 "author": "The Reading Chamber Archive",
-                "coverColor": "#521b41",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-_7AyrDpYFUo-05-roald-dahls-book-of-ghost-stories.jpg"
             },
             {
                 "title": "Nube Series",
@@ -250,14 +250,14 @@ export const episodesChunk3 = {
             {
                 "title": "Vampire Hunter D",
                 "author": "The Reading Chamber Archive",
-                "coverColor": "#285e61",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-_7AyrDpYFUo-08-vampire-hunter-d.jpg"
             },
             {
                 "title": "Black Paradox",
                 "author": "Junji Ito",
-                "coverColor": "#2d3748",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-_7AyrDpYFUo-09-black-paradox.jpg"
             },
             {
                 "title": "Jigoku",
@@ -268,14 +268,14 @@ export const episodesChunk3 = {
             {
                 "title": "Planet Remina",
                 "author": "Junji Ito",
-                "coverColor": "#234e52",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-_7AyrDpYFUo-11-planet-remina.jpg"
             },
             {
                 "title": "Shiver",
                 "author": "Junji Ito",
-                "coverColor": "#22543d",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-_7AyrDpYFUo-12-shiver.jpg"
             },
             {
                 "title": "Gerbang Malam",
@@ -292,14 +292,14 @@ export const episodesChunk3 = {
             {
                 "title": "Scary Lessons",
                 "author": "The Reading Chamber Archive",
-                "coverColor": "#521b41",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-_7AyrDpYFUo-15-scary-lessons.jpg"
             },
             {
                 "title": "Reincarnation",
                 "author": "Emi Ishikawa",
-                "coverColor": "#44337a",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-_7AyrDpYFUo-16-reincarnation.jpg"
             },
             {
                 "title": "Koleksi Chie Watari",
@@ -310,8 +310,8 @@ export const episodesChunk3 = {
             {
                 "title": "Tales from the Darkside",
                 "author": "Yoko Matsumoto",
-                "coverColor": "#285e61",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-_7AyrDpYFUo-18-tales-from-the-darkside.jpg"
             },
             {
                 "title": "Pengantin Demos",
@@ -322,8 +322,8 @@ export const episodesChunk3 = {
             {
                 "title": "Book of Horror",
                 "author": "Takaminato Motosuke",
-                "coverColor": "#1a365d",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-_7AyrDpYFUo-20-book-of-horror.jpg"
             },
             {
                 "title": "Hantu Yoko",
@@ -367,26 +367,26 @@ export const episodesChunk3 = {
             {
                 "title": "Attack on Titan (Shingeki no Kyojin)",
                 "author": "Hajime Isayama",
-                "coverColor": "#1a365d",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-WNPEGuRC7ak-00-attack-on-titan-shingeki-no-kyojin.jpg"
             },
             {
                 "title": "Cardcaptor Sakura",
                 "author": "CLAMP",
-                "coverColor": "#234e52",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-WNPEGuRC7ak-01-cardcaptor-sakura.jpg"
             },
             {
                 "title": "The Promised Neverland",
                 "author": "Kaiu Shirai & Posuka Demizu",
-                "coverColor": "#22543d",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-WNPEGuRC7ak-02-the-promised-neverland.jpg"
             },
             {
                 "title": "Toriko",
                 "author": "Mitsutoshi Shimabukuro",
-                "coverColor": "#744210",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-WNPEGuRC7ak-03-toriko.jpg"
             },
             {
                 "title": "Record of Ragnarok (Shūmatsu no Valkyrie)",

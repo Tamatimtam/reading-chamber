@@ -225,8 +225,8 @@ export const episodesChunk1 = {
             {
                 "title": "Tombstones: A Lawyer's Tales from the Takeover Decades",
                 "author": "Lawrence Lederman",
-                "coverColor": "#2b5034",
-                "coverImage": "assets/books/ep-o3WNHu-Vlh4-00-tombstones-a-lawyer-s-tales-fr.jpg"
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-o3WNHu-Vlh4-00-tombstones-a-lawyers-tales-from-the.jpg"
             },
             {
                 "title": "Bloodsport: When Ruthless Dealmakers, Shrewd Ideologues, and Brawling Lawyers Toppled the Corporate Establishment",
@@ -267,8 +267,8 @@ export const episodesChunk1 = {
             {
                 "title": "A New Taxonomy: The Seven Law Firm Business Models",
                 "author": "Bruce MacEwen",
-                "coverColor": "#5c3a21",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-o3WNHu-Vlh4-07-a-new-taxonomy-the-seven-law-firm-b.jpg"
             },
             {
                 "title": "Tomorrowland: Scenarios for Law Firms Beyond the Horizon",
@@ -326,8 +326,8 @@ export const episodesChunk1 = {
             {
                 "title": "The Entrepreneurial State: Debunking Public vs. Private Sector Myths",
                 "author": "Mariana Mazzucato",
-                "coverColor": "#2b5034",
-                "coverImage": "assets/books/ep-710oKYFv5Ic-06-entrepreneurial-state.jpg"
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-710oKYFv5Ic-06-the-entrepreneurial-state-debunking.jpg"
             },
             {
                 "title": "Power and Progress: Our Thousand-Year Struggle Over Technology and Prosperity",

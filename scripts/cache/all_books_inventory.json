@@ -1,0 +1,1918 @@
+[
+  {
+    "title": "Yang Tak Terkatakan tentang Menuju Dewasa",
+    "author": "Okki Sutanto",
+    "coverColor": "#97b7c2",
+    "coverImage": "assets/books/ep-latest-01-menuju-dewasa.png",
+    "ep": "wgNGCtnfdng",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 0,
+    "img_info": {
+      "size": 1219458,
+      "w": 800,
+      "h": 1200
+    }
+  },
+  {
+    "title": "Why We Are Restless: On the Modern Quest for Contentment",
+    "author": "Benjamin Storey & Jenna Silber Storey",
+    "coverColor": "#c8b70b",
+    "coverImage": "assets/books/ep-latest-02-why-we-are-restless.png",
+    "ep": "wgNGCtnfdng",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 1,
+    "img_info": {
+      "size": 894595,
+      "w": 800,
+      "h": 1200
+    }
+  },
+  {
+    "title": "The Birth of Hedonism: The Cyrenaic Philosophers and Pleasure as a Way of Life",
+    "author": "Kurt Lampe",
+    "coverColor": "#5a4a6b",
+    "coverImage": "assets/books/ep-latest-03-birth-of-hedonism.png",
+    "ep": "wgNGCtnfdng",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 2,
+    "img_info": {
+      "size": 1196156,
+      "w": 800,
+      "h": 1200
+    }
+  },
+  {
+    "title": "The Hedonism Handbook: Mastering the Lost Arts of Leisure and Pleasure",
+    "author": "Michael Flocker",
+    "coverColor": "#3cb5e0",
+    "coverImage": "assets/books/ep-latest-04-hedonism-handbook.png",
+    "ep": "wgNGCtnfdng",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 3,
+    "img_info": {
+      "size": 408800,
+      "w": 800,
+      "h": 1200
+    }
+  },
+  {
+    "title": "Winning: The Unforgiving Race to Greatness",
+    "author": "Tim S. Grover",
+    "coverColor": "#d4af37",
+    "coverImage": "assets/books/ep-latest-05-winning.png",
+    "ep": "wgNGCtnfdng",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 4,
+    "img_info": {
+      "size": 404286,
+      "w": 800,
+      "h": 1200
+    }
+  },
+  {
+    "title": "On Giving Up",
+    "author": "Adam Phillips",
+    "coverColor": "#c4982c",
+    "coverImage": "assets/books/ep-latest-06-on-giving-up.jpg",
+    "ep": "wgNGCtnfdng",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 5,
+    "img_info": {
+      "size": 44742,
+      "w": 325,
+      "h": 500
+    }
+  },
+  {
+    "title": "Catatan Pinggir",
+    "author": "Goenawan Mohamad",
+    "coverColor": "#6b2844",
+    "coverImage": "assets/books/ep-latest-07-catatan-pinggir.jpg",
+    "ep": "wgNGCtnfdng",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 6,
+    "img_info": {
+      "size": 22259,
+      "w": 305,
+      "h": 448
+    }
+  },
+  {
+    "title": "Mr. Clean Mar'ie Muhammad: Sang Pejuang Antikorupsi dan Aktivis Kemanusiaan",
+    "author": "Qaris Tajudin",
+    "coverColor": "#365870",
+    "coverImage": "assets/books/ep-latest-08-mr-clean-marie-muhammad.jpg",
+    "ep": "wgNGCtnfdng",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 7,
+    "img_info": {
+      "size": 84838,
+      "w": 650,
+      "h": 1006
+    }
+  },
+  {
+    "title": "How to Stand Up to a Dictator",
+    "author": "Maria Ressa",
+    "coverColor": "#a83232",
+    "coverImage": "assets/books/ep-latest-09-how-to-stand-up-to-a-dictator.jpg",
+    "ep": "wgNGCtnfdng",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 8,
+    "img_info": {
+      "size": 53003,
+      "w": 329,
+      "h": 500
+    }
+  },
+  {
+    "title": "The Dictator's Handbook",
+    "author": "Bruce Bueno de Mesquita & Alastair Smith",
+    "coverColor": "#82725e",
+    "coverImage": "assets/books/ep-latest-10-dictators-handbook.jpg",
+    "ep": "wgNGCtnfdng",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 9,
+    "img_info": {
+      "size": 42662,
+      "w": 333,
+      "h": 499
+    }
+  },
+  {
+    "title": "Public Choice: Concepts and Applications in Law",
+    "author": "Maxwell L. Stearns & Todd J. Zywicki",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-HbUO9Are2Hw-00-public-choice-concepts-and-app.jpg",
+    "ep": "HbUO9Are2Hw",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 0,
+    "img_info": {
+      "size": 18560,
+      "w": 326,
+      "h": 500
+    }
+  },
+  {
+    "title": "The Arrow Impossibility Theorem",
+    "author": "Eric Maskin & Amartya Sen",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-HbUO9Are2Hw-01-the-arrow-impossibility-theore.jpg",
+    "ep": "HbUO9Are2Hw",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 1,
+    "img_info": {
+      "size": 29480,
+      "w": 333,
+      "h": 500
+    }
+  },
+  {
+    "title": "Collective Action",
+    "author": "Russell Hardin",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-HbUO9Are2Hw-02-collective-action.jpg",
+    "ep": "HbUO9Are2Hw",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 2,
+    "img_info": {
+      "size": 2408,
+      "w": 128,
+      "h": 190
+    }
+  },
+  {
+    "title": "Voting, Interest Groups, and Parties",
+    "author": "Bradbury Seasholes",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-HbUO9Are2Hw-03-voting.jpg",
+    "ep": "HbUO9Are2Hw",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 3,
+    "img_info": {
+      "size": 45576,
+      "w": 355,
+      "h": 500
+    }
+  },
+  {
+    "title": "Odyssey karya Homer",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-0ytdhPJoWRA-00-odyssey.jpg",
+    "ep": "0ytdhPJoWRA",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 0,
+    "img_info": {
+      "size": 46467,
+      "w": 328,
+      "h": 500
+    }
+  },
+  {
+    "title": "Kitab Jihad (The Book of Jihad) karya Imam Ath-Thabari, dibacakan dari edisi terjemahan Inggris. Memuat ijma dan ikhtilaf empat mazhab (Abu Hanifah, Asy-Syafi'i, dll.) soal hukum perang.",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-0ytdhPJoWRA-01-kitab-jihad.jpg",
+    "ep": "0ytdhPJoWRA",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 1,
+    "img_info": {
+      "size": 58043,
+      "w": 500,
+      "h": 500
+    }
+  },
+  {
+    "title": "Tafsir Ath-Thabari dan Tarikh Ath-Thabari karya Imam Ath-Thabari",
+    "author": "koleksi perpustakaan",
+    "coverColor": "#8a2b2b",
+    "coverImage": "",
+    "ep": "0ytdhPJoWRA",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 2,
+    "img_info": null
+  },
+  {
+    "title": "The Greeks and the Irrational karya E.R. Dodds",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-0ytdhPJoWRA-03-the-greeks-and-the-irrational.jpg",
+    "ep": "0ytdhPJoWRA",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 3,
+    "img_info": {
+      "size": 13537,
+      "w": 364,
+      "h": 500
+    }
+  },
+  {
+    "title": "Berserk karya Kentaro Miura",
+    "author": "perbandingan adegan Skilla",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-0ytdhPJoWRA-04-berserk.jpg",
+    "ep": "0ytdhPJoWRA",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 4,
+    "img_info": {
+      "size": 39184,
+      "w": 337,
+      "h": 475
+    }
+  },
+  {
+    "title": "Life of Pi karya Yann Martel",
+    "author": "sebagai kerangka interpretasi trauma",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-0ytdhPJoWRA-05-life-of-pi.jpg",
+    "ep": "0ytdhPJoWRA",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 5,
+    "img_info": {
+      "size": 49970,
+      "w": 309,
+      "h": 475
+    }
+  },
+  {
+    "title": "Jason and the Argonauts",
+    "author": "mitologi Yunani, disebut ada di edisi Donal Bebek lain",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-0ytdhPJoWRA-06-jason-argonau.jpg",
+    "ep": "0ytdhPJoWRA",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 6,
+    "img_info": {
+      "size": 18677,
+      "w": 312,
+      "h": 500
+    }
+  },
+  {
+    "title": "Odyssey",
+    "author": "Homer",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-OUGfYiSk8oo-00-odyssey.jpg",
+    "ep": "OUGfYiSk8oo",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 0,
+    "img_info": {
+      "size": 46467,
+      "w": 328,
+      "h": 500
+    }
+  },
+  {
+    "title": "Iliad",
+    "author": "Homer",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-OUGfYiSk8oo-01-iliad.jpg",
+    "ep": "OUGfYiSk8oo",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 1,
+    "img_info": {
+      "size": 28345,
+      "w": 300,
+      "h": 457
+    }
+  },
+  {
+    "title": "Mitologi Yunani",
+    "author": "Koleksi Klasik) (Menelaos Yannis Stephanides",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-OUGfYiSk8oo-02-mitologi-yunani.jpg",
+    "ep": "OUGfYiSk8oo",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 2,
+    "img_info": {
+      "size": 5908,
+      "w": 128,
+      "h": 184
+    }
+  },
+  {
+    "title": "The Aeneid",
+    "author": "Virgil",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-OUGfYiSk8oo-03-the-aeneid.jpg",
+    "ep": "OUGfYiSk8oo",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 3,
+    "img_info": {
+      "size": 7420,
+      "w": 128,
+      "h": 203
+    }
+  },
+  {
+    "title": "Al-Tabari's Book of Jihad: A Translation from the Original Arabic (Al-Tabari) (Penerjemah & Pengantar: Dr. Yasir S. Ibrahim).",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-OUGfYiSk8oo-04-al-tabari-s-book-of-jihad-a-tr.jpg",
+    "ep": "OUGfYiSk8oo",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 4,
+    "img_info": {
+      "size": 4408,
+      "w": 128,
+      "h": 188
+    }
+  },
+  {
+    "title": "A Guidebook to Learning",
+    "author": "Mortimer J. Adler",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-S3t1FFKl7IY-00-a-guidebook-to-learning.jpg",
+    "ep": "S3t1FFKl7IY",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 0,
+    "img_info": {
+      "size": 5006,
+      "w": 316,
+      "h": 500
+    }
+  },
+  {
+    "title": "Makanya Mikir",
+    "author": "Cania Citta",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-S3t1FFKl7IY-01-makanya-mikir.jpg",
+    "ep": "S3t1FFKl7IY",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 1,
+    "img_info": {
+      "size": 1299744,
+      "w": 712,
+      "h": 1006
+    }
+  },
+  {
+    "title": "Tombstones: A Lawyer's Tales from the Takeover Decades",
+    "author": "Lawrence Lederman",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-o3WNHu-Vlh4-00-tombstones-a-lawyer-s-tales-fr.jpg",
+    "ep": "o3WNHu-Vlh4",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 0,
+    "img_info": {
+      "size": 19950,
+      "w": 296,
+      "h": 500
+    }
+  },
+  {
+    "title": "Bloodsport: When Ruthless Dealmakers, Shrewd Ideologues, and Brawling Lawyers Toppled the Corporate Establishment",
+    "author": "Robert Teitelman",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-o3WNHu-Vlh4-01-bloodsport-when-ruthless-dealm.jpg",
+    "ep": "o3WNHu-Vlh4",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 1,
+    "img_info": {
+      "size": 49197,
+      "w": 378,
+      "h": 500
+    }
+  },
+  {
+    "title": "M&A Titans: The Pioneers Who Shaped Wall Street's Mergers and Acquisitions Industry",
+    "author": "Brett Cole",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-o3WNHu-Vlh4-02-ma-titans.jpg",
+    "ep": "o3WNHu-Vlh4",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 2,
+    "img_info": {
+      "size": 25133,
+      "w": 314,
+      "h": 500
+    }
+  },
+  {
+    "title": "Managing the Professional Service Firm",
+    "author": "David Maister",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-o3WNHu-Vlh4-03-managing-the-professional-serv.jpg",
+    "ep": "o3WNHu-Vlh4",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 3,
+    "img_info": {
+      "size": 32157,
+      "w": 329,
+      "h": 475
+    }
+  },
+  {
+    "title": "First Among Equals: How to Manage a Group of Professionals",
+    "author": "Patrick J. McKenna & David H. Maister",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-o3WNHu-Vlh4-04-first-among-equals-how-to-mana.jpg",
+    "ep": "o3WNHu-Vlh4",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 4,
+    "img_info": {
+      "size": 21734,
+      "w": 318,
+      "h": 475
+    }
+  },
+  {
+    "title": "Art's Principles: 50 Years of Hard-Learned Lessons in Building a World-Class Professional Services Firm",
+    "author": "Arthur Gensler",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-o3WNHu-Vlh4-05-art-s-principles-50-years-of-h.jpg",
+    "ep": "o3WNHu-Vlh4",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 5,
+    "img_info": {
+      "size": 27274,
+      "w": 328,
+      "h": 500
+    }
+  },
+  {
+    "title": "Growth Is Dead: Now What?",
+    "author": "Bruce MacEwen",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-o3WNHu-Vlh4-06-growth-is-dead-now-what.jpg",
+    "ep": "o3WNHu-Vlh4",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 6,
+    "img_info": {
+      "size": 29648,
+      "w": 330,
+      "h": 500
+    }
+  },
+  {
+    "title": "A New Taxonomy: The Seven Law Firm Business Models",
+    "author": "Bruce MacEwen",
+    "coverColor": "#5c3a21",
+    "coverImage": "",
+    "ep": "o3WNHu-Vlh4",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 7,
+    "img_info": null
+  },
+  {
+    "title": "Tomorrowland: Scenarios for Law Firms Beyond the Horizon",
+    "author": "Bruce MacEwen",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-o3WNHu-Vlh4-08-tomorrowland.jpg",
+    "ep": "o3WNHu-Vlh4",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 8,
+    "img_info": {
+      "size": 22893,
+      "w": 333,
+      "h": 500
+    }
+  },
+  {
+    "title": "Poor Economics: A Radical Rethinking of the Way to Fight Global Poverty",
+    "author": "Abhijit V. Banerjee & Esther Duflo",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-710oKYFv5Ic-00-poor-economics.jpg",
+    "ep": "710oKYFv5Ic",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 0,
+    "img_info": {
+      "size": 26771,
+      "w": 326,
+      "h": 500
+    }
+  },
+  {
+    "title": "Gambling on Development: Why Some Countries Win and Others Lose",
+    "author": "Stefan Dercon",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-710oKYFv5Ic-01-gambling-on-development-why-so.jpg",
+    "ep": "710oKYFv5Ic",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 1,
+    "img_info": {
+      "size": 18560,
+      "w": 326,
+      "h": 500
+    }
+  },
+  {
+    "title": "How China Escaped the Poverty Trap",
+    "author": "Yuen Yuen Ang",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-710oKYFv5Ic-02-how-china-escaped.jpg",
+    "ep": "710oKYFv5Ic",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 2,
+    "img_info": {
+      "size": 44553,
+      "w": 334,
+      "h": 500
+    }
+  },
+  {
+    "title": "The Power of Creative Destruction: Economic Upheavals and the Wealth of Nations",
+    "author": "Philippe Aghion, C\u00e9line Antonin, & Simon Bunel",
+    "coverColor": "#1a1a19",
+    "coverImage": "",
+    "ep": "710oKYFv5Ic",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 3,
+    "img_info": null
+  },
+  {
+    "title": "Government versus Markets: The Changing Economic Role of the State",
+    "author": "Vito Tanzi",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-710oKYFv5Ic-04-government-vs-markets.jpg",
+    "ep": "710oKYFv5Ic",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 4,
+    "img_info": {
+      "size": 52978,
+      "w": 331,
+      "h": 500
+    }
+  },
+  {
+    "title": "In the Service of the Republic: The Art and Science of Economic Policy",
+    "author": "Vijay Kelkar & Ajay Shah",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-710oKYFv5Ic-05-in-the-service-of-the-republic.jpg",
+    "ep": "710oKYFv5Ic",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 5,
+    "img_info": {
+      "size": 17579,
+      "w": 300,
+      "h": 300
+    }
+  },
+  {
+    "title": "The Entrepreneurial State: Debunking Public vs. Private Sector Myths",
+    "author": "Mariana Mazzucato",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-710oKYFv5Ic-06-entrepreneurial-state.jpg",
+    "ep": "710oKYFv5Ic",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 6,
+    "img_info": {
+      "size": 25668,
+      "w": 267,
+      "h": 400
+    }
+  },
+  {
+    "title": "Power and Progress: Our Thousand-Year Struggle Over Technology and Prosperity",
+    "author": "Daron Acemoglu & Simon Johnson",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-710oKYFv5Ic-07-power-and-progress-our-thousan.jpg",
+    "ep": "710oKYFv5Ic",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 7,
+    "img_info": {
+      "size": 34763,
+      "w": 323,
+      "h": 500
+    }
+  },
+  {
+    "title": "Shared Prosperity in a Fractured World",
+    "author": "World Bank",
+    "coverColor": "#2b5034",
+    "coverImage": "",
+    "ep": "710oKYFv5Ic",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 8,
+    "img_info": null
+  },
+  {
+    "title": "Pengalaman Pembangunan Indonesia",
+    "author": "Widjojo Nitisastro",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-710oKYFv5Ic-09-pengalaman-pembangunan.jpg",
+    "ep": "710oKYFv5Ic",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 9,
+    "img_info": {
+      "size": 86517,
+      "w": 693,
+      "h": 650
+    }
+  },
+  {
+    "title": "Kesan Para Sahabat tentang Widjojo Nitisastro",
+    "coverColor": "#8a2b2b",
+    "coverImage": "",
+    "ep": "710oKYFv5Ic",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 10,
+    "img_info": null
+  },
+  {
+    "title": "Berenang di Segara: Kuntoro Mangkusubroto dalam Tuturan Sahabat",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-710oKYFv5Ic-11-kuntoro-mangkusubroto.jpg",
+    "ep": "710oKYFv5Ic",
+    "file": "js/data/episodes_chunk1.js",
+    "index": 11,
+    "img_info": {
+      "size": 3405,
+      "w": 128,
+      "h": 126
+    }
+  },
+  {
+    "title": "White Shoes: How a New Breed of Wall Street Lawyers Changed Big Business and the American Economy",
+    "author": "John Oller",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-o80aUzcKTxo-00-white-shoes-how-a-new-breed-of.jpg",
+    "ep": "o80aUzcKTxo",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 0,
+    "img_info": {
+      "size": 10809,
+      "w": 257,
+      "h": 196
+    }
+  },
+  {
+    "title": "Skadden: Power, Money, and the Rise of a Legal Empire",
+    "author": "Lincoln Caplan",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-o80aUzcKTxo-01-skadden-power.jpg",
+    "ep": "o80aUzcKTxo",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 1,
+    "img_info": {
+      "size": 24261,
+      "w": 318,
+      "h": 475
+    }
+  },
+  {
+    "title": "Turks and Brahmins: Upheaval at Milbank, Tweed",
+    "author": "Ellen Joan Pollock",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-o80aUzcKTxo-02-turks-and-brahmins.jpg",
+    "ep": "o80aUzcKTxo",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 2,
+    "img_info": {
+      "size": 55461,
+      "w": 312,
+      "h": 500
+    }
+  },
+  {
+    "title": "A Law Unto Itself: The Untold Story of the Law Firm Sullivan & Cromwell",
+    "author": "Nancy Lisagor & Frank Lipsius",
+    "coverColor": "#2b5034",
+    "coverImage": "assets/books/ep-o80aUzcKTxo-03-a-law-unto-itself-the-untold-s.jpg",
+    "ep": "o80aUzcKTxo",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 3,
+    "img_info": {
+      "size": 3874,
+      "w": 128,
+      "h": 205
+    }
+  },
+  {
+    "title": "The Anointed",
+    "author": "The Elite Dynamics of Wall Street Establishment",
+    "coverColor": "#d6b345",
+    "coverImage": "",
+    "ep": "o80aUzcKTxo",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 4,
+    "img_info": null
+  },
+  {
+    "title": "The Skadden Story",
+    "author": "The Institutional Rise of Skadden, Arps",
+    "coverColor": "#4a3b32",
+    "coverImage": "",
+    "ep": "o80aUzcKTxo",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 5,
+    "img_info": null
+  },
+  {
+    "title": "Thinking in Systems",
+    "author": "Donella H. Meadows",
+    "coverColor": "#1a365d",
+    "coverImage": "",
+    "ep": "r8zrrn_61iI",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 0,
+    "img_info": null
+  },
+  {
+    "title": "Chokepoints",
+    "author": "Edward Fishman",
+    "coverColor": "#234e52",
+    "coverImage": "",
+    "ep": "r8zrrn_61iI",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 1,
+    "img_info": null
+  },
+  {
+    "title": "Paradoks Indonesia",
+    "author": "Prabowo Subianto",
+    "coverColor": "#22543d",
+    "coverImage": "",
+    "ep": "r8zrrn_61iI",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 2,
+    "img_info": null
+  },
+  {
+    "title": "More and More and More",
+    "author": "Jean-Baptiste Fressoz",
+    "coverColor": "#744210",
+    "coverImage": "",
+    "ep": "r8zrrn_61iI",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 3,
+    "img_info": null
+  },
+  {
+    "title": "No Miracles Needed",
+    "author": "Mark Z. Jacobson",
+    "coverColor": "#7b341e",
+    "coverImage": "",
+    "ep": "r8zrrn_61iI",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 4,
+    "img_info": null
+  },
+  {
+    "title": "Project Finance Securitisation",
+    "author": "Philip R. Wood",
+    "coverColor": "#521b41",
+    "coverImage": "",
+    "ep": "r8zrrn_61iI",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 5,
+    "img_info": null
+  },
+  {
+    "title": "Law and Practice",
+    "author": "John Dewar",
+    "coverColor": "#44337a",
+    "coverImage": "",
+    "ep": "r8zrrn_61iI",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 6,
+    "img_info": null
+  },
+  {
+    "title": "The Law and Business of International Project Finance",
+    "author": "Scott L. Hoffman",
+    "coverColor": "#2c5282",
+    "coverImage": "",
+    "ep": "r8zrrn_61iI",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 7,
+    "img_info": null
+  },
+  {
+    "title": "Advanced Introduction to Law and Renewable Energy",
+    "author": "The Reading Chamber Archive",
+    "coverColor": "#285e61",
+    "coverImage": "",
+    "ep": "r8zrrn_61iI",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 8,
+    "img_info": null
+  },
+  {
+    "title": "Sustainable Finance",
+    "author": "Muliaman Hadad",
+    "coverColor": "#2d3748",
+    "coverImage": "",
+    "ep": "r8zrrn_61iI",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 9,
+    "img_info": null
+  },
+  {
+    "title": "The Dictator\u2019s Handbook",
+    "author": "Bruce Bueno de Mesquita & Alastair Smith",
+    "coverColor": "#1a365d",
+    "coverImage": "",
+    "ep": "lqMedBcDGQ8",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 0,
+    "img_info": null
+  },
+  {
+    "title": "How to Be a Dictator: The Cult of Personality in the Twentieth Century",
+    "author": "Frank Dik\u00f6tter",
+    "coverColor": "#234e52",
+    "coverImage": "",
+    "ep": "lqMedBcDGQ8",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 1,
+    "img_info": null
+  },
+  {
+    "title": "The Dictators: 64 Dictators, 64 Authors",
+    "author": "The Reading Chamber Archive",
+    "coverColor": "#22543d",
+    "coverImage": "",
+    "ep": "lqMedBcDGQ8",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 2,
+    "img_info": null
+  },
+  {
+    "title": "The Infernal Library: On Dictators, the Books They Wrote, and Other Catastrophes of Literacy",
+    "author": "Daniel Kalder",
+    "coverColor": "#744210",
+    "coverImage": "",
+    "ep": "lqMedBcDGQ8",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 3,
+    "img_info": null
+  },
+  {
+    "title": "How to Feed a Dictator",
+    "author": "Witold Szablowski",
+    "coverColor": "#7b341e",
+    "coverImage": "",
+    "ep": "lqMedBcDGQ8",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 4,
+    "img_info": null
+  },
+  {
+    "title": "Hidden Games: The Surprising Game Theory of How We Hope, Love, and Care",
+    "author": "Moshe Hoffman & Erez Yoeli",
+    "coverColor": "#521b41",
+    "coverImage": "",
+    "ep": "lqMedBcDGQ8",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 5,
+    "img_info": null
+  },
+  {
+    "title": "Arms and Influence",
+    "author": "Thomas C. Schelling",
+    "coverColor": "#44337a",
+    "coverImage": "",
+    "ep": "lqMedBcDGQ8",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 6,
+    "img_info": null
+  },
+  {
+    "title": "The End of the World Is Just the Beginning",
+    "author": "Peter Zeihan",
+    "coverColor": "#2c5282",
+    "coverImage": "",
+    "ep": "lqMedBcDGQ8",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 7,
+    "img_info": null
+  },
+  {
+    "title": "Conspiracy Theories and Other Dangerous Ideas",
+    "author": "Cass R. Sunstein",
+    "coverColor": "#1a365d",
+    "coverImage": "",
+    "ep": "ez4EitV9TvU",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 0,
+    "img_info": null
+  },
+  {
+    "title": "The Chaos Machine",
+    "author": "Max Fisher",
+    "coverColor": "#234e52",
+    "coverImage": "",
+    "ep": "ez4EitV9TvU",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 1,
+    "img_info": null
+  },
+  {
+    "title": "The Death of Expertise",
+    "author": "Tom Nichols",
+    "coverColor": "#22543d",
+    "coverImage": "",
+    "ep": "ez4EitV9TvU",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 2,
+    "img_info": null
+  },
+  {
+    "title": "The Power Elite",
+    "author": "C. Wright Mills",
+    "coverColor": "#744210",
+    "coverImage": "",
+    "ep": "ez4EitV9TvU",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 3,
+    "img_info": null
+  },
+  {
+    "title": "Power, Pleasure, and Profit",
+    "author": "David Wootton",
+    "coverColor": "#7b341e",
+    "coverImage": "",
+    "ep": "ez4EitV9TvU",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 4,
+    "img_info": null
+  },
+  {
+    "title": "Very Important People",
+    "author": "Ashley Mears",
+    "coverColor": "#521b41",
+    "coverImage": "",
+    "ep": "ez4EitV9TvU",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 5,
+    "img_info": null
+  },
+  {
+    "title": "The Devil Series: The Devil, Satan: The Early Christian Tradition, Lucifer: The Devil in Middle Ages, Mephistopheles: The Devil in Modern World, The Prince of Darkness",
+    "author": "Jeffrey Burton Russell",
+    "coverColor": "#1a365d",
+    "coverImage": "",
+    "ep": "apklQflp3Hs",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 0,
+    "img_info": null
+  },
+  {
+    "title": "Tragedi Setan",
+    "author": "Peter J. Awn",
+    "coverColor": "#234e52",
+    "coverImage": "",
+    "ep": "apklQflp3Hs",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 1,
+    "img_info": null
+  },
+  {
+    "title": "Satan\u2019s Tragedy and Redemption",
+    "author": "Annemarie Schimmel",
+    "coverColor": "#22543d",
+    "coverImage": "",
+    "ep": "apklQflp3Hs",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 2,
+    "img_info": null
+  },
+  {
+    "title": "Evil Men",
+    "author": "James Dawes",
+    "coverColor": "#744210",
+    "coverImage": "",
+    "ep": "apklQflp3Hs",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 3,
+    "img_info": null
+  },
+  {
+    "title": "Kesombongan Iblis",
+    "author": "Ibnu Qayyim Al-Jauziyah",
+    "coverColor": "#7b341e",
+    "coverImage": "",
+    "ep": "apklQflp3Hs",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 4,
+    "img_info": null
+  },
+  {
+    "title": "Karung Mutiara Al-Ghazali",
+    "author": "K.H.A. Mustofa Bisri (Gus Mus)",
+    "coverColor": "#521b41",
+    "coverImage": "",
+    "ep": "apklQflp3Hs",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 5,
+    "img_info": null
+  },
+  {
+    "title": "Four Seasons of Loneliness: A Lawyer's Casebook",
+    "author": "J.W. Freiberg",
+    "coverColor": "#1a365d",
+    "coverImage": "",
+    "ep": "1b0Sdj7fpBQ",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 0,
+    "img_info": null
+  },
+  {
+    "title": "Critical Sociology from a European Perspective",
+    "author": "J.W. Freiberg",
+    "coverColor": "#234e52",
+    "coverImage": "",
+    "ep": "1b0Sdj7fpBQ",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 1,
+    "img_info": null
+  },
+  {
+    "title": "Surrounded by Others and yet So Alone",
+    "author": "J.W. Freiberg",
+    "coverColor": "#22543d",
+    "coverImage": "",
+    "ep": "1b0Sdj7fpBQ",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 2,
+    "img_info": null
+  },
+  {
+    "title": "Growing Up Lonely",
+    "author": "J.W. Freiberg",
+    "coverColor": "#744210",
+    "coverImage": "",
+    "ep": "1b0Sdj7fpBQ",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 3,
+    "img_info": null
+  },
+  {
+    "title": "Cooking Master Boy (Ch\u016bka Ichiban!)",
+    "author": "Etsushi Ogawa",
+    "coverColor": "#1a365d",
+    "coverImage": "",
+    "ep": "nIa57ezhAG0",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 0,
+    "img_info": null
+  },
+  {
+    "title": "Sushi Chef Tsukasa (Mitsuboshi no Sushi)",
+    "author": "Mitsuru Sugaya",
+    "coverColor": "#234e52",
+    "coverImage": "",
+    "ep": "nIa57ezhAG0",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 1,
+    "img_info": null
+  },
+  {
+    "title": "Hell\u2019s Kitchen",
+    "author": "Mitsuru Nishimura & Gumi Amashi",
+    "coverColor": "#22543d",
+    "coverImage": "",
+    "ep": "nIa57ezhAG0",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 2,
+    "img_info": null
+  },
+  {
+    "title": "Yakitate!! Japan",
+    "author": "Takashi Hashiguchi",
+    "coverColor": "#744210",
+    "coverImage": "",
+    "ep": "nIa57ezhAG0",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 3,
+    "img_info": null
+  },
+  {
+    "title": "Bambino!",
+    "author": "Tetsuji Sekiya",
+    "coverColor": "#7b341e",
+    "coverImage": "",
+    "ep": "nIa57ezhAG0",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 4,
+    "img_info": null
+  },
+  {
+    "title": "Toriko",
+    "author": "Mitsutoshi Shimabukuro",
+    "coverColor": "#521b41",
+    "coverImage": "",
+    "ep": "nIa57ezhAG0",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 5,
+    "img_info": null
+  },
+  {
+    "title": "Tapak Sakti",
+    "author": "The Reading Chamber Archive",
+    "coverColor": "#1a365d",
+    "coverImage": "",
+    "ep": "WSrRIzKo2q8",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 0,
+    "img_info": null
+  },
+  {
+    "title": "Pukulan Gledek",
+    "author": "The Reading Chamber Archive",
+    "coverColor": "#234e52",
+    "coverImage": "",
+    "ep": "WSrRIzKo2q8",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 1,
+    "img_info": null
+  },
+  {
+    "title": "Pedang Maha Dewa",
+    "author": "The Reading Chamber Archive",
+    "coverColor": "#22543d",
+    "coverImage": "",
+    "ep": "WSrRIzKo2q8",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 2,
+    "img_info": null
+  },
+  {
+    "title": "Long Hu Men",
+    "author": "The Reading Chamber Archive",
+    "coverColor": "#744210",
+    "coverImage": "",
+    "ep": "WSrRIzKo2q8",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 3,
+    "img_info": null
+  },
+  {
+    "title": "Tiger Heroes",
+    "author": "The Reading Chamber Archive",
+    "coverColor": "#7b341e",
+    "coverImage": "",
+    "ep": "WSrRIzKo2q8",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 4,
+    "img_info": null
+  },
+  {
+    "title": "Tiger Wong",
+    "author": "The Reading Chamber Archive",
+    "coverColor": "#521b41",
+    "coverImage": "",
+    "ep": "WSrRIzKo2q8",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 5,
+    "img_info": null
+  },
+  {
+    "title": "Condor Heroes",
+    "author": "Jin Yong",
+    "coverColor": "#44337a",
+    "coverImage": "",
+    "ep": "WSrRIzKo2q8",
+    "file": "js/data/episodes_chunk2.js",
+    "index": 6,
+    "img_info": null
+  },
+  {
+    "title": "Makanya, Mikir!",
+    "author": "Abigail Limuria & Cania Citta",
+    "coverColor": "#1a365d",
+    "coverImage": "",
+    "ep": "VJWAQbMrMK8",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 0,
+    "img_info": null
+  },
+  {
+    "title": "Maxims for Thinking Analytically",
+    "author": "Daniel Kahneman & others",
+    "coverColor": "#234e52",
+    "coverImage": "",
+    "ep": "VJWAQbMrMK8",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 1,
+    "img_info": null
+  },
+  {
+    "title": "Intuition Pumps and Other Tools for Thinking",
+    "author": "Daniel Dennett",
+    "coverColor": "#22543d",
+    "coverImage": "",
+    "ep": "VJWAQbMrMK8",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 2,
+    "img_info": null
+  },
+  {
+    "title": "Four Ways of Thinking",
+    "author": "David Sumpter",
+    "coverColor": "#744210",
+    "coverImage": "",
+    "ep": "VJWAQbMrMK8",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 3,
+    "img_info": null
+  },
+  {
+    "title": "The 6 Disciplines of Strategic Thinking",
+    "author": "Michael D. Watkins",
+    "coverColor": "#7b341e",
+    "coverImage": "",
+    "ep": "VJWAQbMrMK8",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 4,
+    "img_info": null
+  },
+  {
+    "title": "Si Juki x BlackJack",
+    "author": "Faza Meonk",
+    "coverColor": "#1a365d",
+    "coverImage": "",
+    "ep": "qMOlNeEGGkc",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 0,
+    "img_info": null
+  },
+  {
+    "title": "Kung Fu Komang",
+    "author": "The Reading Chamber Archive",
+    "coverColor": "#234e52",
+    "coverImage": "",
+    "ep": "qMOlNeEGGkc",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 1,
+    "img_info": null
+  },
+  {
+    "title": "Pandawa Seda",
+    "author": "R.A. Kosasih",
+    "coverColor": "#22543d",
+    "coverImage": "",
+    "ep": "qMOlNeEGGkc",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 2,
+    "img_info": null
+  },
+  {
+    "title": "Bharatayudha",
+    "author": "R.A. Kosasih",
+    "coverColor": "#744210",
+    "coverImage": "",
+    "ep": "qMOlNeEGGkc",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 3,
+    "img_info": null
+  },
+  {
+    "title": "Malin Kundang",
+    "author": "Aris Ardianto & Misurind",
+    "coverColor": "#7b341e",
+    "coverImage": "",
+    "ep": "qMOlNeEGGkc",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 4,
+    "img_info": null
+  },
+  {
+    "title": "Paksi Jaladara",
+    "author": "Asep Sunandar Sunarya & Harry Mintareja",
+    "coverColor": "#521b41",
+    "coverImage": "",
+    "ep": "qMOlNeEGGkc",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 5,
+    "img_info": null
+  },
+  {
+    "title": "Sang Naga Sasra, Pendekar Pilihan Dewa, Perebutan Mustika Amaranjali",
+    "author": "Teguh Santosa",
+    "coverColor": "#44337a",
+    "coverImage": "",
+    "ep": "qMOlNeEGGkc",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 6,
+    "img_info": null
+  },
+  {
+    "title": "Tira Dalam Pasungan",
+    "author": "The Reading Chamber Archive",
+    "coverColor": "#2c5282",
+    "coverImage": "",
+    "ep": "qMOlNeEGGkc",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 7,
+    "img_info": null
+  },
+  {
+    "title": "Who Owns This Sentence? A History of Copyrights and Wrongs",
+    "author": "The Reading Chamber Archive",
+    "coverColor": "#285e61",
+    "coverImage": "",
+    "ep": "qMOlNeEGGkc",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 8,
+    "img_info": null
+  },
+  {
+    "title": "Tanda-tanda kemajuan negara berkembang,",
+    "author": "The Reading Chamber Archive",
+    "coverColor": "#1a365d",
+    "coverImage": "",
+    "ep": "8fnseRh8FOc",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 0,
+    "img_info": null
+  },
+  {
+    "title": "Mengejar Fajar",
+    "author": "Metta Dharmasaputra",
+    "coverColor": "#234e52",
+    "coverImage": "",
+    "ep": "8fnseRh8FOc",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 1,
+    "img_info": null
+  },
+  {
+    "title": "When The President Calls",
+    "author": "Simon & Schuster",
+    "coverColor": "#22543d",
+    "coverImage": "",
+    "ep": "8fnseRh8FOc",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 2,
+    "img_info": null
+  },
+  {
+    "title": "Will Singapore Exist in 100 Years?",
+    "author": "Seng Han Thong",
+    "coverColor": "#744210",
+    "coverImage": "",
+    "ep": "8fnseRh8FOc",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 3,
+    "img_info": null
+  },
+  {
+    "title": "Gambling On Development: Why Some Countries Win and Others Lose",
+    "author": "Stefan Dercon",
+    "coverColor": "#7b341e",
+    "coverImage": "",
+    "ep": "8fnseRh8FOc",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 4,
+    "img_info": null
+  },
+  {
+    "title": "Leadership: Six Studies in World Strategy",
+    "author": "Henry Kissinger",
+    "coverColor": "#521b41",
+    "coverImage": "",
+    "ep": "8fnseRh8FOc",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 5,
+    "img_info": null
+  },
+  {
+    "title": "The Feminine Mistake",
+    "author": "Leslie Bennetts",
+    "coverColor": "#44337a",
+    "coverImage": "",
+    "ep": "8fnseRh8FOc",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 6,
+    "img_info": null
+  },
+  {
+    "title": "Nice Girls Don\u2019t Get Rich",
+    "author": "Lois P. Frankel",
+    "coverColor": "#2c5282",
+    "coverImage": "",
+    "ep": "8fnseRh8FOc",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 7,
+    "img_info": null
+  },
+  {
+    "title": "Price Theory",
+    "author": "Milton Friedman",
+    "coverColor": "#285e61",
+    "coverImage": "",
+    "ep": "8fnseRh8FOc",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 8,
+    "img_info": null
+  },
+  {
+    "title": "Economic Theory",
+    "author": "Gary Becker",
+    "coverColor": "#2d3748",
+    "coverImage": "",
+    "ep": "8fnseRh8FOc",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 9,
+    "img_info": null
+  },
+  {
+    "title": "No Longer Human",
+    "author": "Osamu Dazai",
+    "coverColor": "#1a365d",
+    "coverImage": "",
+    "ep": "_7AyrDpYFUo",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 0,
+    "img_info": null
+  },
+  {
+    "title": "Misteri Hantu Terbesar di Dunia",
+    "author": "The Reading Chamber Archive",
+    "coverColor": "#234e52",
+    "coverImage": "",
+    "ep": "_7AyrDpYFUo",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 1,
+    "img_info": null
+  },
+  {
+    "title": "My Death",
+    "author": "Lisa Tuttle",
+    "coverColor": "#22543d",
+    "coverImage": "",
+    "ep": "_7AyrDpYFUo",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 2,
+    "img_info": null
+  },
+  {
+    "title": "A Short Stay in Hell",
+    "author": "Steven L. Peck",
+    "coverColor": "#744210",
+    "coverImage": "",
+    "ep": "_7AyrDpYFUo",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 3,
+    "img_info": null
+  },
+  {
+    "title": "Lisey\u2019s Story",
+    "author": "Stephen King",
+    "coverColor": "#7b341e",
+    "coverImage": "",
+    "ep": "_7AyrDpYFUo",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 4,
+    "img_info": null
+  },
+  {
+    "title": "Roald Dahl\u2019s Book of Ghost Stories",
+    "author": "The Reading Chamber Archive",
+    "coverColor": "#521b41",
+    "coverImage": "",
+    "ep": "_7AyrDpYFUo",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 5,
+    "img_info": null
+  },
+  {
+    "title": "Nube Series",
+    "author": "The Reading Chamber Archive",
+    "coverColor": "#44337a",
+    "coverImage": "",
+    "ep": "_7AyrDpYFUo",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 6,
+    "img_info": null
+  },
+  {
+    "title": "Ushio and Tora",
+    "author": "The Reading Chamber Archive",
+    "coverColor": "#2c5282",
+    "coverImage": "",
+    "ep": "_7AyrDpYFUo",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 7,
+    "img_info": null
+  },
+  {
+    "title": "Vampire Hunter D",
+    "author": "The Reading Chamber Archive",
+    "coverColor": "#285e61",
+    "coverImage": "",
+    "ep": "_7AyrDpYFUo",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 8,
+    "img_info": null
+  },
+  {
+    "title": "Black Paradox",
+    "author": "Junji Ito",
+    "coverColor": "#2d3748",
+    "coverImage": "",
+    "ep": "_7AyrDpYFUo",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 9,
+    "img_info": null
+  },
+  {
+    "title": "Jigoku",
+    "author": "The Reading Chamber Archive",
+    "coverColor": "#1a365d",
+    "coverImage": "",
+    "ep": "_7AyrDpYFUo",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 10,
+    "img_info": null
+  },
+  {
+    "title": "Planet Remina",
+    "author": "Junji Ito",
+    "coverColor": "#234e52",
+    "coverImage": "",
+    "ep": "_7AyrDpYFUo",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 11,
+    "img_info": null
+  },
+  {
+    "title": "Shiver",
+    "author": "Junji Ito",
+    "coverColor": "#22543d",
+    "coverImage": "",
+    "ep": "_7AyrDpYFUo",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 12,
+    "img_info": null
+  },
+  {
+    "title": "Gerbang Malam",
+    "author": "The Reading Chamber Archive",
+    "coverColor": "#744210",
+    "coverImage": "",
+    "ep": "_7AyrDpYFUo",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 13,
+    "img_info": null
+  },
+  {
+    "title": "100 Ghost Stories to Die For",
+    "author": "The Reading Chamber Archive",
+    "coverColor": "#7b341e",
+    "coverImage": "",
+    "ep": "_7AyrDpYFUo",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 14,
+    "img_info": null
+  },
+  {
+    "title": "Scary Lessons",
+    "author": "The Reading Chamber Archive",
+    "coverColor": "#521b41",
+    "coverImage": "",
+    "ep": "_7AyrDpYFUo",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 15,
+    "img_info": null
+  },
+  {
+    "title": "Reincarnation",
+    "author": "Emi Ishikawa",
+    "coverColor": "#44337a",
+    "coverImage": "",
+    "ep": "_7AyrDpYFUo",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 16,
+    "img_info": null
+  },
+  {
+    "title": "Koleksi Chie Watari",
+    "author": "The Reading Chamber Archive",
+    "coverColor": "#2c5282",
+    "coverImage": "",
+    "ep": "_7AyrDpYFUo",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 17,
+    "img_info": null
+  },
+  {
+    "title": "Tales from the Darkside",
+    "author": "Yoko Matsumoto",
+    "coverColor": "#285e61",
+    "coverImage": "",
+    "ep": "_7AyrDpYFUo",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 18,
+    "img_info": null
+  },
+  {
+    "title": "Pengantin Demos",
+    "author": "The Reading Chamber Archive",
+    "coverColor": "#2d3748",
+    "coverImage": "",
+    "ep": "_7AyrDpYFUo",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 19,
+    "img_info": null
+  },
+  {
+    "title": "Book of Horror",
+    "author": "Takaminato Motosuke",
+    "coverColor": "#1a365d",
+    "coverImage": "",
+    "ep": "_7AyrDpYFUo",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 20,
+    "img_info": null
+  },
+  {
+    "title": "Hantu Yoko",
+    "author": "Komik Fantasteen",
+    "coverColor": "#234e52",
+    "coverImage": "",
+    "ep": "_7AyrDpYFUo",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 21,
+    "img_info": null
+  },
+  {
+    "title": "Attack on Titan (Shingeki no Kyojin)",
+    "author": "Hajime Isayama",
+    "coverColor": "#1a365d",
+    "coverImage": "",
+    "ep": "WNPEGuRC7ak",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 0,
+    "img_info": null
+  },
+  {
+    "title": "Cardcaptor Sakura",
+    "author": "CLAMP",
+    "coverColor": "#234e52",
+    "coverImage": "",
+    "ep": "WNPEGuRC7ak",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 1,
+    "img_info": null
+  },
+  {
+    "title": "The Promised Neverland",
+    "author": "Kaiu Shirai & Posuka Demizu",
+    "coverColor": "#22543d",
+    "coverImage": "",
+    "ep": "WNPEGuRC7ak",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 2,
+    "img_info": null
+  },
+  {
+    "title": "Toriko",
+    "author": "Mitsutoshi Shimabukuro",
+    "coverColor": "#744210",
+    "coverImage": "",
+    "ep": "WNPEGuRC7ak",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 3,
+    "img_info": null
+  },
+  {
+    "title": "Record of Ragnarok (Sh\u016bmatsu no Valkyrie)",
+    "author": "Shinya Umemura, Takumi Fukui & Ajichika",
+    "coverColor": "#7b341e",
+    "coverImage": "",
+    "ep": "WNPEGuRC7ak",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 4,
+    "img_info": null
+  },
+  {
+    "title": "Pengantin Demos",
+    "author": "Yuuho Ashibe",
+    "coverColor": "#521b41",
+    "coverImage": "",
+    "ep": "WNPEGuRC7ak",
+    "file": "js/data/episodes_chunk3.js",
+    "index": 5,
+    "img_info": null
+  },
+  {
+    "title": "Bagaimana Media Sosial Menghancurkanmu",
+    "author": "Eno Bening",
+    "coverColor": "#1a365d",
+    "coverImage": "",
+    "ep": "e2_1IEcO1eo",
+    "file": "js/data/episodes_chunk4.js",
+    "index": 0,
+    "img_info": null
+  },
+  {
+    "title": "World Without Sleep",
+    "author": "Yamada Futaba",
+    "coverColor": "#234e52",
+    "coverImage": "",
+    "ep": "e2_1IEcO1eo",
+    "file": "js/data/episodes_chunk4.js",
+    "index": 1,
+    "img_info": null
+  },
+  {
+    "title": "Family Compo",
+    "author": "Tsukasa Hojo",
+    "coverColor": "#22543d",
+    "coverImage": "",
+    "ep": "e2_1IEcO1eo",
+    "file": "js/data/episodes_chunk4.js",
+    "index": 2,
+    "img_info": null
+  },
+  {
+    "title": "Nanatsu no Taizai",
+    "author": "Nakaba Suzuki",
+    "coverColor": "#744210",
+    "coverImage": "",
+    "ep": "e2_1IEcO1eo",
+    "file": "js/data/episodes_chunk4.js",
+    "index": 3,
+    "img_info": null
+  },
+  {
+    "title": "One Piece",
+    "author": "Eiichiro Oda",
+    "coverColor": "#7b341e",
+    "coverImage": "",
+    "ep": "e2_1IEcO1eo",
+    "file": "js/data/episodes_chunk4.js",
+    "index": 4,
+    "img_info": null
+  },
+  {
+    "title": "Oishinbo",
+    "author": "Tetsu Kariya & Akira Hanasaki",
+    "coverColor": "#521b41",
+    "coverImage": "",
+    "ep": "e2_1IEcO1eo",
+    "file": "js/data/episodes_chunk4.js",
+    "index": 5,
+    "img_info": null
+  },
+  {
+    "title": "Revolusi",
+    "author": "David Van Reybrouck",
+    "coverColor": "#1a365d",
+    "coverImage": "",
+    "ep": "5UWRmnV7kyQ",
+    "file": "js/data/episodes_chunk4.js",
+    "index": 0,
+    "img_info": null
+  },
+  {
+    "title": "Chokepoints: Global Private Regulation on the Internet",
+    "author": "Milton Mueller",
+    "coverColor": "#234e52",
+    "coverImage": "",
+    "ep": "5UWRmnV7kyQ",
+    "file": "js/data/episodes_chunk4.js",
+    "index": 1,
+    "img_info": null
+  },
+  {
+    "title": "Against the World: Anti-Globalism and Mass Politics Between the World Wars",
+    "author": "Tara Zahra",
+    "coverColor": "#22543d",
+    "coverImage": "",
+    "ep": "5UWRmnV7kyQ",
+    "file": "js/data/episodes_chunk4.js",
+    "index": 2,
+    "img_info": null
+  },
+  {
+    "title": "The Return of the Strong Gods: Nationalism, Populism, and the Future of the West",
+    "author": "R.R. Reno",
+    "coverColor": "#744210",
+    "coverImage": "",
+    "ep": "5UWRmnV7kyQ",
+    "file": "js/data/episodes_chunk4.js",
+    "index": 3,
+    "img_info": null
+  },
+  {
+    "title": "The Dictator\u2019s Handbook: Why Bad Behavior is Almost Always Good Politics",
+    "author": "Bruce Bueno de Mesquita & Alastair Smith",
+    "coverColor": "#7b341e",
+    "coverImage": "",
+    "ep": "5UWRmnV7kyQ",
+    "file": "js/data/episodes_chunk4.js",
+    "index": 4,
+    "img_info": null
+  },
+  {
+    "title": "War, Religion and Empire: The Transformation of International Orders",
+    "author": "Andrew Phillips & J.C. Sharman",
+    "coverColor": "#521b41",
+    "coverImage": "",
+    "ep": "5UWRmnV7kyQ",
+    "file": "js/data/episodes_chunk4.js",
+    "index": 5,
+    "img_info": null
+  },
+  {
+    "title": "The Grand Chessboard: American Primacy and Its Geostrategic Imperatives",
+    "author": "Zbigniew Brzezinski",
+    "coverColor": "#44337a",
+    "coverImage": "",
+    "ep": "5UWRmnV7kyQ",
+    "file": "js/data/episodes_chunk4.js",
+    "index": 6,
+    "img_info": null
+  },
+  {
+    "title": "Lords of the Desert: Britain\u2019s Struggle with America to Dominate the Middle East",
+    "author": "James Barr",
+    "coverColor": "#2c5282",
+    "coverImage": "",
+    "ep": "5UWRmnV7kyQ",
+    "file": "js/data/episodes_chunk4.js",
+    "index": 7,
+    "img_info": null
+  },
+  {
+    "title": "The Neomercantilist: Global Capitalism and the Geopolitics of Trade",
+    "author": "Eric Helleiner",
+    "coverColor": "#285e61",
+    "coverImage": "",
+    "ep": "5UWRmnV7kyQ",
+    "file": "js/data/episodes_chunk4.js",
+    "index": 8,
+    "img_info": null
+  },
+  {
+    "title": "Feline Philosophy",
+    "author": "Cats and The Meaning of Life by John Gray",
+    "coverColor": "#1a365d",
+    "coverImage": "",
+    "ep": "gWHjt4pQEuE",
+    "file": "js/data/episodes_chunk5.js",
+    "index": 0,
+    "img_info": null
+  },
+  {
+    "title": "The Epistle on Legal Theory by Al-Syafi\u2019i",
+    "author": "The Reading Chamber Archive",
+    "coverColor": "#1a365d",
+    "coverImage": "",
+    "ep": "NT5s5Fuz1LQ",
+    "file": "js/data/episodes_chunk5.js",
+    "index": 0,
+    "img_info": null
+  },
+  {
+    "title": "The Sky",
+    "author": "The Art of Final Fantasy by Yoshitaka Amano",
+    "coverColor": "#1a365d",
+    "coverImage": "",
+    "ep": "IgmCofFeEjk",
+    "file": "js/data/episodes_chunk5.js",
+    "index": 0,
+    "img_info": null
+  },
+  {
+    "title": "The Sky",
+    "author": "The Art of Final Fantasy by Yoshitaka Amano",
+    "coverColor": "#1a365d",
+    "coverImage": "",
+    "ep": "2sNs9AcvsSM",
+    "file": "js/data/episodes_chunk5.js",
+    "index": 0,
+    "img_info": null
+  }
+]

@@ -49,8 +49,8 @@ export const episodesChunk5 = {
             {
                 "title": "Feline Philosophy",
                 "author": "Cats and The Meaning of Life by John Gray",
-                "coverColor": "#1a365d",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-gWHjt4pQEuE-00-feline-philosophy.jpg"
             }
         ]
     },

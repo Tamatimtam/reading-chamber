@@ -37,8 +37,8 @@ export const episodesChunk4 = {
             {
                 "title": "Nanatsu no Taizai",
                 "author": "Nakaba Suzuki",
-                "coverColor": "#744210",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-e2_1IEcO1eo-03-nanatsu-no-taizai.jpg"
             },
             {
                 "title": "One Piece",
@@ -49,8 +49,8 @@ export const episodesChunk4 = {
             {
                 "title": "Oishinbo",
                 "author": "Tetsu Kariya & Akira Hanasaki",
-                "coverColor": "#521b41",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-e2_1IEcO1eo-05-oishinbo.jpg"
             }
         ]
     },
@@ -74,56 +74,56 @@ export const episodesChunk4 = {
             {
                 "title": "Revolusi",
                 "author": "David Van Reybrouck",
-                "coverColor": "#1a365d",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-5UWRmnV7kyQ-00-revolusi.jpg"
             },
             {
                 "title": "Chokepoints: Global Private Regulation on the Internet",
                 "author": "Milton Mueller",
-                "coverColor": "#234e52",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-5UWRmnV7kyQ-01-chokepoints-global-private-regulati.jpg"
             },
             {
                 "title": "Against the World: Anti-Globalism and Mass Politics Between the World Wars",
                 "author": "Tara Zahra",
-                "coverColor": "#22543d",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-5UWRmnV7kyQ-02-against-the-world-anti-globalism-an.jpg"
             },
             {
                 "title": "The Return of the Strong Gods: Nationalism, Populism, and the Future of the West",
                 "author": "R.R. Reno",
-                "coverColor": "#744210",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-5UWRmnV7kyQ-03-the-return-of-the-strong-gods-natio.jpg"
             },
             {
                 "title": "The Dictator’s Handbook: Why Bad Behavior is Almost Always Good Politics",
                 "author": "Bruce Bueno de Mesquita & Alastair Smith",
-                "coverColor": "#7b341e",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-5UWRmnV7kyQ-04-the-dictators-handbook-why-bad-beha.jpg"
             },
             {
                 "title": "War, Religion and Empire: The Transformation of International Orders",
                 "author": "Andrew Phillips & J.C. Sharman",
-                "coverColor": "#521b41",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-5UWRmnV7kyQ-05-war-religion-and-empire-the-transfo.jpg"
             },
             {
                 "title": "The Grand Chessboard: American Primacy and Its Geostrategic Imperatives",
                 "author": "Zbigniew Brzezinski",
-                "coverColor": "#44337a",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-5UWRmnV7kyQ-06-the-grand-chessboard-american-prima.jpg"
             },
             {
                 "title": "Lords of the Desert: Britain’s Struggle with America to Dominate the Middle East",
                 "author": "James Barr",
-                "coverColor": "#2c5282",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-5UWRmnV7kyQ-07-lords-of-the-desert-britains-strugg.jpg"
             },
             {
                 "title": "The Neomercantilist: Global Capitalism and the Geopolitics of Trade",
                 "author": "Eric Helleiner",
-                "coverColor": "#285e61",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-5UWRmnV7kyQ-08-the-neomercantilist-global-capitali.jpg"
             }
         ]
     },

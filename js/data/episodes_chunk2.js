@@ -14,8 +14,8 @@ export const episodesChunk2 = {
             {
                 "title": "White Shoes: How a New Breed of Wall Street Lawyers Changed Big Business and the American Economy",
                 "author": "John Oller",
-                "coverColor": "#2b5034",
-                "coverImage": "assets/books/ep-o80aUzcKTxo-00-white-shoes-how-a-new-breed-of.jpg"
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-o80aUzcKTxo-00-white-shoes-how-a-new-breed-of-wall.jpg"
             },
             {
                 "title": "Skadden: Power, Money, and the Rise of a Legal Empire",
@@ -38,8 +38,8 @@ export const episodesChunk2 = {
             {
                 "title": "The Anointed",
                 "author": "The Elite Dynamics of Wall Street Establishment",
-                "coverColor": "#d6b345",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-o80aUzcKTxo-04-the-anointed.jpg"
             },
             {
                 "title": "The Skadden Story",
@@ -69,8 +69,8 @@ export const episodesChunk2 = {
             {
                 "title": "Thinking in Systems",
                 "author": "Donella H. Meadows",
-                "coverColor": "#1a365d",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-r8zrrn_61iI-00-thinking-in-systems.jpg"
             },
             {
                 "title": "Chokepoints",
@@ -81,8 +81,8 @@ export const episodesChunk2 = {
             {
                 "title": "Paradoks Indonesia",
                 "author": "Prabowo Subianto",
-                "coverColor": "#22543d",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-r8zrrn_61iI-02-paradoks-indonesia.jpg"
             },
             {
                 "title": "More and More and More",
@@ -93,8 +93,8 @@ export const episodesChunk2 = {
             {
                 "title": "No Miracles Needed",
                 "author": "Mark Z. Jacobson",
-                "coverColor": "#7b341e",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-r8zrrn_61iI-04-no-miracles-needed.jpg"
             },
             {
                 "title": "Project Finance Securitisation",
@@ -105,14 +105,14 @@ export const episodesChunk2 = {
             {
                 "title": "Law and Practice",
                 "author": "John Dewar",
-                "coverColor": "#44337a",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-r8zrrn_61iI-06-law-and-practice.jpg"
             },
             {
                 "title": "The Law and Business of International Project Finance",
                 "author": "Scott L. Hoffman",
-                "coverColor": "#2c5282",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-r8zrrn_61iI-07-the-law-and-business-of-internation.jpg"
             },
             {
                 "title": "Advanced Introduction to Law and Renewable Energy",
@@ -123,8 +123,8 @@ export const episodesChunk2 = {
             {
                 "title": "Sustainable Finance",
                 "author": "Muliaman Hadad",
-                "coverColor": "#2d3748",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-r8zrrn_61iI-09-sustainable-finance.jpg"
             }
         ]
     },
@@ -135,26 +135,26 @@ export const episodesChunk2 = {
             {
                 "title": "The Dictator’s Handbook",
                 "author": "Bruce Bueno de Mesquita & Alastair Smith",
-                "coverColor": "#1a365d",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-lqMedBcDGQ8-00-the-dictators-handbook.jpg"
             },
             {
                 "title": "How to Be a Dictator: The Cult of Personality in the Twentieth Century",
                 "author": "Frank Dikötter",
-                "coverColor": "#234e52",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-lqMedBcDGQ8-01-how-to-be-a-dictator-the-cult-of-pe.jpg"
             },
             {
                 "title": "The Dictators: 64 Dictators, 64 Authors",
                 "author": "The Reading Chamber Archive",
-                "coverColor": "#22543d",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-lqMedBcDGQ8-02-the-dictators-64-dictators-64-autho.jpg"
             },
             {
                 "title": "The Infernal Library: On Dictators, the Books They Wrote, and Other Catastrophes of Literacy",
                 "author": "Daniel Kalder",
-                "coverColor": "#744210",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-lqMedBcDGQ8-03-the-infernal-library-on-dictators-t.jpg"
             },
             {
                 "title": "How to Feed a Dictator",
@@ -165,20 +165,20 @@ export const episodesChunk2 = {
             {
                 "title": "Hidden Games: The Surprising Game Theory of How We Hope, Love, and Care",
                 "author": "Moshe Hoffman & Erez Yoeli",
-                "coverColor": "#521b41",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-lqMedBcDGQ8-05-hidden-games-the-surprising-game-th.jpg"
             },
             {
                 "title": "Arms and Influence",
                 "author": "Thomas C. Schelling",
-                "coverColor": "#44337a",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-lqMedBcDGQ8-06-arms-and-influence.jpg"
             },
             {
                 "title": "The End of the World Is Just the Beginning",
                 "author": "Peter Zeihan",
-                "coverColor": "#2c5282",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-lqMedBcDGQ8-07-the-end-of-the-world-is-just-the-be.jpg"
             }
         ]
     },
@@ -195,32 +195,32 @@ export const episodesChunk2 = {
             {
                 "title": "The Chaos Machine",
                 "author": "Max Fisher",
-                "coverColor": "#234e52",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-ez4EitV9TvU-01-the-chaos-machine.jpg"
             },
             {
                 "title": "The Death of Expertise",
                 "author": "Tom Nichols",
-                "coverColor": "#22543d",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-ez4EitV9TvU-02-the-death-of-expertise.jpg"
             },
             {
                 "title": "The Power Elite",
                 "author": "C. Wright Mills",
-                "coverColor": "#744210",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-ez4EitV9TvU-03-the-power-elite.jpg"
             },
             {
                 "title": "Power, Pleasure, and Profit",
                 "author": "David Wootton",
-                "coverColor": "#7b341e",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-ez4EitV9TvU-04-power-pleasure-and-profit.jpg"
             },
             {
                 "title": "Very Important People",
                 "author": "Ashley Mears",
-                "coverColor": "#521b41",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-ez4EitV9TvU-05-very-important-people.jpg"
             }
         ]
     },
@@ -249,8 +249,8 @@ export const episodesChunk2 = {
             {
                 "title": "Evil Men",
                 "author": "James Dawes",
-                "coverColor": "#744210",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-apklQflp3Hs-03-evil-men.jpg"
             },
             {
                 "title": "Kesombongan Iblis",
@@ -319,14 +319,14 @@ export const episodesChunk2 = {
             {
                 "title": "Hell’s Kitchen",
                 "author": "Mitsuru Nishimura & Gumi Amashi",
-                "coverColor": "#22543d",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-nIa57ezhAG0-02-hell-s-kitchen.jpg"
             },
             {
                 "title": "Yakitate!! Japan",
                 "author": "Takashi Hashiguchi",
-                "coverColor": "#744210",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-nIa57ezhAG0-03-yakitate-japan.jpg"
             },
             {
                 "title": "Bambino!",
@@ -337,8 +337,8 @@ export const episodesChunk2 = {
             {
                 "title": "Toriko",
                 "author": "Mitsutoshi Shimabukuro",
-                "coverColor": "#521b41",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-WNPEGuRC7ak-03-toriko.jpg"
             }
         ]
     },
@@ -373,8 +373,8 @@ export const episodesChunk2 = {
             {
                 "title": "Tiger Heroes",
                 "author": "The Reading Chamber Archive",
-                "coverColor": "#7b341e",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-WSrRIzKo2q8-04-tiger-heroes.jpg"
             },
             {
                 "title": "Tiger Wong",
@@ -385,8 +385,8 @@ export const episodesChunk2 = {
             {
                 "title": "Condor Heroes",
                 "author": "Jin Yong",
-                "coverColor": "#44337a",
-                "coverImage": ""
+                "coverColor": "#1e293b",
+                "coverImage": "assets/books/ep-WSrRIzKo2q8-06-condor-heroes.jpg"
             }
         ]
     },
